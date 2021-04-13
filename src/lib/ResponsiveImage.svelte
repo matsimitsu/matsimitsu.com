@@ -2,6 +2,7 @@
   export let src;
   export let alt;
   export let ratio;
+  export let width,height;
   export let full = false;
   let style;
   src = src.split('.')
@@ -26,5 +27,5 @@
   <source type="image/jpg" srcset="{srcsetForExtension("jpg")}">
   <source type="image/webp" srcset="{srcsetForExtension("webp")}">
   <source type="image/avif" srcset="{srcsetForExtension("avif")}">
-  <img class:container="{!full }" class="block mx-auto w-full pt-12 h-auto" src="{src}-720.jpg" alt="{alt}">
+  <img class:container="{!full }" width={width} height={height} class="block mx-auto w-full pt-12 h-auto" src="{src}-720.jpg" alt="{alt}">
 </picture>
