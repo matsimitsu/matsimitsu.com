@@ -1,0 +1,23 @@
+---
+title: "day One"
+layout: trip
+---
+
+<script>
+	import ResponsiveImage from '$lib/ResponsiveImage.svelte'
+  import Panels from '$lib/Panels.svelte'
+  import Map from '$lib/Map.svelte'
+</script>
+
+# Hello friends
+
+This is a paragraph
+
+And this anothe rparagraph
+
+<Panels>
+  <ResponsiveImage src="https://cdn.matsimitsu.com/egypt-2009/luxor/20090823-_DSC0003.jpg"/>
+  <ResponsiveImage src="https://cdn.matsimitsu.com/egypt-2009/luxor/20090823-_DSC0003.jpg"/>
+</Panels>
+
+<Map />
