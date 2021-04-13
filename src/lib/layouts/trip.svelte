@@ -4,7 +4,7 @@
 </script>
 
 <script>
-	import '../app.postcss';
+	import '../../app.postcss';
 </script>
 
 <div class="mx-auto">
