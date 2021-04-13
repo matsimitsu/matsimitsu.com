@@ -1,5 +1,5 @@
 <script>
-  import * as d3 from "d3-geo";
+  import { geoMercator, geoPath } from "d3-geo";
   import * as topojson from "topojson-client";
   import { onMount } from 'svelte';
 
@@ -11,11 +11,11 @@
   let height = width;
 
   let data = [];
-  const projection = d3.geoMercator()
+  const projection = geoMercator()
     .center([ 31.033333, 28.233334])
     .scale(1800)
     .translate([width / 2, height / 2]);
-  $: path = d3.geoPath().projection(projection);
+  $: path = geoPath().projection(projection);
   data = topojson.feature(fap, fap.objects.egypt).features;
 
   var marks = [{lat: 27.25738, long: 33.81291, name: "Hurghada"}];
