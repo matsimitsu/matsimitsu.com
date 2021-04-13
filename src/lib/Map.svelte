@@ -2,23 +2,30 @@
   import { geoMercator, geoPath } from "d3-geo";
   import * as topojson from "topojson-client";
   import { onMount } from 'svelte';
-
   import Feature from '$lib/Feature.svelte'
   import Marker from '$lib/Marker.svelte'
-  import fap from '../../static/middle-east.js'
 
+  export let mapData;
+  export let zoom = 100;
+  export let center = [];
+  export let select = [];
   let width = 400;
   let height = width;
 
   let data = [];
   const projection = geoMercator()
-    .center([ 31.033333, 28.233334])
-    .scale(1800)
+    .center(center)
+    .scale(zoom)
     .translate([width / 2, height / 2]);
   $: path = geoPath().projection(projection);
-  data = topojson.feature(fap, fap.objects.egypt).features;
+  let keys = Object.keys(mapData.objects)
+  let countries = {...mapData.objects[keys[0]]}
 
-  var marks = [{lat: 27.25738, long: 33.81291, name: "Hurghada"}];
+  if (select.length > 0) {
+    countries.geometries =countries.geometries.filter(c => select.includes(c.properties.name))
+  }
+  data = topojson.feature(mapData, countries).features;
+  var marks = [{lat: 25.105497, long: 121.597366, name: "Taipei"}];
 
   onMount(async () => {
     height = width;
