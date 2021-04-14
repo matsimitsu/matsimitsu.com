@@ -2,7 +2,6 @@
 title: "day One"
 layout: trip
 ---
-
 <script>
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte'
   import Panels from '$lib/Panels.svelte'

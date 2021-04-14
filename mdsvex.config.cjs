@@ -17,6 +17,6 @@ module.exports = {
 		}],
 	],
 	layout: {
-		trip: "./src/lib/layouts/trip.svelte",
+		trip: "./src/routes/trips/_post_layout.svelte",
 	}
 };

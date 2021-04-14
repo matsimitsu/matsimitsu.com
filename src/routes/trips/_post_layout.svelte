@@ -3,10 +3,4 @@
 	export { p }
 </script>
 
-<script>
-	import '../../app.postcss';
-</script>
-
-<div class="mx-auto">
-	<slot />
-</div>
+<slot />
