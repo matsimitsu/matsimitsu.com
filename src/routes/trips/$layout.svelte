@@ -17,7 +17,7 @@
 	export let posts = []
 </script>
 
-<div class="mx-auto">
+<div class="mx-auto py-12">
 	<slot />
 	<h3>Related posts</h3>
 	<ul>

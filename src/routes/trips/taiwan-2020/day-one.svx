@@ -1,74 +1,89 @@
 ---
-title: "day One"
-layout: trip
+title: "day One" layout: trip
 ---
+
 <script>
-	import ResponsiveImage from '$lib/ResponsiveImage.svelte'
-  import Panels from '$lib/Panels.svelte'
-  import Map from '$lib/Map.svelte'
-  import taiwan from '$lib/maps/taiwan.json'
-  import world from  '$lib/maps/world.json'
-  import egypt from  '$lib/maps/egypt.json'
+	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
+	import Panels from '$lib/Panels.svelte';
+	import Map from '$lib/Map.svelte';
+	import taiwan from '$lib/maps/taiwan.json';
 </script>
 
-# Hello friends
+# Taichung: Temples and colored walls.
 
-This is a paragraph
+Talk about last-minute, just two days before the planned trip I whipped out the credit card and purchased a flight to Taipei with KLM. With everything going on in China (Corona virus) I decided to wait until the last moment before deciding to go or not.
 
-And this anothe rparagraph
+The flight was about two-thirds full and I didn't have any neighbours. This gave me the luxury to sleep lying down across a row of 3 chairs.
 
-<div class="mx-auto max-w-screen-lg mt-12 prose px-4">
-  <h2 class="flex items-center border-b">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="h-4 w-4 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
-    <span>Hurghada</span>
-  </h2>
-  <div class="flex flex-col lg:flex-row">
-    <div class="flex-1 flex-shrink mr-4">
-      <p>Hurghada was founded in the early 20th century. For many decades it was a small fishing village, but it has grown into a major Red Sea resort as a result of Egyptian and foreign investment that began in the 1980s. </p>
-      <p>Holiday resorts and hotels provide facilities for windsurfing, kitesurfing, yachting, scuba diving and snorkeling. The city is known for its watersports, nightlife and warm weather. Daytime temperatures are around 30 °C (86 °F) most of the year, and during July and August temperatures can reach over 40 °C (104 °F). </p>
-      <p>Hurghada is a popular holiday destination for Europeans, especially during the winter, and some spend Christmas and New Year there. Tourist numbers from Russia dropped significantly after the Metrojet Flight 9268 plane crash in November 2015.
-      </p>
-    </div>
-    <div class="flex-1 flex-shrink ml-4"><Map mapData={egypt} zoom={6500} center={[31.233334, 30.033333]}/></div>
-  </div>
-</div>
+At Taipei airport you had to fill out a health declaration wich they check two times and keep. You also pass the, now common in asia, temperature check and there are plenty of notices telling you to wash your hands and wear a mask if you have a cough.
 
+From the airport I took a 2-hour bus to Taichung where I arrived at about eight in the evening. After a quick 7-Eleven for water it was time for sleep.
 
 <Panels>
-  <ResponsiveImage src="https://cdn.matsimitsu.com/egypt-2009/luxor/20090823-_DSC0003.jpg" width={2200} height={1853}/>
-  <ResponsiveImage src="https://cdn.matsimitsu.com/egypt-2009/luxor/20090823-_DSC0003.jpg" width={2200} height={1853}/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00223.jpg"
+		width={6000}
+		height={4000}
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00224.jpg"
+		width={6000}
+		height={4000}
+	/>
 </Panels>
 
+<div class="mx-auto max-w-screen-lg mt-12 px-4">
+	<h2 class="flex items-center border-b leading-snug text-4xl font-bold text-gray-900 mb-4">
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			data-prefix="fas"
+			data-icon="map-marker-alt"
+			class="h-6 w-6 mr-1 text-gray-600"
+			role="img"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 384 512"
+			><path
+				fill="currentColor"
+				d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+			/></svg
+		>
+		<span>Taiwan</span>
+	</h2>
+	<div class="flex flex-col lg:flex-row mt-12">
+		<div class="flex-1 flex-shrink mr-4 prose ">
+			<p>
+				This is my second visit to Taiwan, the first one was back in 2014 on my second trip to Asia.
+				Back then we only visited Taipei, but this time I'm going around the island.
+			</p>
+			<p>Starting in <strong>Taichung</strong> the trip goes anti-clockwise around the island, visiting the beautiful <strong>Alishan</strong> forests, the port cities of <strong>Tainan</strong> and <strong>Kaohsiung</strong> and across the island to the <strong>Taroko</strong> gorge.</p>
+			<blockquote>
+				This is my second visit to Taiwan, the first one was back in 2014 on my second trip to Asia.
+				Back then we only visited Taipei, but this time we're going around the island.
+			</blockquote>
+      <p>Starting in <strong>Taichung</strong> the trip goes anti-clockwise around the island, visiting the beautiful <strong>Alishan</strong> forests, the port cities of <strong>Tainan</strong> and <strong>Kaohsiung</strong> and across the island to the <strong>Taroko</strong> gorge.</p>
 
-<div class="mx-auto max-w-screen-lg mt-12 prose px-4">
-  <h2 class="flex items-center border-b">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="h-4 w-4 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
-    <span>World</span>
-  </h2>
-  <div class="flex flex-col lg:flex-row">
-    <div class="flex-1 flex-shrink mr-4">
-      <p>Hurghada was founded in the early 20th century. For many decades it was a small fishing village, but it has grown into a major Red Sea resort as a result of Egyptian and foreign investment that began in the 1980s. </p>
-      <p>Holiday resorts and hotels provide facilities for windsurfing, kitesurfing, yachting, scuba diving and snorkeling. The city is known for its watersports, nightlife and warm weather. Daytime temperatures are around 30 °C (86 °F) most of the year, and during July and August temperatures can reach over 40 °C (104 °F). </p>
-      <p>Hurghada is a popular holiday destination for Europeans, especially during the winter, and some spend Christmas and New Year there. Tourist numbers from Russia dropped significantly after the Metrojet Flight 9268 plane crash in November 2015.
-      </p>
-    </div>
-    <div class="flex-1 flex-shrink ml-4"><Map mapData={world} zoom={6500} select={["Algeria", "Bahrain", "Djibouti", "Egypt", "Iran", "Iraq", "Israel", "Jordan", "Kuwait", "Lebanon", "Libya", "Malta", "Morocco", "Oman", "Qatar", "Saudi Arabia", "Syria", "Tunisia", "United Arab Emirates", "Palestine", "Yemen", "Ethiopia", "Sudan"]} center={[31.233334, 30.033333]}/></div>
-  </div>
+		</div>
+		<div class="flex-1 flex-shrink ml-4">
+			<Map
+        mapData={taiwan}
+        zoom={6800}
+        center={[120.797366, 23.45497]}
+        markers={[
+          {lat: 25.105497, long: 121.597366, name: "Taipei"},
+          {lat: 24.147736, long: 120.673645, name: "Taichung"},
+          {lat: 22.999727, long: 120.227028, name: "Tainan"},
+          {lat: 23.52722, long: 120.72778, name: "Alishan", textPosition: "left"},
+          {lat: 22.633, long: 120.267, name: "Kaohsiung"},
+          {lat: 24.1347, long: 121.3825, name: "Taroko national park"}
+        ]}
+      />
+		</div>
+	</div>
 </div>
 
-<ResponsiveImage src="https://cdn.matsimitsu.com/egypt-2009/luxor/20090823-_DSC0003.jpg" width={2200} height={1853}/>
-<div class="mx-auto max-w-screen-lg mt-12 prose px-4">
-  <h2 class="flex items-center border-b">
-    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="h-4 w-4 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg>
-    <span>Taiwan</span>
-  </h2>
-  <div class="flex flex-col lg:flex-row">
-    <div class="flex-1 flex-shrink mr-4">
-      <p>Hurghada was founded in the early 20th century. For many decades it was a small fishing village, but it has grown into a major Red Sea resort as a result of Egyptian and foreign investment that began in the 1980s. </p>
-      <p>Holiday resorts and hotels provide facilities for windsurfing, kitesurfing, yachting, scuba diving and snorkeling. The city is known for its watersports, nightlife and warm weather. Daytime temperatures are around 30 °C (86 °F) most of the year, and during July and August temperatures can reach over 40 °C (104 °F). </p>
-      <p>Hurghada is a popular holiday destination for Europeans, especially during the winter, and some spend Christmas and New Year there. Tourist numbers from Russia dropped significantly after the Metrojet Flight 9268 plane crash in November 2015.
-      </p>
-    </div>
-    <div class="flex-1 flex-shrink ml-4"><Map mapData={taiwan} zoom={6500}  center={[120.597366, 23.85497]}/></div>
-  </div>
-</div>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00225.jpg"
+	width={6000}
+	height={4000}
+/>

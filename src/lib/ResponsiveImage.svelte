@@ -1,7 +1,6 @@
 <script>
   export let src;
   export let alt;
-  export let ratio;
   export let width,height;
   export let full = false;
   let style;
@@ -20,7 +19,7 @@
     }).join(", ")
   }
 
-  style = `flex: ${ratio}`
+  style = `flex: ${width / height}`
 </script>
 
 <picture style="{style}" class="ml-2 first:ml-0 mb-4">
