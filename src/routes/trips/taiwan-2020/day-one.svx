@@ -33,13 +33,13 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 </Panels>
 
 <div class="mx-auto max-w-screen-lg mt-12 px-4">
-	<h2 class="flex items-center border-b leading-snug text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+	<h2 class="flex items-center font-extrabold tracking-snug leading-8 text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4">
 		<svg
 			aria-hidden="true"
 			focusable="false"
 			data-prefix="fas"
 			data-icon="map-marker-alt"
-			class="h-6 w-6 mr-1 text-gray-600 dark:text-gray-400"
+			class="h-6 w-6 mr-2 text-gray-600 dark:text-gray-400"
 			role="img"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 384 512"
@@ -49,6 +49,7 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 			/></svg
 		>
 		<span>Taiwan</span>
+		<hr class="flex-1 ml-8 border-b border-t border-gray-200 mt-1 rounded" />
 	</h2>
 	<div class="flex flex-col lg:flex-row mt-12">
 		<div class="flex-1 flex-shrink mr-4 prose dark:prose-dark">
@@ -84,6 +85,38 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00225.jpg"
+	width={6000}
+	height={4000}
+/>
+
+
+## Confucius Temple
+
+Built in 1972, the temple has a very relaxing atmosphere, there was almost nobody there, except for a group of people taking an art class and a small group of women playing flutes, which made everything even more relaxing.
+
+
+<ResponsiveImage
+	full
+	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00231.jpg"
+	width={6000}
+	height={4000}
+/>
+
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00233.jpg"
+		width={6000}
+		height={4000}
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00234.jpg"
+		width={4000}
+		height={6000}
+	/>
+</Panels>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00239.jpg"
 	width={6000}
 	height={4000}
 />

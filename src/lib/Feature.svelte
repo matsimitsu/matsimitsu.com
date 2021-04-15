@@ -10,5 +10,4 @@
 		fill: #f3f4f6;
 		stroke-width: 0.5;
 	}
-
 </style>

@@ -22,9 +22,9 @@
   style = `flex: ${width / height}`
 </script>
 
-<picture style="{style}" class="ml-2 first:ml-0 mb-4">
+<picture style="{style}" class="ml-2 first:ml-0 mb-4 overflow-hidden">
   <source type="image/jpg" srcset="{srcsetForExtension("jpg")}">
   <source type="image/webp" srcset="{srcsetForExtension("webp")}">
   <source type="image/avif" srcset="{srcsetForExtension("avif")}">
-  <img class:container="{!full }" width={width} height={height} class="block mx-auto w-full pt-12 h-auto" src="{src}-720.jpg" alt="{alt}">
+  <img class:max-w-screen-2xl="{!full }" width={width} height={height} class="block mx-auto w-full pt-6 h-auto" src="{src}-720.jpg" alt="{alt}">
 </picture>

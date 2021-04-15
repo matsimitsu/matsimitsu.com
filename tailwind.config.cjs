@@ -11,18 +11,18 @@ module.exports = {
           css: {
             color: theme('colors.grey.800'),
             a: {
-              color: theme('colors.red.500'),
+              color: theme('colors.gray.800'),
               'text-decoration': 'none',
               '&:hover, &.active': {
                 color: 'white',
-                'background-color': theme('colors.red.500'),
+                'background-color': theme('colors.gray.800'),
                 strong: {
                   color: 'white'
                 },
               },
             },
             strong: {
-              color: theme('colors.red.500')
+              color: theme('colors.gray.800')
             },
             h1: {
               color: theme('colors.grey.800'),
