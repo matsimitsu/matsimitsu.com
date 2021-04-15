@@ -21,11 +21,13 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 
 <Panels>
 	<ResponsiveImage
+		panel
 		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00223.jpg"
 		width={6000}
 		height={4000}
 	/>
 	<ResponsiveImage
+		panel
 		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00224.jpg"
 		width={6000}
 		height={4000}
@@ -52,7 +54,7 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 		<hr class="flex-1 ml-8 border-b border-t border-gray-200 mt-1 rounded" />
 	</h2>
 	<div class="flex flex-col lg:flex-row mt-12">
-		<div class="flex-1 flex-shrink mr-4 prose dark:prose-dark">
+		<div class="flex-1 flex-shrink mr-4 prose prose-lg dark:prose-dark">
 			<p>
 				This is my second visit to Taiwan, the first one was back in 2014 on my second trip to Asia.
 				Back then we only visited Taipei, but this time I'm going around the island.
@@ -62,8 +64,6 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 				This is my second visit to Taiwan, the first one was back in 2014 on my second trip to Asia.
 				Back then we only visited Taipei, but this time we're going around the island.
 			</blockquote>
-      <p>Starting in <strong>Taichung</strong> the trip goes anti-clockwise around the island, visiting the beautiful <strong>Alishan</strong> forests, the port cities of <strong>Tainan</strong> and <strong>Kaohsiung</strong> and across the island to the <strong>Taroko</strong> gorge.</p>
-
 		</div>
 		<div class="flex-1 flex-shrink ml-4">
 			<Map
@@ -84,16 +84,19 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 </div>
 
 <ResponsiveImage
+  single
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00225.jpg"
 	width={6000}
 	height={4000}
 />
 
+<div class="py-24">
 
 ## Confucius Temple
 
 Built in 1972, the temple has a very relaxing atmosphere, there was almost nobody there, except for a group of people taking an art class and a small group of women playing flutes, which made everything even more relaxing.
 
+</div>
 
 <ResponsiveImage
 	full
@@ -102,13 +105,15 @@ Built in 1972, the temple has a very relaxing atmosphere, there was almost nobod
 	height={4000}
 />
 
-<Panels>
+<Panels snug>
 	<ResponsiveImage
+		panel
 		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00233.jpg"
 		width={6000}
 		height={4000}
 	/>
 	<ResponsiveImage
+		panel
 		src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00234.jpg"
 		width={4000}
 		height={6000}
@@ -116,6 +121,7 @@ Built in 1972, the temple has a very relaxing atmosphere, there was almost nobod
 </Panels>
 
 <ResponsiveImage
+	single
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00239.jpg"
 	width={6000}
 	height={4000}
