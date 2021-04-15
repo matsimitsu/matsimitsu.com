@@ -33,13 +33,13 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 </Panels>
 
 <div class="mx-auto max-w-screen-lg mt-12 px-4">
-	<h2 class="flex items-center border-b leading-snug text-4xl font-bold text-gray-900 mb-4">
+	<h2 class="flex items-center border-b leading-snug text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
 		<svg
 			aria-hidden="true"
 			focusable="false"
 			data-prefix="fas"
 			data-icon="map-marker-alt"
-			class="h-6 w-6 mr-1 text-gray-600"
+			class="h-6 w-6 mr-1 text-gray-600 dark:text-gray-400"
 			role="img"
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 384 512"
@@ -51,7 +51,7 @@ From the airport I took a 2-hour bus to Taichung where I arrived at about eight 
 		<span>Taiwan</span>
 	</h2>
 	<div class="flex flex-col lg:flex-row mt-12">
-		<div class="flex-1 flex-shrink mr-4 prose ">
+		<div class="flex-1 flex-shrink mr-4 prose dark:prose-dark">
 			<p>
 				This is my second visit to Taiwan, the first one was back in 2014 on my second trip to Asia.
 				Back then we only visited Taipei, but this time I'm going around the island.

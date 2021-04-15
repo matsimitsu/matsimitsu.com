@@ -50,7 +50,7 @@
 	on:enterViewport={startAnimation}
 	on:exitViewport={resetAnimation}
 >
-	<svg {width} {height} class="bg-white rounded">
+	<svg {width} {height} class="bg-transparent rounded">
 		{#each data as feature}
 			<Feature featurePath={path(feature)} />
 		{/each}
