@@ -3,16 +3,16 @@
 	export let alt;
 	export let width, height;
 	export let full = false;
-  export let single = false;
-  export let panel = false;
+	export let single = false;
+	export let panel = false;
 	let style;
 
-  // Remove file extension from source
-  if (src) {
-    src = src.split('.');
-    src.pop();
-    src = src.join('.');
-  }
+	// Remove file extension from source
+	if (src) {
+		src = src.split('.');
+		src.pop();
+		src = src.join('.');
+	}
 	if (!alt) {
 		const [name] = src.split('/').slice(-1);
 		alt = name;
@@ -29,17 +29,17 @@
 	style = `flex: ${width / height}`;
 </script>
 
-<picture {style} class="block first:ml-0 overflow-hidden" class:pt-6={single} class:ml-2={panel} >
+<picture
+	{style}
+	class:px-4={single}
+	class:max-w-screen-2xl={single}
+	class:max-w-full={full}
+	class="block first:ml-0 overflow-hidden"
+	class:pt-6={single}
+	class:ml-2={panel}
+>
 	<source type="image/jpg" srcset={srcsetForExtension('jpg')} />
 	<source type="image/webp" srcset={srcsetForExtension('webp')} />
 	<source type="image/avif" srcset={srcsetForExtension('avif')} />
-	<img
-		class:max-w-screen-2xl={single}
-    class:w-full={full}
-		{width}
-		{height}
-		class="block mx-auto h-auto"
-		src="{src}-720.jpg"
-		{alt}
-	/>
+	<img {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
 </picture>
