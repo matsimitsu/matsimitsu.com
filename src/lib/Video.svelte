@@ -23,7 +23,7 @@
 	}
 
 </script>
-<div class="relative container mx-auto max-w-screen-2xl" on:mouseenter={onContainerMouseEnter} on:mouseleave={onContainerMouseLeave}>
+<div class="mt-2 lg:mt-6 px-2 lg:px-0 relative container mx-auto max-w-screen-2xl" on:mouseenter={onContainerMouseEnter} on:mouseleave={onContainerMouseLeave}>
 	<div class="absolute bg-black w-full h-full transition-opacity bg-opacity-30 {showOverlay ? 'opacity-100' : 'opacity-0'}" >
 		<div class="absolute inset-x-0 bottom-0 w-full p-8 text-right flex items-center">
 			{#if title}

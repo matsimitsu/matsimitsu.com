@@ -44,10 +44,10 @@
 
 <style>
 	.single {
-		@apply px-4 max-w-screen-2xl pt-6 px-4 lg:px-0
+		@apply px-4 max-w-screen-2xl mt-2 lg:mt-6 px-2 lg:px-0
 	}
 	.panel {
-		@apply ml-6 first:ml-0
+		@apply ml-2 lg:ml-6 first:ml-0
 	}
 	.full {
 		@apply max-w-full
