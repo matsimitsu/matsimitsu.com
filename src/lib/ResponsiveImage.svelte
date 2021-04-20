@@ -31,15 +31,25 @@
 
 <picture
 	{style}
-	class:px-4={single}
-	class:max-w-screen-2xl={single}
-	class:max-w-full={full}
-	class="block first:ml-0 overflow-hidden"
-	class:pt-6={single}
-	class:ml-2={panel}
+	class:single={single}
+	class:full={full}
+	class="mx-auto block overflow-hidden"
+	class:panel={panel}
 >
 	<source type="image/jpg" srcset={srcsetForExtension('jpg')} />
 	<source type="image/webp" srcset={srcsetForExtension('webp')} />
 	<source type="image/avif" srcset={srcsetForExtension('avif')} />
 	<img {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
 </picture>
+
+<style>
+	.single {
+		@apply px-4 max-w-screen-2xl pt-6 px-4 lg:px-0
+	}
+	.panel {
+		@apply ml-6 first:ml-0
+	}
+	.full {
+		@apply max-w-full
+	}
+</style>
