@@ -1,3 +1,10 @@
+<script context="module">
+  export const metadata = {
+    title: "Egypt 2009",
+    trip: "egypt-2009"
+  }
+</script>
+
 <script>
 	import TextContent from '$lib/TextContent.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';

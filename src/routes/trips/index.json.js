@@ -1,7 +1,5 @@
-import { posts } from "./_posts"
-
-export function get() {
+export function get({context}) {
   return {
-    body: posts,
+    body: context.posts,
   };
 }

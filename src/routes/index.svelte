@@ -5,7 +5,7 @@
 	<h1>Hello world!</h1>
 
 
-	<p>Visit <a class="text-blue-600 underline dark:text-blue-200" href="/trips/taiwan-2020/day-one">Taiwan 2020</a> to view a trip.</p>
+	<p>Visit <a class="text-blue-600 underline dark:text-blue-200" href="/trips/egypt-2009">Egypt 2009</a> to view a trip.</p>
 </main>
 
 <style style lang="postcss">
