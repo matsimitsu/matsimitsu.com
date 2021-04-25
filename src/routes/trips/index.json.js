@@ -1,5 +1,8 @@
-export function get({context}) {
+export async function get() {
+  const posts = []
+
+
   return {
-    body: context.posts,
+    body: posts,
   };
 }

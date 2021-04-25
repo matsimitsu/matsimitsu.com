@@ -1,5 +1,4 @@
 <script context="module">
-
 	export async function load({page, fetch}) {
 		const req = await fetch('/trips.json')
 		const posts = await req.json()
