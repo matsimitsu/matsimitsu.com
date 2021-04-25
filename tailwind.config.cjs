@@ -1,15 +1,15 @@
 module.exports = {
-	mode: "jit",
-	darkMode: "class",
-	purge: [
-		"./src/**/*.{html,js,svelte,ts,svx}",
-	],
-	theme: {
-		extend: {
-			typography: (theme) => ({
+  mode: "jit",
+  darkMode: "class",
+  purge: [
+    "./src/**/*.{html,js,svelte,ts,svx}",
+  ],
+  theme: {
+    extend: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.grey.800'),
+            color: theme('colors.grey.600'),
             a: {
               color: theme('colors.gray.800'),
               'text-decoration': 'none',
@@ -25,18 +25,22 @@ module.exports = {
               color: theme('colors.gray.800')
             },
             h1: {
+              'text-align': 'center',
               color: theme('colors.grey.800'),
               'margin-top': '0'
             },
             h2: {
+              'text-align': 'center',
               color: theme('colors.grey.800'),
               'margin-top': '0'
             },
             h3: {
+              'text-align': 'center',
               color: theme('colors.grey.800'),
               'margin-top': '0'
             },
             h4: {
+              'text-align': 'center',
               color: theme('colors.grey.800'),
               'margin-top': '0'
             },
@@ -48,14 +52,10 @@ module.exports = {
               }
             },
             p: {
-              color: theme('colors.grey.800'),
+              color: theme('colors.grey.600'),
               'margin-top': '0',
-              'margin-bottom': '1em'
-            },
-            img: {
-              'margin-top': '0',
-              'margin-bottom': '0',
-              'box-shadow': '0px 2px 4px -2px rgba(0, 0, 0, 30%)'
+              'margin-bottom': '1em',
+              'line-height': '1.75rem'
             },
             'ul > li': {
               '&::before': {
@@ -74,7 +74,7 @@ module.exports = {
 
         dark: {
           css: {
-            color: theme('colors.gray.200'),
+            color: theme('colors.gray.400'),
             a: {
               color: theme('colors.gray.500'),
               'text-decoration': 'none',
@@ -87,18 +87,22 @@ module.exports = {
               color: theme('colors.gray.100')
             },
             h1: {
+              'text-align': 'center',
               color: 'white',
               'margin-top': '0'
             },
             h2: {
+              'text-align': 'center',
               color: 'white',
               'margin-top': '0'
             },
             h3: {
+              'text-align': 'center',
               color: 'white',
               'margin-top': '0'
             },
             h4: {
+              'text-align': 'center',
               color: 'white',
               'margin-top': '0'
             },
@@ -110,17 +114,13 @@ module.exports = {
               }
             },
             p: {
-              color: 'white',
+              color: theme('colors.gray.400'),
               'margin-top': '0',
-              'margin-bottom': '1em'
+              'margin-bottom': '1em',
+              'line-height': '1.75rem'
             },
-						blockquote: {
+            blockquote: {
               color: theme('colors.gray.100'),
-						},
-            img: {
-              'margin-top': '0',
-              'margin-bottom': '0',
-              'box-shadow': '0px 2px 4px -2px rgba(255, 255, 255, 30%)'
             },
             'ul > li': {
               '&::before': {
@@ -137,14 +137,14 @@ module.exports = {
           }
         },
       })
-		},
-	},
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
-	variants: {
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+  variants: {
     extend: {
       typography: ['dark']
     }
-	}
+  }
 };

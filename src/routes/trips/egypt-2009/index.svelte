@@ -1,0 +1,318 @@
+<script>
+	import TextContent from '$lib/TextContent.svelte';
+	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
+	import Panels from '$lib/Panels.svelte';
+	import Map from '$lib/Map.svelte';
+	import egypt from '$lib/maps/egypt.json';
+</script>
+
+<TextContent>
+  <h1>Egypt 2009</h1>
+</TextContent>
+
+<div class="mx-auto max-w-screen-lg mt-12 px-4">
+	<h2
+		class="flex items-center font-extrabold tracking-snug leading-8 text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4"
+	>
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			data-prefix="fas"
+			data-icon="map-marker-alt"
+			class="h-6 w-6 mr-2 text-gray-600 dark:text-gray-400"
+			role="img"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 384 512"
+			><path
+				fill="currentColor"
+				d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+			/></svg
+		>
+		<span>Egypt</span>
+		<hr class="flex-1 ml-8 border-b border-t border-gray-200 mt-1 rounded" />
+	</h2>
+	<div class="flex flex-col lg:flex-row mt-12">
+		<div class="flex-1 flex-shrink mr-4 prose prose-lg dark:prose-dark">
+			<p>
+				This was my first trip outside of the European continent, it also was my second (and last)
+				"package holiday".
+			</p>
+			<p>
+				While this was an easy experience since everyting is arranged for you, we quickly became
+				aware that this wasn't how we wanted to travel, it felt quite limited and the
+				all-you-can-eat-restort life just wasn't for us.
+			</p>
+			<p>
+				After arriving in Hurghada we sat down with the travel operator and picked the excursions
+				we'd like to do during our week long stay in Egypt. We picked a day-trip to <strong
+					>Luxor</strong
+				>, a day of diving along the <strong>Hurghada</strong> coast and a quad ride in the dunes nearby.
+			</p>
+		</div>
+		<div class="flex-1 flex-shrink ml-4">
+			<Map
+				mapData={egypt}
+				zoom={2000}
+				center={[31.0206, 25.8025]}
+				markers={[
+					{ lat: 27.25738, long: 33.81291, name: 'Hurghada', textPosition: 'left' },
+					{ lat: 25.6872, long: 32.6396, name: 'Luxor' }
+				]}
+			/>
+		</div>
+	</div>
+</div>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0003.jpg"
+	width="2200"
+	height="1853"
+/>
+<TextContent>
+	<h2>The Karnak temple</h2>
+	<p>
+		The first excursion was a day trip to Luxor. We woke up early and took a van for the
+		multiple-hour long trip to Luxor. There were tons of (military) checkpoints along the way.
+	</p>
+	<p>
+		Luxor is a city in the south of Egypt and was once the capital of the Pharaos in the 16th-11th
+		centuries B.C.
+	</p>
+	<p>
+		Our trip started at the <strong>Karnak</strong> temple, a huge temple site with preserved ancient
+		ruins & over 200 structures. Where we were free to roam the complex.
+	</p>
+</TextContent>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0013.jpg"
+		width="1461"
+		height="2200"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0015.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg"
+	width="2200"
+	height="1461"
+/>
+
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0016.jpg"
+		width="1461"
+		height="2200"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0018.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+<TextContent>
+	<p>
+		It's amazing to see the Egyptian hieroglyphs in real-life along the walls of the temple complex.
+	</p>
+</TextContent>
+
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0019.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0025.jpg"
+		width="2200"
+		height="1461"
+	/>
+</Panels>
+<ResponsiveImage
+	full
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0022.jpg"
+	width="2200"
+	height="1461"
+/>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0043.jpg"
+		width="1461"
+		height="2200"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0049.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+
+<TextContent>
+	<p>
+		There were quite a number of people visiting the complex.
+	</p>
+</TextContent>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0037.jpg"
+	width="2200"
+	height="1461"
+/>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0031.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0046.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0063.jpg"
+	width="2200"
+	height="1461"
+/>
+<TextContent>
+	<h2>The Nile river</h2>
+	<p>
+		After wandering around for a few hours through the complex, we were brought to the river banks
+		where we boarded a boat to get across. On the other side lunch was served.
+	</p>
+</TextContent>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0065.jpg"
+	width="2200"
+	height="1461"
+/>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0079.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0083.jpg"
+		width="2200"
+		height="1461"
+	/>
+</Panels>
+<TextContent>
+	<h2>Valley of the kings</h2>
+	<p>
+		Near Luxor lies a valley called Valley of the Kings. This is the place where a lot of pharaohs
+		and powerful nobles were buried in rock-cut tombs.
+	</p>
+	<p>
+		It's also one of the hottest places on earth and it was a nice 45 degrees celcius when we
+		arrived.
+	</p>
+</TextContent>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0093.jpg"
+		width="1461"
+		height="2200"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0112.jpg"
+		width="2200"
+		height="1461"
+	/>
+</Panels>
+<TextContent>
+	<p>
+		For some inexplicable reason I don't seem to have taken any photo's from inside the tombs and I
+		can't remember of that was because it wasn't allowed or I just forgot...
+	</p>
+</TextContent>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0101.jpg"
+	width="2200"
+	height="1461"
+/>
+
+<TextContent>
+	<h2>Quad ride near Hurghada</h2>
+	<p>
+		Near Luxor lies a valley called Valley of the Kings. This is the place where a lot of pharaohs
+		and powerful nobles were buried in rock-cut tombs.
+	</p>
+	<p>
+		It's also one of the hottest places on earth and it was a nice 45 degrees celcius when we
+		arrived.
+	</p>
+</TextContent>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0190.jpg"
+	width="2200"
+	height="1461"
+/>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0289.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0290.jpg"
+		width="2200"
+		height="1461"
+	/>
+</Panels>
+<ResponsiveImage
+	full
+	src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0189.jpg"
+	width="2200"
+	height="1461"
+/>
+
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0297.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0311.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0188.jpg"
+		width="1461"
+		height="2200"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0323.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0301.jpg"
+		width="2200"
+		height="1461"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0307.jpg"
+		width="1461"
+		height="2200"
+	/>
+</Panels>
+
+<ResponsiveImage
+	full
+	src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0325.jpg"
+	width="2200"
+	height="1461"
+/>

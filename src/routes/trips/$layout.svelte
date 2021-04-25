@@ -18,7 +18,9 @@
 </script>
 
 <div class="mx-auto py-6">
-	<slot />
+	<div class="mx-auto">
+		<slot />
+	</div>
 	<h3>Related posts</h3>
 	<ul>
 	{#each posts as post}

@@ -16,7 +16,4 @@ module.exports = {
 			behavior: "wrap",
 		}],
 	],
-	layout: {
-		trip: "./src/routes/trips/_post_layout.svelte",
-	}
 };
