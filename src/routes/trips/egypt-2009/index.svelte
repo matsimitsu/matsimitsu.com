@@ -1,7 +1,13 @@
 <script context="module">
 	export const metadata = {
 		title: 'Egypt 2009',
-		trip: 'egypt-2009'
+		trip: 'egypt-2009',
+		date: new Date('2009-08-24'),
+		image: {
+			src: 'https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg',
+			width: 2200,
+			height: 1461
+		}
 	};
 </script>
 

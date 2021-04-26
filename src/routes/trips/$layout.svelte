@@ -1,28 +1,30 @@
 <script context="module">
-	export async function load({page, fetch, context}) {
-		const req = await fetch('/trips.json')
-		const posts = await req.json()
-		const tripPosts = posts.filter(p => p.url.startsWith(page.path))
+
+	// Use load function to get the current trip posts
+	export async function load({page, fetch}) {
+		const [_root, _trips, trip, post] = page.path.split('/')
+		const req = await fetch(`/trips.json?trip=${trip}`)
+
 		return {
-			props: { posts: tripPosts }
+			props: { tripPosts: await req.json() }
 		}
 	}
 </script>
 
 <script>
-	export let posts = []
+	export let tripPosts = []
 </script>
 
 <div class="mx-auto py-6">
 	<div class="mx-auto">
 		<slot />
 	</div>
-	<h3>Related posts</h3>
-	<ul>
-	{#each posts as post}
-		<li><a target="_blank" href={post.url}>
-			{post.title}
-		</a></li>
-	{/each}
-	</ul>
+	{#if tripPosts.length > 1}
+	<div>
+		List of posts for trip
+	</div>
+	{/if}
+	<div>
+		Trip layout footer
+	</div>
 </div>

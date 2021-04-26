@@ -5,3 +5,6 @@
 
 <Nav />
 <slot />
+<footer>
+	fooooooter
+</footer>
