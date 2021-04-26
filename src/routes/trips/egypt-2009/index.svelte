@@ -284,6 +284,54 @@
 	height="1461"
 />
 
+<div class="max-w-xl my-40 mx-auto">
+	<div class="mx-4 px-8 py-8 bg-white dark:bg-black shadow-lg rounded-lg border dark:border-gray-900">
+		<div class="flex justify-end -mt-16">
+			<svg
+				aria-hidden="true"
+				focusable="false"
+				data-prefix="fas"
+				data-icon="info-circle"
+				class="border w-16 h-16 p-2 rounded-full dark:bg-black bg-white border text-gray-400 dark:text-gray-600 dark:border-gray-900"
+				role="img"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 192 512"
+				><path
+					fill="currentColor"
+					d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"
+				/></svg
+			>
+		</div>
+		<div class="prose prose-lg dark:prose-dark">
+			<h2 class="text-left">The Egypt desert</h2>
+			<p>
+				The Western Desert of Egypt is an area of the Sahara that lies west of the river Nile, up to
+				the Libyan border, and south from the Mediterranean sea to the border with Sudan.
+			</p>
+			<p>
+				It is named in contrast to the Eastern Desert which extends east from the Nile to Red Sea. The
+				Western Desert is mostly rocky desert, though an area of sandy desert, known as the Great Sand
+				Sea, lies to the west against the Libyan border.
+			</p>
+			<p>
+				The desert covers an area of 680,650 km2 (262,800 sq mi) which is two-thirds of the land area
+				of the country.[1] Its highest elevation is 1,000 m (3,300 ft) in the Gilf Kebir plateau to
+				the far south-west of the country, on the Egypt-Sudan-Libya border.
+			</p>
+			<p>
+				The Western Desert is barren and uninhabited save for a chain of oases which extend in an arc
+				from Siwa, in the north-west, to Kharga in the south. It has been the scene of conflict in
+				modern times, particularly during the Second World War.
+			</p>
+		</div>
+		<div class="flex justify-end mt-4">
+			<a
+				href="https://en.wikipedia.org/wiki/Western_Desert_(Egypt)"
+				class="text-xl font-medium text-blue-500">Wikipedia</a
+			>
+		</div>
+	</div>
+</div>
 <Panels>
 	<ResponsiveImage
 		src="https://cdn.matsimitsu.com/egypt-2009/20090824-_DSC0297.jpg"
