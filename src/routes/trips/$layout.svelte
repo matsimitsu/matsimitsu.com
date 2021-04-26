@@ -1,5 +1,5 @@
 <script context="module">
-	export async function load({page, fetch}) {
+	export async function load({page, fetch, context}) {
 		const req = await fetch('/trips.json')
 		const posts = await req.json()
 		const tripPosts = posts.filter(p => p.url.startsWith(page.path))

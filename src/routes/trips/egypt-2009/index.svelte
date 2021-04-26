@@ -1,8 +1,8 @@
 <script context="module">
-  export const metadata = {
-    title: "Egypt 2009",
-    trip: "egypt-2009"
-  }
+	export const metadata = {
+		title: 'Egypt 2009',
+		trip: 'egypt-2009'
+	};
 </script>
 
 <script>
@@ -14,7 +14,7 @@
 </script>
 
 <TextContent>
-  <h1>Egypt 2009</h1>
+	<h1>Egypt 2009</h1>
 </TextContent>
 
 <div class="mx-auto max-w-screen-lg mt-12 px-4">
@@ -159,9 +159,7 @@
 </Panels>
 
 <TextContent>
-	<p>
-		There were quite a number of people visiting the complex.
-	</p>
+	<p>There were quite a number of people visiting the complex.</p>
 </TextContent>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0037.jpg"
