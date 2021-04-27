@@ -17,6 +17,7 @@
 	import Panels from '$lib/Panels.svelte';
 	import Map from '$lib/Map.svelte';
 	import Explanation from '$lib/Explanation.svelte';
+	import Location from '$lib/Location.svelte';
 </script>
 
 <TextContent>
@@ -25,72 +26,39 @@
 
 <div class="max-w-screen-xl mx-auto">
 	<Map
-highlight={["Egypt"]}
-height={800}
-zoom={250}
-center={[0, 10]}
-markers={[
-	{ lat: 25.9, long: 31, name: 'Egypt', textPosition: 'left' }
-]}
-/>
-
+		highlight={['Egypt']}
+		height={800}
+		zoom={250}
+		center={[0, 10]}
+	/>
 </div>
 
-
-<div class="mx-auto max-w-screen-lg my-20 px-4">
-	<h2
-		class="flex items-center font-extrabold tracking-snug leading-8 text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4"
-	>
-		<svg
-			aria-hidden="true"
-			focusable="false"
-			data-prefix="fas"
-			data-icon="map-marker-alt"
-			class="h-8 w-8 mr-2 text-gray-600 dark:text-gray-400"
-			role="img"
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 384 512"
-			><path
-				fill="currentColor"
-				d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
-			/></svg
-		>
-		<span>Egypt</span>
-		<hr class="flex-1 ml-8 border-b border-t border-gray-200 mt-1 rounded" />
-	</h2>
-	<div class="flex flex-col lg:flex-row mt-12">
-		<div class="flex-1 flex-shrink mr-4 prose prose-lg dark:prose-dark">
-			<p>
-				This was my first trip outside of the European continent, it also was my second (and last)
-				"package holiday".
-			</p>
-			<p>
-				While this was an easy experience since everyting is arranged for you, we quickly became
-				aware that this wasn't how we wanted to travel, it felt quite limited and the
-				all-you-can-eat-restort life just wasn't for us.
-			</p>
-			<p>
-				After arriving in Hurghada we sat down with the travel operator and picked the excursions
-				we'd like to do during our week long stay in Egypt. We picked a day-trip to <strong
-					>Luxor</strong
-				>, a day of diving along the <strong>Hurghada</strong> coast and a quad ride in the dunes nearby.
-			</p>
-		</div>
-		<div class="flex-1 flex-shrink ml-4">
-			<Map
-			highlight={["Egypt"]}
-			height={340}
-			zoom={550}
-			focus={true}
-			center={[31.0206, 25.8025]}
-			markers={[
-				{ lat: 27.25738, long: 33.81291, name: 'Hurghada', textPosition: 'left' },
-				{ lat: 25.6872, long: 32.6396, name: 'Luxor' }
-			]}
-		/>
-					</div>
-	</div>
-</div>
+<Location
+	name="Egypt"
+	height={340}
+	zoom={550}
+	focus={true}
+	center={[31.0206, 25.8025]}
+	markers={[
+		{ lat: 27.25738, long: 33.81291, name: 'Hurghada', textPosition: 'left' },
+		{ lat: 25.6872, long: 32.6396, name: 'Luxor' }
+	]}
+>
+	<p>
+		This was my first trip outside of the European continent, it also was my second (and last)
+		"package holiday".
+	</p>
+	<p>
+		While this was an easy experience since everyting is arranged for you, we quickly became aware
+		that this wasn't how we wanted to travel, it felt quite limited and the all-you-can-eat-restort
+		life just wasn't for us.
+	</p>
+	<p>
+		After arriving in Hurghada we sat down with the travel operator and picked the excursions we'd
+		like to do during our week long stay in Egypt. We picked a day-trip to <strong>Luxor</strong>, a
+		day of diving along the <strong>Hurghada</strong> coast and a quad ride in the dunes nearby.
+	</p>
+</Location>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0003.jpg"
 	width="2200"
@@ -302,8 +270,8 @@ markers={[
 <Explanation href="https://en.wikipedia.org/wiki/Western_Desert_(Egypt)" name="Wikipedia">
 	<h2 class="text-left">The Egypt desert</h2>
 	<p>
-		The Western Desert of Egypt is an area of the Sahara that lies west of the river Nile, up to
-		the Libyan border, and south from the Mediterranean sea to the border with Sudan.
+		The Western Desert of Egypt is an area of the Sahara that lies west of the river Nile, up to the
+		Libyan border, and south from the Mediterranean sea to the border with Sudan.
 	</p>
 	<p>
 		It is named in contrast to the Eastern Desert which extends east from the Nile to Red Sea. The
@@ -311,9 +279,9 @@ markers={[
 		Sea, lies to the west against the Libyan border.
 	</p>
 	<p>
-		The desert covers an area of 680,650 km2 (262,800 sq mi) which is two-thirds of the land area
-		of the country.[1] Its highest elevation is 1,000 m (3,300 ft) in the Gilf Kebir plateau to
-		the far south-west of the country, on the Egypt-Sudan-Libya border.
+		The desert covers an area of 680,650 km2 (262,800 sq mi) which is two-thirds of the land area of
+		the country.[1] Its highest elevation is 1,000 m (3,300 ft) in the Gilf Kebir plateau to the far
+		south-west of the country, on the Egypt-Sudan-Libya border.
 	</p>
 	<p>
 		The Western Desert is barren and uninhabited save for a chain of oases which extend in an arc

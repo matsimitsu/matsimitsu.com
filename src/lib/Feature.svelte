@@ -12,6 +12,7 @@
 		stroke-width: 0.5;
 	}
 	.highlight {
-		fill: #D1D5DB;
+		stroke: #F59E0B;
+		fill: #FCD34D;
 	}
 </style>

@@ -3,6 +3,7 @@
 	import { geoNaturalEarth1, geoPath } from 'd3-geo';
 	import * as topojson from 'topojson-client';
 	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
 	import viewport from '$lib/actions/inViewportAction';
 
 	import Feature from '$lib/Feature.svelte';
@@ -17,7 +18,7 @@
 	let width = 400;
 
 	let data = [];
-	const tweenedZoom = tweened(focus ? 100 : zoom, { duration: 2000 });
+	const tweenedZoom = tweened(focus ? 100 : zoom, { duration: 2000, easing: cubicOut });
 	$: projection = geoNaturalEarth1()
 		.center(center)
 		.scale($tweenedZoom)
