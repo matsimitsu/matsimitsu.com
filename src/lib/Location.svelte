@@ -35,7 +35,7 @@
 		<div class="flex-1 flex-shrink mr-4 prose prose-lg dark:prose-dark">
 			<slot />
 		</div>
-		<div class="flex-1 flex-shrink mt-8 md:ml-4">
+		<div class="flex-1 flex-shrink mt-8 md:ml-4 md:mt-0">
 			<Map {...{ zoom, center, markers, highlight, focus, height }} />
 		</div>
 	</div>

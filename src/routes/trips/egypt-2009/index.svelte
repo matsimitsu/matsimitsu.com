@@ -1,8 +1,10 @@
 <script context="module">
 	export const metadata = {
 		title: 'Egypt 2009',
+		subtitle: 'Land of Pharaohs and Sphinxes. My first trip outside of continental Europe.',
 		trip: 'egypt-2009',
-		date: new Date('2009-08-24'),
+		startDate: new Date('2009-08-22'),
+		endDate: new Date('2009-08-29'),
 		image: {
 			src: 'https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg',
 			width: 2200,
@@ -18,19 +20,13 @@
 	import Map from '$lib/Map.svelte';
 	import Explanation from '$lib/Explanation.svelte';
 	import Location from '$lib/Location.svelte';
+	import TripHeader from '$lib/TripHeader.svelte';
 </script>
 
-<TextContent>
-	<h1>Egypt 2009</h1>
-</TextContent>
+<TripHeader {...metadata} />
 
 <div class="max-w-screen-xl mx-auto">
-	<Map
-		highlight={['Egypt']}
-		height={800}
-		zoom={250}
-		center={[0, 10]}
-	/>
+	<Map highlight={['Egypt']} height={800} zoom={250} center={[0, 10]} />
 </div>
 
 <Location
@@ -71,7 +67,7 @@
 		multiple-hour long trip to Luxor. There were tons of (military) checkpoints along the way.
 	</p>
 	<p>
-		Luxor is a city in the south of Egypt and was once the capital of the Pharaos in the 16th-11th
+		Luxor is a city in the south of Egypt and was once the capital of the Pharaohs in the 16th-11th
 		centuries B.C.
 	</p>
 	<p>
@@ -149,7 +145,10 @@
 </Panels>
 
 <TextContent>
-	<p>There were quite a number of people visiting the complex.</p>
+	<p>
+		There were quite a number of people visiting the complex, but most people were busy trying to
+		stay in the shade as the 30+ degrees sun tried its best to burn through the sunscreen.
+	</p>
 </TextContent>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0037.jpg"
@@ -268,26 +267,26 @@
 	height="1461"
 />
 
-<Explanation href="https://en.wikipedia.org/wiki/Western_Desert_(Egypt)" name="Wikipedia">
-	<h2 class="text-left">The Egypt desert</h2>
+<Explanation>
+	<h2 class="text-left">The downside of tourism</h2>
 	<p>
-		The Western Desert of Egypt is an area of the Sahara that lies west of the river Nile, up to the
-		Libyan border, and south from the Mediterranean sea to the border with Sudan.
+		The quad tour stopped at multiple stops along the way, a couple of those stops were questionable
+		at best.
 	</p>
 	<p>
-		It is named in contrast to the Eastern Desert which extends east from the Nile to Red Sea. The
-		Western Desert is mostly rocky desert, though an area of sandy desert, known as the Great Sand
-		Sea, lies to the west against the Libyan border.
+		One was a camel ride where you could hop on a camel and be walked around a hill for a few
+		minutes, wich wasn't that bad in the grand scheme of things.
 	</p>
 	<p>
-		The desert covers an area of 680,650 km2 (262,800 sq mi) which is two-thirds of the land area of
-		the country.[1] Its highest elevation is 1,000 m (3,300 ft) in the Gilf Kebir plateau to the far
-		south-west of the country, on the Egypt-Sudan-Libya border.
+		The other was a "zoo" where you could see the native wild-life. Wich consisted of a dark, hot
+		and dirty tent which housed several extremely small and dirty shallow pools that contained
+		turtles, snakes and other animals. One of the attractions was to "ride" a turtle or poke a snake
+		etc.
 	</p>
 	<p>
-		The Western Desert is barren and uninhabited save for a chain of oases which extend in an arc
-		from Siwa, in the north-west, to Kharga in the south. It has been the scene of conflict in
-		modern times, particularly during the Second World War.
+		We were quite shocked by the treatment of these animals and from then on we tried our best to
+		never visit an attraction that adds to the misery of animals, such as these "road side zoos" or
+		riding elephants in Thailand, for example.
 	</p>
 </Explanation>
 

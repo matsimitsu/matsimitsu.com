@@ -1,8 +1,12 @@
 <script>
-  export let href, name
+	export let href = null;
+	export let name = null;
 </script>
+
 <div class="max-w-xl my-40 mx-auto">
-	<div class="mx-4 px-8 py-8 bg-white dark:bg-black shadow-lg rounded-lg border dark:border-gray-900">
+	<div
+		class="mx-4 px-8 py-8 bg-white dark:bg-black shadow-lg rounded-lg border dark:border-gray-900"
+	>
 		<div class="flex justify-end -mt-16">
 			<svg
 				aria-hidden="true"
@@ -20,15 +24,12 @@
 			>
 		</div>
 		<div class="prose prose-lg dark:prose-dark">
-      <slot />
+			<slot />
 		</div>
-    {#if href && name }
-      <div class="flex justify-end mt-4">
-        <a
-          href="{href}"
-          class="text-xl font-medium text-blue-500 hover:text-blue-700">{name}</a
-        >
-      </div>
-    {/if}
+		{#if href && name}
+			<div class="flex justify-end mt-4">
+				<a {href} class="text-xl font-medium text-blue-500 hover:text-blue-700">{name}</a>
+			</div>
+		{/if}
 	</div>
 </div>

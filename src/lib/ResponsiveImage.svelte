@@ -5,9 +5,8 @@
 	export let alt;
 	export let width, height;
 	export let full = false;
-	export let single = false;
 	let style;
-	let inPanel = getContext('inPanel') || false
+	let inPanel = getContext('inPanel') || false;
 
 	// Remove file extension from source
 	if (src) {
@@ -34,25 +33,25 @@
 <picture
 	{style}
 	class:single={!inPanel}
-	class:full={full}
+	class:full
 	class="mx-auto block overflow-hidden"
-	class:inPanel={inPanel}
+	class:inPanel
 >
 	<source type="image/jpg" srcset={srcsetForExtension('jpg')} />
 	<source type="image/webp" srcset={srcsetForExtension('webp')} />
 	<source type="image/avif" srcset={srcsetForExtension('avif')} />
-	<img {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
+	<img loading="lazy" {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
 </picture>
 
 <style>
 	.single {
-		@apply px-4 max-w-screen-2xl mt-2 lg:mt-2 px-2 2xl:px-0
+		@apply px-4 max-w-screen-2xl mt-2 lg:mt-2 px-2 2xl:px-0;
 	}
 	.inPanel {
-		@apply ml-2 lg:ml-2 first:ml-0
+		@apply ml-2 lg:ml-2 first:ml-0;
 	}
 	.full {
-		@apply max-w-full
+		@apply max-w-full;
 	}
 
 	img {

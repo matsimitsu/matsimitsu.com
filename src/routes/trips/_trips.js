@@ -14,7 +14,7 @@ export async function getTrips() {
   }));
 
   // Oldest first
-  trips.sort((a, b) => (a.date > b.date) ? 1 : -1);
+  trips.sort((a, b) => (a.startDate > b.startDate) ? 1 : -1);
 
   return trips
 }

@@ -25,14 +25,14 @@
 		<div class="mx-auto container">
 			<a
 			href="/trips"
-			class="flex mr-auto items-center px-2 2xl:px-0 overflow-hidden text-gray-600 dark:text-gray-400 dark:hover:text-gray-600 hover:text-gray-600"
+			class="flex mr-auto items-center px-2 2xl:px-0 overflow-hidden text-gray-600 dark:text-gray-400 dark:hover:text-gray-600 hover:text-gray-800"
 		>
 			<svg
 				aria-hidden="true"
 				focusable="false"
 				data-prefix="fas"
 				data-icon="arrow-left"
-				class="w-16 h-16 p-3 rounded-full border border-gray-600 dark:border-gray-600"
+				class="w-12 h-12 p-3 rounded-full border border-gray-600 dark:border-gray-600"
 				role="img"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 448 512"
@@ -42,7 +42,7 @@
 				/></svg
 			>
 			<span
-				class="ml-4 mr-auto font-extrabold leading-8 text-4xl font-bold"
+				class="ml-4 mr-auto font-extrabold leading-8 text-2xl font-bold"
 				>Return to trips</span
 			>
 		</a>
