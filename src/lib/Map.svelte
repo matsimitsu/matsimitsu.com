@@ -1,45 +1,37 @@
 <script>
-	import { geoMercator, geoPath } from 'd3-geo';
+	import world from '$lib/maps/world.json';
+	import { geoNaturalEarth1, geoPath } from 'd3-geo';
 	import * as topojson from 'topojson-client';
-	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
 	import viewport from '$lib/actions/inViewportAction';
 
 	import Feature from '$lib/Feature.svelte';
 	import Marker from '$lib/Marker.svelte';
 
-	export let mapData;
 	export let zoom = 100;
 	export let center = [];
-	export let select = [];
 	export let markers = [];
+	export let highlight = [];
+	export let focus = false;
+	export let height = 400;
 	let width = 400;
-	let height = width;
 
 	let data = [];
-	const tweenedZoom = tweened(zoom - 500, { duration: 1000 });
-	$: projection = geoMercator()
+	const tweenedZoom = tweened(focus ? 100 : zoom, { duration: 2000 });
+	$: projection = geoNaturalEarth1()
 		.center(center)
 		.scale($tweenedZoom)
 		.translate([width / 2, height / 2]);
 	$: path = geoPath().projection(projection);
-	let keys = Object.keys(mapData.objects);
-	let countries = { ...mapData.objects[keys[0]] };
+	let keys = Object.keys(world.objects);
+	let countries = { ...world.objects[keys[0]] };
 
-	if (select.length > 0) {
-		countries.geometries = countries.geometries.filter((c) => select.includes(c.properties.name));
-	}
-	data = topojson.feature(mapData, countries).features;
-
-	onMount(async () => {
-		height = width;
-	});
+	data = topojson.feature(world, countries).features;
 
 	function startAnimation() {
-		tweenedZoom.set(zoom);
-	}
-	function resetAnimation() {
-		tweenedZoom.set(zoom - 500);
+		if(focus) {
+			tweenedZoom.set(zoom);
+		}
 	}
 </script>
 
@@ -48,11 +40,10 @@
 	class="block"
 	use:viewport
 	on:enterViewport={startAnimation}
-	on:exitViewport={resetAnimation}
 >
 	<svg {width} {height} class="bg-transparent rounded">
 		{#each data as feature}
-			<Feature featurePath={path(feature)} />
+			<Feature featurePath={path(feature)} properties={feature.properties} highlight={highlight.includes(feature.properties.name)} />
 		{/each}
 		{#each markers as marker}
 			<Marker
