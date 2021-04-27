@@ -110,6 +110,7 @@
 		height="2200"
 	/>
 </Panels>
+
 <TextContent>
 	<p>
 		It's amazing to see the Egyptian hieroglyphs in real-life along the walls of the temple complex.
