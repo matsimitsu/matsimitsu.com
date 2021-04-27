@@ -16,4 +16,7 @@ module.exports = {
 			behavior: "wrap",
 		}],
 	],
+	layout: {
+		_: "./src/routes/_mdsvex.svelte",
+	}
 };

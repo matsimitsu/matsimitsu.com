@@ -62,13 +62,13 @@
         <h5 class="text-xl font-bold mb-6">About</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">About me</a>
+            <a href="/about" class="hover:text-blue-500">About me</a>
           </li>
           <li class="mb-2">
             <a href="#" class="hover:text-blue-500">Gear</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Tech</a>
+            <a href="/uses" class="hover:text-blue-500">Tech</a>
           </li>
         </ul>
       </div>
