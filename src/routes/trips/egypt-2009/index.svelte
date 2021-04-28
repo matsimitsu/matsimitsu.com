@@ -8,7 +8,8 @@
 		image: {
 			src: 'https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg',
 			width: 2200,
-			height: 1461
+			height: 1461,
+			alt: 'Photo of Egyptian ruins with hieroglyphs in Luxor'
 		}
 	};
 </script>
