@@ -1,20 +1,20 @@
-export async function getTrips() {
+export async function getPosts() {
   const modules = import.meta.glob("/src/routes/trips/**/*.svelte");
-  const trips = []
+  const posts = []
   await Promise.all(Object.entries(modules).map(async ([file, module]) => {
-    const { tripData } = await module();
+    const { postData } = await module();
 
-    if (tripData) {
+    if (postData) {
       const url = file
         .replace('/src/routes', '')
         .replace("index.svelte", "")
         .replace(".svelte", "");
-      trips.push({ ...tripData, url });
+      posts.push({ ...postData, url });
     }
   }));
 
   // Oldest first
-  trips.sort((a, b) => (a.startDate > b.startDate) ? 1 : -1);
+  posts.sort((a, b) => (a.startDate > b.startDate) ? 1 : -1);
 
-  return trips
+  return posts
 }

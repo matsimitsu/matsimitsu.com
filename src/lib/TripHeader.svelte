@@ -4,7 +4,6 @@
 
 	export let title, subtitle, startDate, image;
 	export let endDate = null;
-
 	const headerImage = image.src.replace('.jpg', '-720.jpg');
 </script>
 

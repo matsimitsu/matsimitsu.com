@@ -1,9 +1,8 @@
 <script context="module">
 	// Use load function to get the current trip posts
 	export async function load({ page, fetch }) {
-		const [_root, _trips, trip, post] = page.path.split('/');
-		const req = await fetch(`/trips.json?trip=${trip}`);
-
+		const [_root, _trips, trip, _post] = page.path.split('/');
+		const req = await fetch(`/trips/posts.json?trip=${trip}`);
 		return {
 			props: { tripPosts: await req.json() }
 		};

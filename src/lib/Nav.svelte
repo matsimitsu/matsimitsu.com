@@ -8,8 +8,8 @@
     <h3 class="ml-4 text-gray-600 hidden md:block dark:text-gray-400">Robert Beekman</h3>
   </div>
   <ul class="flex items-center dark:text-gray-200">
-    <li>Home</li>
-    <li class="ml-4">Trips</li>
+    <li><a href="/">Home</a></li>
+    <li class="ml-4"><a sveltekit:prefetch href="/trips">Trips</a></li>
     <li class="ml-4"><DarkModeToggle /></li>
   </ul>
 </nav>
