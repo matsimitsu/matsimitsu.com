@@ -38,7 +38,7 @@
 	</p>
 	<PhonePic>
 		<ResponsiveImage
-			src="https://cdn.matsimitsu.com/usa-2011/day-one-six/20110704-IMG_0016 1.jpg"
+			src="https://cdn.matsimitsu.com/usa-2011/day-one-six/20110704-IMG_0016-1.jpg"
 			width="2200"
 			height="1650"
 			alt="Photo of In flight entertainment system"
