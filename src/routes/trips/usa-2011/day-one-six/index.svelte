@@ -4,7 +4,7 @@
 		subtitle: 'From New-York/Allentown to The Rocky Mountains.',
 		trip: 'usa-2011',
 		startDate: new Date('2011-07-04'),
-		endDate: new Date('2011-07-10'),
+		endDate: new Date('2011-07-09'),
 		image: {
 			src: 'https://cdn.matsimitsu.com/usa-2011/day-one-six/20110709-_DSC0155.jpg',
 			width: 2200,
@@ -18,8 +18,6 @@
 	import TextContent from '$lib/TextContent.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
-	import Map from '$lib/Map.svelte';
-	import Explanation from '$lib/Explanation.svelte';
 	import PhonePic from '$lib/PhonePic.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
