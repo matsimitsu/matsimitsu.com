@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day eight',
-		subtitle: 'Bryce Canyon',
+		subtitle: 'Bryce Canyon and Zion National Park',
 		trip: 'usa-2011',
 		startDate: new Date('2011-07-11'),
 		image: {
@@ -58,6 +58,7 @@
 		{ lat: 39.7392, long: -104.9903, name: 'Denver' },
 		{ lat: 38.7331, long: -109.5925, name: 'Arches Nat. Park', textPosition: 'left' },
 		{ lat: 37.593, long: -112.1871, name: 'Bryce Canyon Nat. Park' },
+		{ lat: 37.2982, long: -113.0263, name: 'Zion Nat. Park', textPosition: 'left' },
 		{ lat: 36.1699, long: -115.1398, name: 'Las Vegas' }
 	]}
 >
@@ -206,6 +207,62 @@
 	height="1205"
 	alt="Bryce Canyon?"
 />
+
+<TextContent>
+	<h2>Zion National Park</h2>
+	<p>After Bryce Canyon we still had some daylight to spare so we headed to Zion National Park.</p>
+</TextContent>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110711-_DSC0558.jpg"
+	width="2200"
+	height="1461"
+	alt="Road to Zion National Park"
+/>
+
+<ResponsiveImage
+	full
+	src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110711-_DSC0563-Pano.jpg"
+	width="2200"
+	height="1339"
+	alt="View around Zion National Park"
+/>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110711-_DSC0564.jpg"
+	width="2200"
+	height="1461"
+	alt="Rocks at Zion National Park"
+/>
+
+<TextContent>
+	<p>
+		With time limited we managed to make our way to the bottom of the canyon and walk around on the
+		canyon floor, before taking the bus back to the park entrance.
+	</p>
+</TextContent>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110712-_DSC0570.jpg"
+	width="2200"
+	height="1461"
+	alt="Valley bottom at Zion National Park"
+/>
+
+<Panels>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110712-_DSC0577.jpg"
+		width="1461"
+		height="2200"
+		alt="Valley at Zion National Park"
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/usa-2011/day-eight/20110712-_DSC0589.jpg"
+		width="2200"
+		height="1461"
+		alt="Bus at Zion National Park"
+	/>
+</Panels>
 
 <TextContent>
 	<p>

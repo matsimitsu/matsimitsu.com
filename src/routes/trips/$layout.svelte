@@ -10,6 +10,8 @@
 </script>
 
 <script>
+	import Date from '$lib/Date.svelte';
+	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	export let tripPosts = [];
 </script>
 
@@ -18,11 +20,31 @@
 		<slot />
 	</div>
 	{#if tripPosts.length > 1}
-		<div>List of posts for trip</div>
+		<div class="mt-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-4">
+			{#each tripPosts as post (post.title)}
+				<a sveltekit:prefetch href={post.url} class="flex max-w-4xl mx-auto mb-8 transform hover:scale-105 duration-300 transition transition-transform">
+					<div class="flex-1">
+						<ResponsiveImage {...post.image} />
+					</div>
+					<div class="flex-1 p-4 lg:p-8">
+						<p class="mx-auto text-sm text-gray-400 mb-4">
+							<Date date={post.startDate} />
+							{#if post.endDate}
+								<span>-</span>
+								<Date date={post.endDate} />
+							{/if}
+						</p>
+						<h3 class="font-extrabold tracking-snug leading-8 text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-2 lg:mb-4">{post.title}</h3>
+						<p class="text-lg text-gray-600 dark:text-gray-400">{post.subtitle}</p>
+					</div>
+				</a>
+			{/each}
+		</div>
 	{/if}
 	<div class="mt-24 border-t border-b dark:border-gray-600 border-gray-200 py-8 px-4">
 		<div class="mx-auto container">
 			<a
+			sveltekit:prefetch
 			href="/trips"
 			class="flex mr-auto items-center px-2 2xl:px-0 overflow-hidden text-gray-600 dark:text-gray-400 dark:hover:text-gray-600 hover:text-gray-800"
 		>
