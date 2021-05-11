@@ -15,6 +15,15 @@
 	export let tripPosts = [];
 </script>
 
+<svelte:head>
+	<link
+	rel="alternate"
+	type="application/rss+xml"
+	title="Matsimitsu.com - Robert Beekman - Trips RSS Feed"
+	href="/feeds/trips.xml"
+	/>
+</svelte:head>
+
 <div class="mx-auto">
 	<div>
 		<slot />

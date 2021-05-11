@@ -37,7 +37,7 @@
             <a href="#" class="hover:text-blue-500">Another resource</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Final resource</a>
+            <a href="/feeds/trips.xml" class="hover:text-blue-500">Trips RSS feed</a>
           </li>
         </ul>
       </div>
