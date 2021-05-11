@@ -1,10 +1,10 @@
 <script context="module">
 	export const tripData = {
-		title: 'USA 2011',
-		subtitle: 'Land of the free.',
-		trip: 'usa-2011',
-		startDate: new Date('2011-07-04'),
-		endDate: new Date('2011-08-02'),
+		title: 'USA 2012',
+		subtitle: 'Same trip, different people.',
+		trip: 'usa-2012',
+		startDate: new Date('2012-06-04'),
+		endDate: new Date('2012-06-25'),
 		image: {
 			src: 'https://cdn.matsimitsu.com/usa-2011/day-sixteen-seventeen/20110718-_DSC0835-Pano.jpg',
 			width: 2200,

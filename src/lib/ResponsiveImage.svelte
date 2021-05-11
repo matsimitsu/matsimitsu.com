@@ -3,6 +3,8 @@
 
 	export let src;
 	export let alt;
+	export let noPadding = false;
+	export let rounded = false
 	export let width, height;
 	export let full = false;
 	let style;
@@ -36,6 +38,8 @@
 	class:full
 	class="mx-auto block overflow-hidden"
 	class:inPanel
+	class:noPadding
+	class:rounded
 >
 	<source type="image/jpg" srcset={srcsetForExtension('jpg')} />
 	<source type="image/webp" srcset={srcsetForExtension('webp')} />
@@ -49,6 +53,13 @@
 	}
 	.inPanel {
 		@apply ml-2 lg:ml-2 first:ml-0;
+	}
+	.noPadding {
+		@apply px-0;
+	}
+
+	.rounded > img {
+		@apply rounded-md;
 	}
 	.full {
 		@apply max-w-full;
