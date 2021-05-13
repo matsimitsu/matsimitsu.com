@@ -65,9 +65,6 @@
             <a href="/about" class="hover:text-blue-500">About me</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Gear</a>
-          </li>
-          <li class="mb-2">
             <a href="/uses" class="hover:text-blue-500">Tech</a>
           </li>
         </ul>

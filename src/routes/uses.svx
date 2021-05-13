@@ -4,6 +4,10 @@ subtitle: Inspired by Wes Bos's project <a href="https://uses.tech" class="c-bol
 summary: "Inspired by Wes Bos's project uses.tech, this page is about my (tech) stack."
 ---
 
+# Tech used
+
+Inspired by Wes Bos's project [uses.tech](https://uses.tech), here's a list of my (tech) stack.
+
 ## Hardware
 
 * **[Macbook Pro 2020 13"](https://www.apple.com/macbook-pro-13/).** One of the worst MacBooks I've ever had the pleasure of owning. It gets hot and drains the battery at random moments (nothing in activity monitor). USB-C stops working at random moments (won't charge, nor detect new devices plugged in) and the touchpad is horrible to use in warm weather/with sweatty hands. I wish I'd never given away my 2013 MacBook Pro 13".

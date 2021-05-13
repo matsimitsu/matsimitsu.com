@@ -1,3 +1,10 @@
+const headerLink = {
+  color: "inherit",
+  '&:hover, &:active': {
+    'text-decoration': 'none'
+  }
+};
+
 module.exports = {
   mode: "jit",
   darkMode: "class",
@@ -11,14 +18,10 @@ module.exports = {
           css: {
             color: theme('colors.grey.600'),
             a: {
-              color: theme('colors.gray.800'),
+              color: theme('colors.blue.400'),
               'text-decoration': 'none',
               '&:hover, &.active': {
-                color: 'white',
-                'background-color': theme('colors.gray.800'),
-                strong: {
-                  color: 'white'
-                },
+                'text-decoration': 'underline',
               },
             },
             strong: {
@@ -27,22 +30,26 @@ module.exports = {
             h1: {
               'text-align': 'center',
               color: theme('colors.grey.800'),
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h2: {
               'text-align': 'center',
               color: theme('colors.grey.800'),
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h3: {
               'text-align': 'center',
               color: theme('colors.grey.800'),
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h4: {
               'text-align': 'center',
               color: theme('colors.grey.800'),
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             code: {
               color: 'white',
@@ -76,11 +83,10 @@ module.exports = {
           css: {
             color: theme('colors.gray.400'),
             a: {
-              color: theme('colors.gray.500'),
+              color: theme('colors.blue.400'),
               'text-decoration': 'none',
               '&:hover, &.active': {
-                color: 'white',
-                'background-color': theme('colors.gray.500'),
+                'text-decoration': 'underline',
               },
             },
             strong: {
@@ -89,22 +95,26 @@ module.exports = {
             h1: {
               'text-align': 'center',
               color: 'white',
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h2: {
               'text-align': 'center',
               color: 'white',
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h3: {
               'text-align': 'center',
               color: 'white',
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             h4: {
               'text-align': 'center',
               color: 'white',
-              'margin-top': '0'
+              'margin-top': '0',
+              a: headerLink
             },
             code: {
               color: theme('colors.grey.800'),

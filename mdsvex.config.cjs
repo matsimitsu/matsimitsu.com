@@ -18,5 +18,6 @@ module.exports = {
 	],
 	layout: {
 		_: "./src/routes/_mdsvex.svelte",
+		blog: "./src/routes/blog/_mdsvex.svelte"
 	}
 };
