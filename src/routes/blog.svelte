@@ -27,9 +27,9 @@
 	<h1
 		class="font-extrabold tracking-snug leading-8 text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
 	>
-		Blog
+		Blogposts
 	</h1>
-	<p class="text-lg text-gray-600 dark:text-gray-400">Opinions are mine.</p>
+	<p class="text-lg max-w-xl mx-auto text-gray-600 dark:text-gray-400">Stories on problems I encountered while writing code/using products and how I solved them.</p>
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
