@@ -33,6 +33,6 @@
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
-<div class="mx-auto max-w-lg">
+<div class="mx-auto max-w-xl">
   <PostList posts={posts} />
 </div>

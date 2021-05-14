@@ -4,8 +4,9 @@ export async function getPosts() {
 
   await Promise.all(Object.entries(modules).map(async ([file, module]) => {
     const post = await module();
+
     if (post && post.metadata) {
-      const url = file
+      const url = post.metadata.appsignal || file
         .replace('/src/routes', '')
         .replace(".svx", "");
       posts.push({ ...post.metadata, url });

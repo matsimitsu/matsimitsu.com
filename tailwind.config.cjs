@@ -16,7 +16,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.grey.600'),
+            color: theme('colors.gray.600'),
             a: {
               color: theme('colors.blue.400'),
               'text-decoration': 'none',
@@ -29,50 +29,50 @@ module.exports = {
             },
             h1: {
               'text-align': 'center',
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0',
               a: headerLink
             },
             h2: {
               'text-align': 'center',
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0',
               a: headerLink
             },
             h3: {
               'text-align': 'center',
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0',
               a: headerLink
             },
             h4: {
               'text-align': 'center',
-              color: theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
               'margin-top': '0',
               a: headerLink
             },
             code: {
-              color: 'white',
-              'background-color': theme('colors.grey.800'),
+              color: theme('colors.gray.800'),
+              'background-color': theme('colors.gray.200'),
               '&:before, &:after': {
                 display: 'none'
               }
             },
             p: {
-              color: theme('colors.grey.600'),
+              color: theme('colors.gray.600'),
               'margin-top': '0',
               'margin-bottom': '1em',
               'line-height': '1.75rem'
             },
             'ul > li': {
               '&::before': {
-                'background-color': theme('colors.grey.800'),
+                'background-color': theme('colors.gray.800'),
                 'font-weight': 'bold'
               }
             },
             'ol > li': {
               '&::before': {
-                color: theme('colors.grey.800'),
+                color: theme('colors.gray.800'),
                 'font-weight': 'bold'
               }
             }
@@ -117,8 +117,8 @@ module.exports = {
               a: headerLink
             },
             code: {
-              color: theme('colors.grey.800'),
-              'background-color': 'white',
+              color: theme('colors.gray.400'),
+              'background-color': theme('colors.gray.800'),
               '&:before, &:after': {
                 display: 'none'
               }

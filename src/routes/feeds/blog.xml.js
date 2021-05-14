@@ -2,6 +2,14 @@ import { getPosts } from '../blog/_posts';
 
 const siteUrl = 'https://matsimitsu.com';
 
+const siteUrlOrUrl = (givenUrl) => {
+  if (givenUrl.startsWith("http")) {
+    return givenUrl
+  } else {
+    return `${siteUrl}${givenUrl}`
+  }
+}
+
 const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -18,8 +26,8 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
         <item>
           <title><![CDATA[${post.title}]]></title>
           <description><![CDATA[${post.summary}]]></description>
-          <link>${siteUrl}${post.url}</link>
-          <guid isPermaLink="false">${siteUrl}${post.url}</guid>
+          <link>${siteUrlOrUrl(post.url)}</link>
+          <guid isPermaLink="false">${siteUrlOrUrl(post.url)}</guid>
           <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         </item>
         `,
