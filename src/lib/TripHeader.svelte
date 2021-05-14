@@ -16,6 +16,7 @@
 	<meta property="og:locale" content="en_US" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@matsimitsu" />
 	<meta property="og:url" content="https://matsimitsu.com{$page.path}" />
 	<link rel="canonical" href="https://matsimitsu.com{$page.path}" />
 </svelte:head>

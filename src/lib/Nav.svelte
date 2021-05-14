@@ -9,6 +9,7 @@
   </div>
   <ul class="flex items-center dark:text-gray-200">
     <li><a href="/">Home</a></li>
+    <li class="ml-4"><a sveltekit:prefetch href="/blog">Blog</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/trips">Trips</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/about">About</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/uses">Tech</a></li>
