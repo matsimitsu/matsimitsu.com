@@ -887,9 +887,9 @@ const renderXmlRssFeed$2 = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     ${posts.map((post) => `
         <item>
           <title><![CDATA[${post.title}]]></title>
-          <link>${siteUrlOrUrl(post.url)}</link>
-          <guid isPermaLink="false">${siteUrlOrUrl(post.url)}</guid>
-          <pubDate>${siteUrl$2}${post.url}</pubDate>
+          <link>${siteUrl$2}${post.url}</link>
+          <guid isPermaLink="false">${siteUrl$2}${post.url}</guid>
+          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         </item>
         `).join("\n")}
   </channel>
@@ -1058,7 +1058,7 @@ async function getPosts() {
   return posts;
 }
 const siteUrl = "https://matsimitsu.com";
-const siteUrlOrUrl$1 = (givenUrl) => {
+const siteUrlOrUrl = (givenUrl) => {
   if (givenUrl.startsWith("http")) {
     return givenUrl;
   } else {
@@ -1080,8 +1080,8 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
         <item>
           <title><![CDATA[${post.title}]]></title>
           <description><![CDATA[${post.summary}]]></description>
-          <link>${siteUrlOrUrl$1(post.url)}</link>
-          <guid isPermaLink="false">${siteUrlOrUrl$1(post.url)}</guid>
+          <link>${siteUrlOrUrl(post.url)}</link>
+          <guid isPermaLink="false">${siteUrlOrUrl(post.url)}</guid>
           <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         </item>
         `).join("\n")}

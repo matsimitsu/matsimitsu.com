@@ -17,9 +17,9 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
       .map(post => `
         <item>
           <title><![CDATA[${post.title}]]></title>
-          <link>${siteUrlOrUrl(post.url)}</link>
-          <guid isPermaLink="false">${siteUrlOrUrl(post.url)}</guid>
-          <pubDate>${siteUrl}${post.url}</pubDate>
+          <link>${siteUrl}${post.url}</link>
+          <guid isPermaLink="false">${siteUrl}${post.url}</guid>
+          <pubDate>${new Date(post.date).toUTCString()}</pubDate>
         </item>
         `,
       ).join('\n')
