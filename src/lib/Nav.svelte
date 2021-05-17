@@ -11,6 +11,7 @@
     <li><a href="/">Home</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/blog">Blog</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/trips">Trips</a></li>
+    <li class="ml-4"><a sveltekit:prefetch href="/notes">Notes</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/about">About</a></li>
     <li class="ml-4"><a sveltekit:prefetch href="/uses">Tech</a></li>
     <li class="ml-4"><DarkModeToggle /></li>

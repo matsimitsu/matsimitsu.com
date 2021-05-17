@@ -1,15 +1,14 @@
-const { mdsvex } = require("mdsvex");
-const mdsvexConfig = require("./mdsvex.config.cjs");
-const sveltePreprocess = require("svelte-preprocess");
-const static = require('@sveltejs/adapter-static');
-const pkg = require('./package.json');
+import adapter from '@sveltejs/adapter-static'
+import { mdsvex } from 'mdsvex'
+import mdsvexConfig from "./mdsvex.config.cjs"
+import preprocess from "svelte-preprocess"
 
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
+const config =  {
 	extensions: [".svelte", ...mdsvexConfig.extensions],
 	preprocess: [
 		mdsvex(mdsvexConfig),
-		sveltePreprocess({
+		preprocess({
 			defaults: {
 				style: "postcss",
 			},
@@ -21,16 +20,14 @@ module.exports = {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
 		adapter: {
-			adapt: static
+			adapt: adapter
 		},
 
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 
-		vite: {
-			ssr: {
-				External: Object.keys(pkg.dependencies || {})
-			}
-		}
+		vite: {}
 	}
 };
+
+export default config;

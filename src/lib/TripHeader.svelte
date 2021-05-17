@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Date from '$lib/Date.svelte';
+	import FormattedDate from '$lib/FormattedDate.svelte';
 
 	export let title, subtitle, startDate, image;
 	export let endDate = null;
@@ -23,10 +23,10 @@
 
 <div class="mx-auto container my-24 text-center">
 	<p class="mx-auto text-sm text-gray-400 mb-4">
-		<Date date={startDate} />
+		<FormattedDate date={startDate} />
 		{#if endDate}
 			<span>-</span>
-			<Date date={endDate} />
+			<FormattedDate date={endDate} />
 		{/if}
 	</p>
 	<h1

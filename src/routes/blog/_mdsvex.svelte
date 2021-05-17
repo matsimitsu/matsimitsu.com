@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Date from '$lib/Date.svelte';
+	import FormattedDate from '$lib/FormattedDate.svelte';
 
 	export let title;
 	export let summary;
@@ -37,7 +37,7 @@
 
 <div class="mx-auto container my-24 text-center max-w-4xl">
 	<p class="mx-auto text-sm text-gray-400 mb-4">
-		<Date date={date} />
+		<FormattedDate date={date} />
 	</p>
 	<h1
 		class="font-extrabold tracking-snug text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"

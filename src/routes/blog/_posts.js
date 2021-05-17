@@ -13,7 +13,7 @@ export async function getPosts() {
     }
   }));
 
-  // Oldest first
+  // Newest first
   posts.sort((a, b) => (a.date > b.date) ? -1 : 1);
   return posts
 }

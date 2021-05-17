@@ -11,7 +11,7 @@
 
 <script>
 	export let posts = [];
-  import PostList from '$lib/PostList.svelte'
+  import Post from '$lib/Post.svelte'
 </script>
 
 <svelte:head>
@@ -33,6 +33,8 @@
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
-<div class="mx-auto max-w-xl">
-  <PostList posts={posts} />
+<div class="mx-auto max-w-xl mb-24">
+	{#each posts as post (post.url)}
+		<Post post={post} />
+	{/each}
 </div>

@@ -2,6 +2,7 @@
 title: Remote uploads with pre-signed URLs on Scaleway's object storage.
 date: 2021-04-20
 summary: "Or, make sure your headers match, otherwise you'll get a lot of strange errors."
+layout: note
 ---
 
 A while ago Scaleway [announced their S3-compatible Object Storage](https://blog.scaleway.com/object-storage-general-availability/). It implements most, but not all of the S3 API.
