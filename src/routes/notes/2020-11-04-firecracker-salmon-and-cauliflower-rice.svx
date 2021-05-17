@@ -5,7 +5,11 @@ category: recipes
 layout: note
 ---
 
-![20201103-DSC01272.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/20201103-DSC01272-720.jpg "1.5")
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte"
+</script>
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/20201103-DSC01272.jpg" width="6000" height="4000" alt="Picture of Firecracker Salmon Rice" />
 
 Delicious Cauliflower Rice with pan-seared Salmon covered in a sauce made of Soy Sauce, Sambal, Suger and Garlic. Delicious!
 

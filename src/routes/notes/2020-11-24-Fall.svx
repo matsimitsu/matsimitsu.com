@@ -5,6 +5,10 @@ category: photo
 layout: note
 ---
 
-![20201122-DSC01315.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/20201122-DSC01315-720.jpg "1.5")
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte"
+</script>
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/20201122-DSC01315.jpg" width="5316" height="3544" alt="Fall photo of mushrooms" />
 
 Another fall photo, shot with the 16-50 Kitlens for the A6000, therefore not as sharp as I'm used to.

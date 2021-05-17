@@ -4,6 +4,11 @@ title: 📷 Rainy days
 category: notes
 layout: note
 ---
+
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte"
+</script>
+
 Figures, heatwave for weeks, but as soon as I buy a drone, it's non-stop rain. Luckily it stopped for half an hour, so I could finally practice a bit.
 
-![20200829-DJI_0058.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/20200829-DJI_0058-720.jpg "1.78")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/20200829-DJI_0058.jpg" width="2200" height="1238" alt="Drone shot of farmland and clouds" />

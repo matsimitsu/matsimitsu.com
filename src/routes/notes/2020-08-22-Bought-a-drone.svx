@@ -4,9 +4,9 @@ title: 📷 Bought a drone
 category: notes
 layout: note
 ---
-<figure>
-<img src="https://d3khpbv2gxh34v.cloudfront.net/r/notes/20200822-DJI_0019-720.jpg" alt="" title="1.78" />
-<figcaption>Shot with the DJI Mavic Mini</figcaption>
-</figure>
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte"
+</script>
 
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/20200822-DJI_0019.jpg" width="2200" height="1238" alt="Drone shot of farmland" />
 <p>A DJI Mavic Mini, compact enough to take on hikes in my backpack. </p>

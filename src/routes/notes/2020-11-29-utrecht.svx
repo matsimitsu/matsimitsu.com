@@ -5,34 +5,46 @@ category: photos
 layout: note
 ---
 
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte";
+  import Panels from "$lib/Panels.svelte";
+</script>
+
 To test out my new A7 III Camera with Tamron 28-75, I woke up early this Saturday morning and went to Utrecht for some city shots.
 
-![20201128-DSC00257-2.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00257-2.jpg "1.5")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00257-2.jpg" width="6000" height="4000" alt="Veenendaal West station at early morning sunrise" />
 
-![20201128-DSC00263.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00263.jpg "1.5")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00263.jpg" width="6000" height="4000" alt="Utrecht Central Station" />
 
-![20201128-DSC00273.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00273.jpg "1.347")
-![20201128-DSC00288.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00288.jpg "1.325")
+<Panels>
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00273.jpg" width="3981" height="2955" alt="Person on phone" />
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00288.jpg" width="4655" height="3512" alt="Person on phone" />
+</Panels>
 
-![20201128-DSC00274.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00274.jpg "1.403")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00274.jpg" width="4741" height="3379" alt="Rabarber written in Neon lights" />
 
-![20201128-DSC00292.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00292.jpg "1.5")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00292.jpg" width="6000" height="4000" alt="Tunnel" />
 
-![20201128-DSC00277.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00277.jpg "2.07")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00277.jpg" width="4506" height="2177" alt="Windows" />
 
-![20201128-DSC00272.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00272.jpg "1.5")
-![20201128-DSC00335.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00335.jpg "0.667")
+<Panels>
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00272.jpg" width="6000" height="4000" alt="Utrecht street" />
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00335.jpg" width="4000" height="6000" alt="Girl riding on a bike in Utrecht" />
+</Panels>
+
+<Panels>
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00330.jpg" width="6000" height="4000" alt="Security Guard" />
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00312.jpg" width="6000" height="4000" alt="People waiting on the bus" />
+</Panels>
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00341.jpg" width="5350" height="3718" alt="Person waiting for customers" />
+
+<Panels>
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00340.jpg" width="4000" height="4456" alt="Person waiting" />
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00353.jpg" width="3395" height="4413" alt="Person reading book at Utrecht Central Station" />
+</Panels>
 
 
-![20201128-DSC00330.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00330.jpg "1.5")
-![20201128-DSC00312.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00312.jpg "1.5")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00367.jpg" width="5393" height="3748" alt="People looking at departue board at Utrecht Central Station" />
 
-![20201128-DSC00341.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00341.jpg "1.439")
-
-![20201128-DSC00340.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00340.jpg "0.898")
-![20201128-DSC00353.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00353.jpg "0.769")
-
-
-![20201128-DSC00367.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00367.jpg "1.439")
-
-![20201128-DSC00369.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/utrecht/20201128-DSC00369.jpg "1.501")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/utrecht/20201128-DSC00369.jpg" width="4360" height="2904" alt="Photo of person playing the piano at Utrecht Central Station" />

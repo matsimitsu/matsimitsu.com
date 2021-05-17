@@ -5,20 +5,29 @@ category: photos
 layout: note
 ---
 
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte";
+  import Panels from "$lib/Panels.svelte";
+</script>
+
 With the country in lockdown it's hard to get out and take photo's. Here's todays attempt.
 
-![20210110-DSC00672.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00672.jpg "0.829")
-![20210110-DSC00698.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00698.jpg "1.553")
+<Panels>
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00672.jpg" width="1823" height="2200" alt="Bike wrong way up" />
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00698.jpg" width="2200" height="1417" alt="Hoofdstraat in Veenendaal Man putting stuff into a bag" />
+</Panels>
 
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00689.jpg" width="2200" height="2033" alt="Art installation at Veenendaal" />
 
+<Panels>
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00675.jpg" width="2200" height="1467" alt="Windows" />
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00692.jpg" width="1629" height="2200" alt="Art installation at Veenendaal" />
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00684.jpg" width="2200" height="1467" alt="Windows" />
+</Panels>
 
-![20210110-DSC00689.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00689.jpg "1.082")
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00688.jpg" width="2200" height="1586" alt="Man riding bike taken through window" />
 
-![20210110-DSC00675.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00675.jpg "1.5")
-![20210110-DSC00692.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00692.jpg "0.74")
-![20210110-DSC00684.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00684.jpg "1.5")
-
-![20210110-DSC00688.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00688.jpg "1.387")
-
-![20210110-DSC00685.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00685.jpg "0.88")
-![20210110-DSC00695.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/street/20210110-DSC00695.jpg "1.263")
+<Panels>
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00685.jpg" width="1936" height="2200" alt="Man with dog walking in front of a shop called Douglas" />
+  <ResponsiveImage src="https://cdn.matsimitsu.com/notes/street/20210110-DSC00695.jpg" width="2200" height="1742" alt="Woman walking in front of a shop" />
+</Panels>

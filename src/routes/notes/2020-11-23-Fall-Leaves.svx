@@ -5,6 +5,10 @@ category: photo
 layout: note
 ---
 
-![20201101-DSC01252.jpg](https://d3khpbv2gxh34v.cloudfront.net/r/notes/20201101-DSC01252-720.jpg "1.0")
+<script>
+  import ResponsiveImage from "$lib/ResponsiveImage.svelte"
+</script>
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/notes/20201101-DSC01252.jpg" width="4000" height="4000" alt="Fall leaves" />
 
 Nice fall colours during a nice walk.
