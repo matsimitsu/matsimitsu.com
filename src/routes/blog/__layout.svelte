@@ -31,4 +31,4 @@
 		<Post {post} />
 	{/each}
 </div>
-<ReturnToCategory path="/notes" text="Return to notes" />
+<ReturnToCategory path="/blog" text="Return to blog" />
