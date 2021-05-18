@@ -1,6 +1,6 @@
 ---
 date: 2020-08-22T12:32:28.483Z
-title: 🎥 A Taxi Driver (Korean)
+title: A Taxi Driver (Korean)
 category: reviews
 layout: note
 ---

@@ -1,7 +1,7 @@
 ---
 date: 2020-08-22T15:45:42.267Z
-title: 📷 Bought a drone
-category: notes
+title: Bought a drone
+category: photos
 layout: note
 ---
 <script>

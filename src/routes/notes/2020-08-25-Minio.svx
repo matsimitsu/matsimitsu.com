@@ -1,6 +1,6 @@
 ---
 date: 2020-08-25T17:44:44.011Z
-title: 🗒️ Minio
+title: Minio
 category: notes
 layout: note
 ---

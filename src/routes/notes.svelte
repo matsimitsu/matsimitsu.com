@@ -10,8 +10,9 @@
 </script>
 
 <script>
+	import Note from '$lib/Note.svelte';
+
 	export let posts = [];
-  import Note from '$lib/Note.svelte'
 </script>
 
 <svelte:head>
@@ -29,12 +30,14 @@
 	>
 		Notes
 	</h1>
-	<p class="text-lg max-w-xl mx-auto text-gray-600 dark:text-gray-400">Another place to not post anything ;)</p>
+	<p class="text-lg max-w-xl mx-auto text-gray-600 dark:text-gray-400">
+		Another place to not post anything ;)
+	</p>
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
-<div class="mx-auto max-w-xl mb-24">
-  {#each posts as note (note.url)}
-    <Note note={note} />
-  {/each}
+<div class="px-4 lg:px-0 max-w-xl mb-24 mx-auto">
+	{#each posts as note (note.url)}
+		<Note {note} />
+	{/each}
 </div>

@@ -1,7 +1,7 @@
 ---
 date: 2020-11-24T09:00:00.000Z
-title: 📷 Fall
-category: photo
+title: Fall
+category: photos
 layout: note
 ---
 

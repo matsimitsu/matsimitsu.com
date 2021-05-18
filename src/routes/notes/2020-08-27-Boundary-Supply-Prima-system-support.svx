@@ -1,6 +1,6 @@
 ---
 date: 2020-08-27T09:21:07.554Z
-title: 🗒️ Boundary Supply Prima system support
+title: Boundary Supply Prima system support
 category: notes
 layout: note
 ---

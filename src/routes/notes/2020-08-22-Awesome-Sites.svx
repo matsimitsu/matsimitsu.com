@@ -1,6 +1,6 @@
 ---
 date: 2020-08-22T11:07:02.884Z
-title: 🗒️ Awesome sites
+title: Awesome sites
 category: notes
 layout: note
 ---

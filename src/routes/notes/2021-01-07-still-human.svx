@@ -1,6 +1,6 @@
 ---
 date: 2021-01-07T12:32:28.483Z
-title: 🎥 Still Human (Hong Kong)
+title: Still Human (Hong Kong)
 category: reviews
 layout: note
 ---

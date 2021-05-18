@@ -1,7 +1,7 @@
 ---
 date: 2020-08-31T18:15:05.111Z
-title: 📷 Getting better with the Drone
-category: notes
+title: Getting better with the Drone
+category: photos
 layout: note
 ---
 
