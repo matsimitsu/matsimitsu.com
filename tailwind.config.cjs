@@ -60,9 +60,6 @@ module.exports = {
             },
             p: {
               color: theme('colors.gray.600'),
-              'margin-top': '0',
-              'margin-bottom': '1em',
-              'line-height': '1.75rem'
             },
             'ul > li': {
               '&::before': {
@@ -125,9 +122,6 @@ module.exports = {
             },
             p: {
               color: theme('colors.gray.400'),
-              'margin-top': '0',
-              'margin-bottom': '1em',
-              'line-height': '1.75rem'
             },
             blockquote: {
               color: theme('colors.gray.100'),

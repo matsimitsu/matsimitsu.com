@@ -6,7 +6,7 @@
   export let subject = "post";
 </script>
 
-<div class="mt-24 border-t dark:border-gray-600 border-gray-200 py-12 px-4 bg-gray-100">
+<div class="mt-24 border-t dark:border-gray-600 border-gray-200 py-12 px-4 bg-gray-100 dark:bg-gray-800">
 	<div class="flex justify-between mx-auto ">
 		{#if prevPost}
 			<a
