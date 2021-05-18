@@ -33,29 +33,6 @@
           <li class="mb-2">
             <a href="#" class="hover:text-blue-500">Resource name</a>
           </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Another resource</a>
-          </li>
-          <li class="mb-2">
-            <a href="/feeds/trips.xml" class="hover:text-blue-500">Trips RSS feed</a>
-          </li>
-        </ul>
-      </div>
-      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6">Notes</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Team</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Locations</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Privacy</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Terms</a>
-          </li>
         </ul>
       </div>
       <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
@@ -66,6 +43,20 @@
           </li>
           <li class="mb-2">
             <a href="/uses" class="hover:text-blue-500">Tech</a>
+          </li>
+        </ul>
+      </div>
+      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+        <h5 class="text-xl font-bold mb-6">RSS Feeds</h5>
+        <ul class="list-none footer-links">
+          <li class="mb-2">
+            <a href="/feeds/blog.xml" class="hover:text-blue-500">Blog</a>
+          </li>
+          <li class="mb-2">
+            <a href="/feeds/trips.xml" class="hover:text-blue-500">Trips</a>
+          </li>
+          <li class="mb-2">
+            <a href="/feeds/notes.xml" class="hover:text-blue-500">Notes</a>
           </li>
         </ul>
       </div>
