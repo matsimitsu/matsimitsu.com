@@ -6,7 +6,8 @@
 		const [_root, _trips, trip, _post] = page.path.split('/');
 		const req = await fetch(`/trips/posts.json?trip=${trip}`);
 		const tripPosts = await req.json();
-		const [prevPost, nextPost] = getNeighbours(page, tripPosts);
+		const [prevPost, nextPost] =
+			tripPosts.length > 1 ? getNeighbours(page, tripPosts) : [null, null];
 
 		return {
 			props: { tripPosts, prevPost, nextPost }

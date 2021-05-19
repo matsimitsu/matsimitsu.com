@@ -6,10 +6,10 @@
 		startDate: new Date('2012-06-04'),
 		endDate: new Date('2012-06-25'),
 		image: {
-			src: 'https://cdn.matsimitsu.com/usa-2011/day-sixteen-seventeen/20110718-_DSC0835-Pano.jpg',
+			src: 'https://cdn.matsimitsu.com/usa-2012/day-nine/20120613-_DSC0506.jpg',
 			width: 2200,
-			height: 1424,
-			alt: 'View of Yosemite National Park'
+			height: 1461,
+			alt: 'Big arch at Arches Nat. Park'
 		},
 		countries: [
 			'United States of America'
