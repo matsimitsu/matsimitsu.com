@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day sixteen - seventeen',
-		subtitle: 'Yosemete National Park',
+		subtitle: 'Yosemite National Park',
 		trip: 'usa-2011',
 		startDate: new Date('2011-07-18'),
 		endDate: new Date('2011-07-19'),
@@ -49,22 +49,22 @@
 />
 
 <Location
-	name="Yosemete National Park"
+	name="Yosemite National Park"
 	height={300}
 	zoom={800}
 	focus={true}
 	center={[-110.613953, 37.477791]}
 	markers={[
 		{ lat: 32.7157, long: -117.1611, name: 'San Diego', textPosition: 'left' },
-		{ lat: 37.8651, long: -119.5383, name: 'Yosemete Nat. Park' },
+		{ lat: 37.8651, long: -119.5383, name: 'Yosemite Nat. Park' },
 		{ lat: 36.7378, long: -119.7871, name: 'Fresno' },
-		{ lat: 37.7749, long: -122.4194, name: 'San Fransisco', textPosition: 'left' },
+		{ lat: 37.7749, long: -122.4194, name: 'San Francisco', textPosition: 'left' },
 		{ lat: 34.0522, long: -118.2437, name: 'Los Angeles' },
 		{ lat: 39.5296, long: -119.8138, name: 'Reno' }
 	]}
 >
 	<p>
-		After Fresno we headed towards Yosemete National Park. It was quite busy at the park but the
+		After Fresno we headed towards Yosemite National Park. It was quite busy at the park but the
 		views were amazing.
 	</p>
 	<p>

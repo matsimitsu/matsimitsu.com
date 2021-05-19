@@ -66,7 +66,7 @@
 		{ lat: 39.7392, long: -104.9903, name: 'Denver' },
 		{ lat: 36.5054, long: -117.0794, name: 'Death Valley Nat. Park', textPosition: 'left' },
 		{ lat: 36.1699, long: -115.1398, name: 'Las Vegas' },
-		{ lat: 37.7749, long: -122.4194, name: 'San Fransisco' },
+		{ lat: 37.7749, long: -122.4194, name: 'San Francisco' },
 		{ lat: 34.0522, long: -118.2437, name: 'Los Angeles' }
 	]}
 >

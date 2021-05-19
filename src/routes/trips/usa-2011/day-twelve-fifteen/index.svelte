@@ -27,7 +27,7 @@
 
 <TextContent>
 	<p>
-		Instead of heading up to Yosemete National Park from Death valley, we made a little detour, the
+		Instead of heading up to Yosemite National Park from Death valley, we made a little detour, the
 		opposite way, towards the Mexican border.
 	</p>
 </TextContent>
@@ -118,7 +118,7 @@
 	markers={[
 		{ lat: 32.7157, long: -117.1611, name: 'San Diego', textPosition: 'left' },
 		{ lat: 36.1699, long: -115.1398, name: 'Las Vegas' },
-		{ lat: 37.7749, long: -122.4194, name: 'San Fransisco' },
+		{ lat: 37.7749, long: -122.4194, name: 'San Francisco' },
 		{ lat: 34.0522, long: -118.2437, name: 'Los Angeles' }
 	]}
 >

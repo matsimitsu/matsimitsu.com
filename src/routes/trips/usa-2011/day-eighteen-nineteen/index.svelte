@@ -50,7 +50,7 @@
 	markers={[
 		{ lat: 42.9446, long: -122.109, name: 'Crater lake' },
 		{ lat: 45.5051, long: -122.675, name: 'Portland' },
-		{ lat: 37.7749, long: -122.4194, name: 'San Fransisco' },
+		{ lat: 37.7749, long: -122.4194, name: 'San Francisco' },
 		{ lat: 34.0522, long: -118.2437, name: 'Los Angeles' },
 		{ lat: 39.5296, long: -119.8138, name: 'Reno' }
 	]}
