@@ -37,7 +37,7 @@
 		<FormattedDate date={date} />
 	</p>
 	<h1
-		class="font-extrabold tracking-snug text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
+	class="px-4 font-extrabold tracking-snug text-2xl sm:text-4xl md:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
 	>
 		{title}
 	</h1>

@@ -41,13 +41,15 @@
 	{#if nextPost}
 		<div class="mt-24 border-t dark:border-gray-600 border-gray-200 py-24 px-4 bg-gray-100">
 			<MoreHeader>Next in this trip</MoreHeader>
-			<Trip trip={nextPost} />
+			{#each [nextPost] as post (post.url)}
+				<Trip trip={post} />
+			{/each}
 		</div>
 	{/if}
 	{#if tripPosts.length > 1}
 		<div class="border-t dark:border-gray-600 border-gray-200 pt-24 px-4" class:mt-24={!nextPost}>
 			<MoreHeader>More posts in this trip</MoreHeader>
-			{#each tripPosts as post (post.title)}
+			{#each tripPosts as post (post.url)}
 				<a
 					sveltekit:prefetch
 					href={post.url}
@@ -56,8 +58,8 @@
 					<div class="flex-1">
 						<ResponsiveImage rounded {...post.image} />
 					</div>
-					<div class="flex-1 p-4 lg:p-8">
-						<p class="mx-auto text-sm text-gray-400 mb-4">
+					<div class="flex-1 p-2 md:p-4 lg:p-8">
+						<p class="mx-auto text-sm text-gray-400 mb md:mb-4">
 							<FormattedDate date={post.startDate} />
 							{#if post.endDate}
 								<span>-</span>
@@ -65,11 +67,11 @@
 							{/if}
 						</p>
 						<h3
-							class="font-extrabold tracking-snug leading-8 text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-2 lg:mb-4"
+							class="font-extrabold tracking-snug md:leading-8 text-xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb md:mb-2 lg:mb-4"
 						>
 							{post.title}
 						</h3>
-						<p class="text-xl text-gray-500">{post.subtitle}</p>
+						<p class="text-sm md:text-xl text-gray-500">{post.subtitle}</p>
 					</div>
 				</a>
 			{/each}

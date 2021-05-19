@@ -27,7 +27,7 @@
 <slot />
 
 <PrevNextPost prevPost={prevNote} nextPost={nextNote} subject="note" />
-<div class="mb-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-4">
+<div class="mb-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-8">
 	<MoreHeader>More notes</MoreHeader>
 
 	{#each notes.slice(0, 10) as note (note.url)}

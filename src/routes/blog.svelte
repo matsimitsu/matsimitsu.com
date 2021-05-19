@@ -33,7 +33,7 @@
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
-<div class="mx-auto max-w-xl mb-24">
+<div class="mx-auto max-w-xl mb-24 px-4">
 	{#each posts as post (post.url)}
 		<Post post={post} />
 	{/each}

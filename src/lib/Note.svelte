@@ -6,9 +6,9 @@
 <a
 	sveltekit:prefetch
 	href={note.url}
-	class="flex items-center max-w-xl mx-auto block mb-4 border-b dark:border-gray-800 pb-2 transform hover:scale-105 duration-200 transition transition-transform"
+	class="flex items-center max-w-xl mx-auto mb-4 border-b dark:border-gray-800 pb-2 transform hover:scale-105 duration-200 transition transition-transform"
 >
-	<p class="text-sm text-gray-400 dark:text-gray-600 w-30">
+	<p class="text-xs sm:text-sm text-gray-400 dark:text-gray-600 w-30 block">
 		<FormattedDate date={note.date} />
 			{#if note.category == 'photos'}
 				<svg
@@ -16,7 +16,7 @@
 					focusable="false"
 					data-prefix="fas"
 					data-icon="camera"
-					class="h-5 w-5 mx-2 inline fa-camera fa-w-16"
+					class="hidden sm:inline h-5 w-5 mx-2 fa-camera fa-w-16"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -31,7 +31,7 @@
 					focusable="false"
 					data-prefix="fas"
 					data-icon="utensils"
-					class="h-5 w-5 mx-2 inline fa-utensils fa-w-13"
+					class="hidden sm:inline h-5 w-5 mx-2 fa-utensils fa-w-13"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 416 512"
@@ -46,7 +46,7 @@
 					focusable="false"
 					data-prefix="fas"
 					data-icon="video"
-					class="h-5 w-5 mx-2 inline fa-video fa-w-18"
+					class="hidden sm:inline h-5 w-5 mx-2 fa-video fa-w-18"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 576 512"
@@ -61,7 +61,7 @@
 					focusable="false"
 					data-prefix="fas"
 					data-icon="sticky-note"
-					class="h-5 w-5 mx-2 inline fa-sticky-note fa-w-14"
+					class="hidden sm:inline h-5 w-5 mx-2 fa-sticky-note fa-w-14"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 448 512"
@@ -72,7 +72,7 @@
 				>
 			{/if}
 	</p>
-	<h2 class="text-xl lg:text-2xl ml-2 font-bold text-gray-700 dark:text-gray-200">
+	<h2 class="text-md sm:text-lg lg:text-2xl ml-2 font-bold text-gray-700 dark:text-gray-200">
 		{note.title}
 	</h2>
 </a>

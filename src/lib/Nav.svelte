@@ -3,7 +3,7 @@
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 </script>
 
-<nav class="mx-auto px-4 text-lg flex justify-between pt-4 border-b pb-2 mb-4 dark:border-gray-700">
+<nav class="mx-auto px-4 text-md md:text-lg flex justify-between pt-4 border-b pb-2 mb-4 dark:border-gray-700">
 	<div class="flex">
 		<a href="/" class="hoverable"><h1 class="dark:text-gray-100">Matsimitsu</h1></a>
 		<h3
