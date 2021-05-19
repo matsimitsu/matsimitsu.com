@@ -1,41 +1,21 @@
 <footer class="footer-1 bg-gray-100 py-8 sm:py-12 text-gray-600 dark:bg-gray-800 dark:text-gray-400">
   <div class="container mx-auto px-4">
     <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4 px-4">
-      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6">
-        <h5 class="text-xl font-bold mb-6">Blog</h5>
+      <div class="px-4 w-1/4">
+        <h5 class="text-xl font-bold mb-6">Content</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Cool stuff</a>
+            <a href="/blog" class="hover:text-blue-500">Blog</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Random feature</a>
+            <a href="/trips" class="hover:text-blue-500">Trips</a>
           </li>
           <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Team feature</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Stuff for developers</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Another one</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Last time</a>
+            <a href="/notes" class="hover:text-blue-500">Notes</a>
           </li>
         </ul>
       </div>
-      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 sm:mt-0">
-        <h5 class="text-xl font-bold mb-6">Trips</h5>
-        <ul class="list-none footer-links">
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Resource</a>
-          </li>
-          <li class="mb-2">
-            <a href="#" class="hover:text-blue-500">Resource name</a>
-          </li>
-        </ul>
-      </div>
-      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+      <div class="px-4 w-1/4">
         <h5 class="text-xl font-bold mb-6">About</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
@@ -46,8 +26,8 @@
           </li>
         </ul>
       </div>
-      <div class="px-4 w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
-        <h5 class="text-xl font-bold mb-6">RSS Feeds</h5>
+      <div class="px-4 w-1/4">
+        <h5 class="text-xl font-bold mb-6">Feeds</h5>
         <ul class="list-none footer-links">
           <li class="mb-2">
             <a href="/feeds/blog.xml" class="hover:text-blue-500">Blog</a>
@@ -60,7 +40,7 @@
           </li>
         </ul>
       </div>
-      <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto sm:text-center xl:text-left xl:mt-0 xl:ml-auto">
+      <div class="px-4 w-1/4">
         <h5 class="text-xl font-bold mb-6 ">Credits</h5>
 				<ul class="list-none footer-links">
           <li class="mb-2">

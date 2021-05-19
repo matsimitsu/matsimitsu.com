@@ -10,7 +10,7 @@
 </script>
 
 <script>
-	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
+	import Trip from '$lib/Trip.svelte';
 	import Map from '$lib/Map.svelte';
 
 	export let trips = [];
@@ -31,20 +31,7 @@
 </div>
 
 {#each trips as trip (trip.trip)}
-	<a
-		sveltekit:prefetch
-		href={trip.url}
-		class="block max-w-screen-lg mx-auto relative overflow-hidden transform hover:scale-105 duration-300 transition transition-transform my-24 rounded-md overflow-hidden"
-	>
-		<div
-			class="absolute inset-x-0 bottom-0 h-64 text-center bg-gradient-to-t from-black to-transparent opacity-80"
-		/>
-		<div class="absolute inset-x-0 bottom-0 h-40 text-center">
-			<h2 class="text-white text-6xl font-bold mb-4">{trip.title}</h2>
-			<p class="text-gray-300 text-lg">{trip.subtitle}</p>
-		</div>
-		<ResponsiveImage noPadding rounded {...trip.image} />
-	</a>
+	<Trip trip={trip} />
 {/each}
 
 <div class="max-w-screen-xl mx-auto border-t">

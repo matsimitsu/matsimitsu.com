@@ -19,6 +19,7 @@
 	import MoreHeader from '$lib/MoreHeader.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
+	import Trip from '$lib/Trip.svelte';
 
 	export let tripPosts = [];
 	export let nextPost = null;
@@ -40,30 +41,7 @@
 	{#if nextPost}
 		<div class="mt-24 border-t dark:border-gray-600 border-gray-200 py-24 px-4 bg-gray-100">
 			<MoreHeader>Next in this trip</MoreHeader>
-			<a
-				sveltekit:prefetch
-				href={nextPost.url}
-				class="flex max-w-screen-xl mx-auto mb-8 transform hover:scale-105 duration-300 transition transition-transform"
-			>
-				<div class="flex-1">
-					<ResponsiveImage rounded {...nextPost.image} />
-				</div>
-				<div class="flex-1 p-4 lg:p-8">
-					<p class="mx-auto text-sm text-gray-400 mb-4">
-						<FormattedDate date={nextPost.startDate} />
-						{#if nextPost.endDate}
-							<span>-</span>
-							<FormattedDate date={nextPost.endDate} />
-						{/if}
-					</p>
-					<h3
-						class="font-extrabold tracking-snug leading-8 text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-2 lg:mb-4"
-					>
-						{nextPost.title}
-					</h3>
-					<p class="text-xl text-gray-500">{nextPost.subtitle}</p>
-				</div>
-			</a>
+			<Trip trip={nextPost} />
 		</div>
 	{/if}
 	{#if tripPosts.length > 1}
