@@ -14,6 +14,7 @@
 </script>
 
 <script>
+	import MoreHeader from '$lib/MoreHeader.svelte';
 	import Post from '$lib/Post.svelte';
 	import PrevNextPost from '$lib/PrevNextPost.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
@@ -27,6 +28,8 @@
 
 <PrevNextPost {prevPost} {nextPost} />
 <div class="mb-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-4">
+	<MoreHeader>More posts</MoreHeader>
+
 	{#each posts.slice(0, 5) as post (post.url)}
 		<Post {post} />
 	{/each}
