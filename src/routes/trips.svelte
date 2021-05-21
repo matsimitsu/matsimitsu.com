@@ -30,10 +30,11 @@
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>
 
-{#each trips as trip (trip.trip)}
-	<Trip trip={trip} />
-{/each}
-
+<div class="px-4">
+	{#each trips as trip (trip.trip)}
+		<Trip trip={trip} />
+	{/each}
+</div>
 <div class="max-w-screen-xl mx-auto border-t">
 	<Map highlight={countries} height={800} zoom={250} center={[0, 10]} />
 </div>
