@@ -4,13 +4,20 @@
 	// Use load function to get the current trip posts
 	export async function load({ page, fetch }) {
 		const [_root, _trips, trip, _post] = page.path.split('/');
-		const req = await fetch(`/trips/posts.json?trip=${trip}`);
-		const tripPosts = await req.json();
+		const postsReq = await fetch(`/trips/posts.json?trip=${trip}`);
+		const tripReq = await fetch('/trips.json');
+
+		const tripPosts = await postsReq.json();
+		const trips = await tripReq.json();
+
+		const currentTrip = trips.find(t => t.trip == trip)
+		const currentPost = tripPosts.find(p => p.url == page.path)
+
 		const [prevPost, nextPost] =
 			tripPosts.length > 1 ? getNeighbours(page, tripPosts) : [null, null];
 
 		return {
-			props: { tripPosts, prevPost, nextPost }
+			props: { tripPosts, prevPost, nextPost, currentTrip, currentPost }
 		};
 	}
 </script>
@@ -24,9 +31,39 @@
 
 	export let tripPosts = [];
 	export let nextPost = null;
+	export let currentPost = null
+	export let currentTrip = null;
 </script>
 
 <svelte:head>
+	{#if currentPost && currentTrip}
+		<title>{currentPost.title} - {currentTrip.title} - Matsimitsu</title>
+		<meta name="description" content={currentPost.subtitle} />
+		<meta property="og:title" content="{currentPost.title} - {currentTrip.title} - Matsimitsu" />
+		<meta property="og:description" content={currentPost.subtitle} />
+		<meta property="og:image" content={currentPost.image.src.replace('.jpg', '-720.jpg')} />
+		<meta property="og:image:alt" content={currentPost.image.alt} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@matsimitsu" />
+		<meta property="og:url" content="https://matsimitsu.com{currentPost.url}" />
+		<link rel="canonical" href="https://matsimitsu.com{currentPost.url}" />
+	{:else if currentTrip}
+	<title>{currentTrip.title} - Matsimitsu</title>
+	<meta name="description" content={currentTrip.subtitle} />
+	<meta property="og:title" content="{currentTrip.title} - Matsimitsu" />
+	<meta property="og:description" content={currentTrip.subtitle} />
+	<meta property="og:image" content={currentTrip.image.src.replace('.jpg', '-720.jpg')} />
+	<meta property="og:image:alt" content={currentTrip.image.alt} />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@matsimitsu" />
+	<meta property="og:url" content="https://matsimitsu.com{currentTrip.url}" />
+	<link rel="canonical" href="https://matsimitsu.com{currentTrip.url}" />
+	{/if}
+
 	<link
 		rel="alternate"
 		type="application/rss+xml"
@@ -34,7 +71,6 @@
 		href="/feeds/trips.xml"
 	/>
 </svelte:head>
-
 <div class="mx-auto">
 	<div>
 		<slot />
