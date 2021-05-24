@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day One',
-		subtitle: 'Temple of Heaven.',
+		subtitle: 'Temple of Heaven',
 		trip: 'asia-2014',
 		startDate: new Date('2014-05-15'),
 		image: {

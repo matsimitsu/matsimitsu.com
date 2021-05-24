@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day Two',
-		subtitle: 'The Great Wall of China & Emperors Tomb.',
+		subtitle: 'The Great Wall of China & Emperors Tomb',
 		trip: 'asia-2014',
 		startDate: new Date('2014-05-16'),
 		image: {
@@ -20,7 +20,6 @@
 	import Explanation from '$lib/Explanation.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
-	import { circIn } from 'svelte/easing';
 </script>
 
 <TripHeader {...postData} />
