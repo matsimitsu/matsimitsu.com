@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day Two',
-		subtitle: 'The Great Wall of China & Emperors Tomb',
+		subtitle: 'China - The Great Wall of China & Emperors Tomb',
 		trip: 'asia-2014',
 		startDate: new Date('2014-05-16'),
 		image: {

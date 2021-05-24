@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day Three',
-		subtitle: 'Summer Palace & The Forbidden City',
+		subtitle: 'China - Summer Palace & The Forbidden City',
 		trip: 'asia-2014',
 		startDate: new Date('2014-05-17'),
 		image: {

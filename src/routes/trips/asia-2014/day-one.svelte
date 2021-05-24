@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day One',
-		subtitle: 'Temple of Heaven',
+		subtitle: 'China - Temple of Heaven',
 		trip: 'asia-2014',
 		startDate: new Date('2014-05-15'),
 		image: {
@@ -25,11 +25,13 @@
 <TripHeader {...postData} />
 
 <TextContent>
+	<p>Our first stop is Beijing, where we go on a 72 hour transfer visa. This visa does not require anything upfront, which is quite new. At Schiphol they check your visa before boarding and when it was our turn and told them we didn't have one, we could hear the sighs of the people behind us.</p>
+	<p>It took a good couple of minutes of explaining and verifying before we could board. In their defense, the visa is for 72 hours maximum and between landing in Beijing and taking off again where 71 hours and fourty minutes.
 	<p>
 		After an 8.5 hour flight from Amsterdam and a very confusing ride to our hotel we finally made
 		it to Beijing!
 	</p>
-	<p>
+		<p>
 		We decided to head to the Temple of Heaven, a giant park with temples and people playing card
 		games, as it was quite close to our hotel near the Forbidden City.
 	</p>
