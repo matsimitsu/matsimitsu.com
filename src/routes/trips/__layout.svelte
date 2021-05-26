@@ -11,7 +11,6 @@
 		const trips = await tripReq.json();
 
 		const currentTrip = trips.find(t => t.trip == trip)
-		console.log(page.path)
 		const currentPost = tripPosts.find(p => p.url == page.path)
 
 		const [prevPost, nextPost] =
@@ -38,12 +37,10 @@
 	export let currentTrip = null;
 
 	let seenPosts = [];
+
 	onMount(() => {
-
 		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
-		console.log("mounted", currentPost.url ,seenPosts)
 	})
-
 </script>
 
 <svelte:head>
