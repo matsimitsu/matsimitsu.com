@@ -10,8 +10,8 @@
 		const tripPosts = await postsReq.json();
 		const trips = await tripReq.json();
 
-		const currentTrip = trips.find(t => t.trip == trip)
-		const currentPost = tripPosts.find(p => p.url == page.path)
+		const currentTrip = trips.find((t) => t.trip == trip);
+		const currentPost = tripPosts.find((p) => p.url == page.path);
 
 		const [prevPost, nextPost] =
 			tripPosts.length > 1 ? getNeighbours(page, tripPosts) : [null, null];
@@ -33,14 +33,14 @@
 
 	export let tripPosts = [];
 	export let nextPost = null;
-	export let currentPost = null
+	export let currentPost = null;
 	export let currentTrip = null;
 
 	let seenPosts = [];
 
 	onMount(() => {
 		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
-	})
+	});
 </script>
 
 <svelte:head>
@@ -58,18 +58,18 @@
 		<meta property="og:url" content="https://matsimitsu.com{currentPost.url}" />
 		<link rel="canonical" href="https://matsimitsu.com{currentPost.url}" />
 	{:else if currentTrip}
-	<title>{currentTrip.title} - Matsimitsu</title>
-	<meta name="description" content={currentTrip.subtitle} />
-	<meta property="og:title" content="{currentTrip.title} - Matsimitsu" />
-	<meta property="og:description" content={currentTrip.subtitle} />
-	<meta property="og:image" content={currentTrip.image.src.replace('.jpg', '-720.jpg')} />
-	<meta property="og:image:alt" content={currentTrip.image.alt} />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:creator" content="@matsimitsu" />
-	<meta property="og:url" content="https://matsimitsu.com{currentTrip.url}" />
-	<link rel="canonical" href="https://matsimitsu.com{currentTrip.url}" />
+		<title>{currentTrip.title} - Matsimitsu</title>
+		<meta name="description" content={currentTrip.subtitle} />
+		<meta property="og:title" content="{currentTrip.title} - Matsimitsu" />
+		<meta property="og:description" content={currentTrip.subtitle} />
+		<meta property="og:image" content={currentTrip.image.src.replace('.jpg', '-720.jpg')} />
+		<meta property="og:image:alt" content={currentTrip.image.alt} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@matsimitsu" />
+		<meta property="og:url" content="https://matsimitsu.com{currentTrip.url}" />
+		<link rel="canonical" href="https://matsimitsu.com{currentTrip.url}" />
 	{/if}
 
 	<link
