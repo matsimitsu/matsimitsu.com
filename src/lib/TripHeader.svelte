@@ -5,7 +5,7 @@
 	export let endDate = null;
 </script>
 
-<div class="mx-auto container my-24 text-center">
+<div class="mx-auto container my-24 text-center px-4">
 	<p class="mx-auto text-sm text-gray-400 mb-4">
 		<FormattedDate date={startDate} />
 		{#if endDate}
