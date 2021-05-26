@@ -4,7 +4,7 @@
 	// Use load function to get the current trip posts
 	export async function load({ page, fetch }) {
 		const [_root, _trips, trip, _post] = page.path.split('/');
-		const postsReq = await fetch(`/trips/posts.json?trip=${trip}`);
+		const postsReq = await fetch(`/trips/${trip}.json`);
 		const tripReq = await fetch('/trips.json');
 
 		const tripPosts = await postsReq.json();
@@ -39,11 +39,7 @@
 	let seenPosts = [];
 
 	onMount(() => {
-		try {
-			seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
-		} catch(e) {
-			alert(e)
-		}
+		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
 	});
 </script>
 
