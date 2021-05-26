@@ -39,7 +39,11 @@
 	let seenPosts = [];
 
 	onMount(() => {
-		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
+		try {
+			seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
+		} catch(e) {
+			alert(e)
+		}
 	});
 </script>
 
