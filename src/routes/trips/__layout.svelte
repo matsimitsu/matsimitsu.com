@@ -11,6 +11,7 @@
 		const trips = await tripReq.json();
 
 		const currentTrip = trips.find(t => t.trip == trip)
+		console.log(page.path)
 		const currentPost = tripPosts.find(p => p.url == page.path)
 
 		const [prevPost, nextPost] =
@@ -23,16 +24,26 @@
 </script>
 
 <script>
+	import { getSeenPosts, setSeenPost } from '$lib/utils/seenPosts.js';
 	import FormattedDate from '$lib/FormattedDate.svelte';
 	import MoreHeader from '$lib/MoreHeader.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
 	import Trip from '$lib/Trip.svelte';
+	import { onMount } from 'svelte';
 
 	export let tripPosts = [];
 	export let nextPost = null;
 	export let currentPost = null
 	export let currentTrip = null;
+
+	let seenPosts = [];
+	onMount(() => {
+
+		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
+		console.log("mounted", currentPost.url ,seenPosts)
+	})
+
 </script>
 
 <svelte:head>
@@ -101,6 +112,9 @@
 							{#if post.endDate}
 								<span>-</span>
 								<FormattedDate date={post.endDate} />
+							{/if}
+							{#if seenPosts.includes(post.url)}
+								<span class="inline-block border rounded px-1 bg-green-500 text-white">seen</span>
 							{/if}
 						</p>
 						<h3
