@@ -24,10 +24,6 @@
 
 <TripHeader {...postData} />
 
-<TextContent>
-	<p />
-</TextContent>
-
 <Location
 	name="Panmunjeom (North Korea)"
 	height={300}
