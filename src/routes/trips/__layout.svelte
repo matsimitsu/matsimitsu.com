@@ -39,7 +39,9 @@
 	let seenPosts = [];
 
 	onMount(() => {
+		console.log(currentPost)
 		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
+		console.log(seenPosts)
 	});
 </script>
 
