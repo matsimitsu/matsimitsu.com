@@ -1,5 +1,7 @@
 <script context="module">
 	import { getNeighbours } from '$lib/utils/neighbours';
+  import { getSeenPosts } from '$lib/utils/seenPosts.js';
+  import { browser } from '$app/env';
 
 	// Use load function to get the current trip posts
 	export async function load({ page, fetch }) {
@@ -13,36 +15,31 @@
 		const currentTrip = trips.find((t) => t.trip == trip);
 		const currentPost = tripPosts.find((p) => p.url == page.path);
 
+		let seenPosts = []
+		if (browser && currentPost) {
+			seenPosts = [...getSeenPosts(), currentPost.url]
+		}
+
 		const [prevPost, nextPost] =
 			tripPosts.length > 1 ? getNeighbours(page, tripPosts) : [null, null];
 
 		return {
-			props: { tripPosts, prevPost, nextPost, currentTrip, currentPost }
+			props: { tripPosts, prevPost, nextPost, currentTrip, currentPost, seenPosts }
 		};
 	}
 </script>
 
 <script>
-	import { getSeenPosts, setSeenPost } from '$lib/utils/seenPosts.js';
-	import FormattedDate from '$lib/FormattedDate.svelte';
+	import TripPostCard from '$lib/TripPostCard.svelte';
 	import MoreHeader from '$lib/MoreHeader.svelte';
-	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
 	import Trip from '$lib/Trip.svelte';
-	import { onMount } from 'svelte';
 
 	export let tripPosts = [];
 	export let nextPost = null;
 	export let currentPost = null;
 	export let currentTrip = null;
-
-	let seenPosts = [];
-
-	onMount(() => {
-		console.log(currentPost)
-		seenPosts = currentPost ? setSeenPost(currentPost.url) : getSeenPosts();
-		console.log(seenPosts)
-	});
+	export let seenPosts = [];
 </script>
 
 <svelte:head>
@@ -97,33 +94,7 @@
 		<div class="border-t dark:border-gray-600 border-gray-200 pt-24 px-4" class:mt-24={!nextPost}>
 			<MoreHeader>More posts in this trip</MoreHeader>
 			{#each tripPosts as post (post.url)}
-				<a
-					sveltekit:prefetch
-					href={post.url}
-					class="flex max-w-4xl mx-auto mb-8 transform hover:scale-105 duration-300 transition transition-transform"
-				>
-					<div class="flex-1">
-						<ResponsiveImage rounded {...post.image} />
-					</div>
-					<div class="flex-1 p-2 md:p-4 lg:p-8">
-						<p class="mx-auto text-sm text-gray-400 mb md:mb-4">
-							<FormattedDate date={post.startDate} />
-							{#if post.endDate}
-								<span>-</span>
-								<FormattedDate date={post.endDate} />
-							{/if}
-							{#if seenPosts.includes(post.url)}
-								<span class="inline-block border rounded px-1 bg-green-500 text-white">seen</span>
-							{/if}
-						</p>
-						<h3
-							class="font-extrabold tracking-snug md:leading-8 text-xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb md:mb-2 lg:mb-4"
-						>
-							{post.title}
-						</h3>
-						<p class="text-sm md:text-xl text-gray-500">{post.subtitle}</p>
-					</div>
-				</a>
+				<TripPostCard post={post} seenPosts={seenPosts} />
 			{/each}
 		</div>
 	{/if}

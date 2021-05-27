@@ -1,8 +1,15 @@
 <script>
 	import FormattedDate from '$lib/FormattedDate.svelte';
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+	import { setSeenPost } from '$lib/utils/seenPosts'
 
 	export let title, subtitle, startDate;
 	export let endDate = null;
+
+	onMount(() => {
+		setSeenPost($page.path)
+	})
 </script>
 
 <div class="mx-auto container my-24 text-center px-4">
