@@ -1,43 +1,94 @@
-<script>
+<script context="module">
+	// Use load function to get the current trip posts
+	export async function load({ _page, fetch }) {
+		const posts = await fetch(`/blog.json`);
+		const notes = await fetch(`/notes.json`);
+		const trips = await fetch(`/trips.json`);
+
+		return {
+			props: {
+				posts: await posts.json(),
+				notes: await notes.json(),
+				trips: await trips.json()
+			}
+		};
+	}
 </script>
 
-<main>
-	<h1>Hello world!</h1>
+<script>
+	import TripPostCard from "$lib/TripPostCard.svelte";
+	import Post from '$lib/Post.svelte';
+import Note from "$lib/Note.svelte";
+import PageHeader from '$lib/PageHeader.svelte';
+	export let posts = [];
+	export let notes = [];
+	export let trips = [];
+
+	const description = "Hi there! My name is Robert Beekman, developer, photographer and longboarder."
+</script>
+
+<svelte:head>
+	<title>Matsimitsu.com</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content="Matsimitsu" />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content="https://cdn.matsimitsu.com/site/me-zhanjiejie-720.jpg" />
+	<meta property="og:image:alt" content="Me at Zhangjiajie National Park in China." />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@matsimitsu" />
+	<meta property="og:url" content="https://matsimitsu.com" />
+	<link rel="canonical" href="https://matsimitsu.com" />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="Matsimitsu.com - Robert Beekman - Blog RSS Feed"
+		href="/feeds/blog.xml"
+	/>
+</svelte:head>
+
+<PageHeader title={description} align="left">
+	<span slot="hat">
+		<div class="text-4xl mb-2">👋</div>
+	</span>
+	<span slot="subtitle">
+		<p>
+			I love connecting brands and companies with their customers through good design, I can help you
+			with logo, identity & digital design. I teach design on skillshare and I post very often on
+			dribbble, but enough about me, how can I help you?
+		</p>
+	</span>
+</PageHeader>
+
+<PageHeader title="From the blog" align="left">
+</PageHeader>
+<div class="mx-auto max-w-4xl mb-24 px-4 -mt-12">
+	<div class="max-w-xl ml-0">
+		{#each posts.slice(0, 3) as post (post.url)}
+		<Post post={post} />
+	{/each}
+	</div>
+</div>
 
 
-	<p>Visit <a class="text-blue-600 underline dark:text-blue-200" href="/trips/egypt-2009">Egypt 2009</a> to view a trip.</p>
-</main>
+<PageHeader title="From my trips" align="left">
+</PageHeader>
 
-<style style lang="postcss">
-	main {
-		@apply text-center;
-		@apply p-4;
-		@apply mx-auto;
-	}
+<div class="mx-auto max-w-4xl px-4 mb-24 -mt-12">
+	{#each trips.slice(0, 3) as trip (trip.trip)}
+		<TripPostCard post={trip}/>
+	{/each}
+</div>
 
-	h1 {
-		@apply text-red-600;
-		@apply uppercase;
-		@apply text-6xl;
-		@apply font-thin;
-		@apply leading-tight;
-		@apply my-16 mx-auto;
-		@apply max-w-xs;
-	}
 
-	p {
-		@apply max-w-xs;
-		@apply my-8 mx-auto;
-		@apply leading-snug;
-	}
+<PageHeader title="Notes" align="left">
+</PageHeader>
 
-	@screen sm {
-		h1 {
-			@apply max-w-none;
-		}
-
-		p {
-			@apply max-w-none;
-		}
-	}
-</style>
+<div class="mx-auto max-w-4xl mb-24 px-4 -mt-12">
+	<div class="max-w-xl ml-0">
+		{#each notes.slice(0, 3) as note (note.url)}
+		<Note note={note} />
+	{/each}
+	</div>
+</div>

@@ -21,7 +21,7 @@
 		{/if}
 	</p>
 	<h1
-		class="font-extrabold tracking-snug leading-8 text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
+		class="font-extrabold tracking-snug text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
 	>
 		{title}
 	</h1>

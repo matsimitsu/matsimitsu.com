@@ -11,30 +11,39 @@
 
 <script>
 	import Note from '$lib/Note.svelte';
+	import PageHeader from '$lib/PageHeader.svelte';
 
 	export let posts = [];
+
+	const description = "Another place to not post anything ;)"
 </script>
 
 <svelte:head>
+	<title>Blog - Matsimitsu.com</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content="Matsimitsu" />
+	<meta property="og:description" content={description} />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@matsimitsu" />
+	<meta property="og:url" content="https://matsimitsu.com/notes" />
+	<link rel="canonical" href="https://matsimitsu.com/notes" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
-		title="Matsimitsu.com - Robert Beekman - Blog RSS Feed"
-		href="/feeds/blog.xml"
+		title="Matsimitsu.com - Robert Beekman - Notes RSS Feed"
+		href="/feeds/notes.xml"
 	/>
 </svelte:head>
 
-<div class="mx-auto container my-24 text-center">
-	<h1
-		class="font-extrabold tracking-snug leading-8 text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
-	>
-		Notes
-	</h1>
-	<p class="text-lg max-w-xl mx-auto text-gray-600 dark:text-gray-400">
-		Another place to not post anything ;)
-	</p>
-	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
-</div>
+<PageHeader title="Notes">
+	<span slot="subtitle">
+		<p>
+			{description}
+		</p>
+	</span>
+</PageHeader>
 
 <div class="px-4 lg:px-0 max-w-xl mb-24 mx-auto">
 	{#each posts as note (note.url)}

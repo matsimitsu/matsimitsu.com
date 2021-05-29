@@ -24,7 +24,7 @@
 			/></svg
 		>
 		<span
-			class="ml-4 mr-auto font-extrabold leading-8 text-2xl font-bold"
+			class="ml-4 mr-auto font-extrabold text-2xl font-bold"
 			>{text}</span
 		>
 	</a>

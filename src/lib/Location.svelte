@@ -12,7 +12,7 @@
 
 <div class="mx-auto max-w-screen-lg my-24 px-4">
 	<h2
-		class="flex items-center font-extrabold tracking-snug leading-8 text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4"
+		class="flex items-center font-extrabold tracking-snug text-4xl font-bold text-gray-800 dark:text-gray-200 mb-4"
 	>
 		<svg
 			aria-hidden="true"

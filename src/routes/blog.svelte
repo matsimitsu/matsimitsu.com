@@ -10,11 +10,24 @@
 </script>
 
 <script>
-	export let posts = [];
   import Post from '$lib/Post.svelte'
+	import PageHeader from '$lib/PageHeader.svelte';
+	export let posts = [];
+
+	const description ="Stories on problems I encountered while writing code/using products and how I solved them."
 </script>
 
 <svelte:head>
+	<title>Blog - Matsimitsu.com</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content="Matsimitsu" />
+	<meta property="og:description" content={description} />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@matsimitsu" />
+	<meta property="og:url" content="https://matsimitsu.com/blog" />
+	<link rel="canonical" href="https://matsimitsu.com/blog" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
@@ -23,17 +36,15 @@
 	/>
 </svelte:head>
 
-<div class="mx-auto container my-24 text-center">
-	<h1
-		class="font-extrabold tracking-snug leading-8 text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
-	>
-		Blogposts
-	</h1>
-	<p class="text-lg max-w-xl mx-auto text-gray-600 dark:text-gray-400">Stories on problems I encountered while writing code/using products and how I solved them.</p>
-	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
-</div>
+<PageHeader title="Posts I made">
+	<span slot="subtitle">
+		<p>
+			{description}
+		</p>
+	</span>
+</PageHeader>
 
-<div class="mx-auto max-w-xl mb-24 px-4">
+<div class="mx-auto mb-24 px-4 max-w-4xl">
 	{#each posts as post (post.url)}
 		<Post post={post} />
 	{/each}

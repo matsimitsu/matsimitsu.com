@@ -27,7 +27,7 @@
 			{/if}
 		</p>
 		<h3
-			class="font-extrabold tracking-snug md:leading-8 text-xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb md:mb-2 lg:mb-4"
+			class="font-extrabold tracking-snug text-xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb md:mb-2 lg:mb-4"
 		>
 			{post.title}
 		</h3>

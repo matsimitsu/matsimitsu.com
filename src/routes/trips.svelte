@@ -12,23 +12,40 @@
 <script>
 	import Trip from '$lib/Trip.svelte';
 	import Map from '$lib/Map.svelte';
+	import PageHeader from '$lib/PageHeader.svelte';
 
 	export let trips = [];
 	let countries = trips.map((t) => t.countries || []).flat();
+	const description = "Over the years I've visited quite a few countries on many trips, below I'll share these with you."
 </script>
 
-<div class="mx-auto container my-24 text-center">
-	<h1
-		class="font-extrabold tracking-snug leading-8 text-6xl font-bold text-gray-800 dark:text-gray-200 mb-8"
-	>
-		Trips I made
-	</h1>
-	<p class="text-lg text-gray-600 dark:text-gray-400">
-		Over the years I've visited quite a few countries on many trips, below I'll share these with
-		you.
-	</p>
-	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
-</div>
+<svelte:head>
+	<title>Blog - Matsimitsu.com</title>
+	<meta name="description" content={description} />
+	<meta property="og:title" content="Matsimitsu" />
+	<meta property="og:description" content={description} />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@matsimitsu" />
+	<meta property="og:url" content="https://matsimitsu.com/blog" />
+	<link rel="canonical" href="https://matsimitsu.com/blog" />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="Matsimitsu.com - Robert Beekman - Trips RSS Feed"
+		href="/feeds/trips.xml"
+	/>
+</svelte:head>
+
+
+<PageHeader title="Trips I made">
+	<span slot="subtitle">
+		<p>
+			{description}
+		</p>
+	</span>
+</PageHeader>
 
 <div class="px-4">
 	{#each trips as trip (trip.trip)}
