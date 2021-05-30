@@ -9,7 +9,7 @@ export async function getTrips() {
         .replace('/src/routes', '')
         .replace("index.svelte", "")
         .replace(".svelte", "");
-      trips.push({ ...tripData, url });
+      trips.push({ url, ...tripData });
     }
   }));
 

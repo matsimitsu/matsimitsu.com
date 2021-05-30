@@ -54,9 +54,8 @@ import PageHeader from '$lib/PageHeader.svelte';
 	</span>
 	<span slot="subtitle">
 		<p>
-			I love connecting brands and companies with their customers through good design, I can help you
-			with logo, identity & digital design. I teach design on skillshare and I post very often on
-			dribbble, but enough about me, how can I help you?
+			I love creating scalable webapplications, created pragmatically, with both "boring" and new technologies, whatever is best suited for the job. I made the first commit to <a href="https://appsignal.com">AppSignal</a>, where I'm still happily employed.
+			In my free time I like to travel, mainly to Asia and when I'm not abroad I regularly take my longboard out for a spin.
 		</p>
 	</span>
 </PageHeader>

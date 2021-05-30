@@ -3,7 +3,7 @@
   export let post;
 </script>
 
-<a sveltekit:prefetch href={post.url} class="block mb-12 transform hover:scale-105 duration-200 transition transition-transform">
+<a href={post.url} class="block mb-12 transform hover:scale-105 duration-200 transition transition-transform">
   <p class="mx-auto text-sm text-gray-400 dark:text-gray-600">
     <FormattedDate date={post.date} />
     {#if post.appsignal}

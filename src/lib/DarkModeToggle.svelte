@@ -45,7 +45,7 @@
 	focusable="false"
 	data-prefix="far"
 	data-icon="lightbulb"
-	class="h-4 w-4 cursor-pointer dark:text-gray-200 fill-current"
+	class="h-8 w-8 p-1 md:h-6 md:w-6 cursor-pointer dark:text-gray-200 fill-current"
 	role="img"
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 352 512"
