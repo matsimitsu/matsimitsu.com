@@ -1,6 +1,6 @@
 <script>
 	import world from '$lib/maps/world.json';
-	import * as d3geoPkg  from 'd3-geo';
+	import { geoNaturalEarth1, geoPath } from 'd3-geo';
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
 	import viewport from '$lib/actions/inViewportAction';
@@ -17,7 +17,6 @@
 
 	let width = 400;
 
-	const { geoNaturalEarth1, geoPath } = d3geoPkg
 	const tweenedZoom = tweened(focus ? 100 : zoom, { duration: 2000, easing: cubicOut });
 	$: projection = geoNaturalEarth1()
 		.center(center)
