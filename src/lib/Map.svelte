@@ -1,7 +1,6 @@
 <script>
 	import world from '$lib/maps/world.json';
-	import { geoNaturalEarth1, geoPath } from 'd3-geo';
-	import * as topojson from 'topojson-client';
+	import * as d3geoPkg  from 'd3-geo';
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
 	import viewport from '$lib/actions/inViewportAction';
@@ -15,19 +14,16 @@
 	export let highlight = [];
 	export let focus = false;
 	export let height = 400;
+
 	let width = 400;
 
-	let data = [];
+	const { geoNaturalEarth1, geoPath } = d3geoPkg
 	const tweenedZoom = tweened(focus ? 100 : zoom, { duration: 2000, easing: cubicOut });
 	$: projection = geoNaturalEarth1()
 		.center(center)
 		.scale($tweenedZoom)
 		.translate([width / 2, height / 2]);
 	$: path = geoPath().projection(projection);
-	let keys = Object.keys(world.objects);
-	let countries = { ...world.objects[keys[0]] };
-
-	data = topojson.feature(world, countries).features;
 
 	function startAnimation() {
 		if(focus) {
@@ -43,7 +39,7 @@
 	on:enterViewport={startAnimation}
 >
 	<svg {width} {height} class="bg-transparent rounded">
-		{#each data as feature}
+		{#each world.features as feature}
 			<Feature featurePath={path(feature)} properties={feature.properties} highlight={highlight.includes(feature.properties.name)} />
 		{/each}
 		{#each markers as marker}
