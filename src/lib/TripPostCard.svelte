@@ -16,7 +16,7 @@
 		<ResponsiveImage rounded {...post.image} />
 	</div>
 	<div class="flex-1 p-2 md:p-4 lg:p-8">
-		<p class="mx-auto text-sm text-gray-400 mb md:mb-4">
+		<p class="hidden md:block mx-auto text-sm text-gray-400 mb md:mb-4">
 			<FormattedDate date={post.startDate} />
 			{#if post.endDate}
 				<span>-</span>
@@ -31,6 +31,6 @@
 		>
 			{post.title}
 		</h3>
-		<p class="text-sm md:text-xl text-gray-500">{post.subtitle}</p>
+		<p class="text-sm md:text-xl text-gray-500 line-clamp-3 md:line-clamp-none">{post.subtitle}</p>
 	</div>
 </a>

@@ -10,7 +10,7 @@
       <span class="inline-block text-xs rounded py-1 px-2 bg-green-500 text-white dark:bg-green-800">AppSignal</span>
     {/if}
   </p>
-  <h2 class="text-2xl font-bold text-gray-700 dark:text-gray-200">
+  <h2 class="text-xl md:text-2xl font-bold text-gray-700 dark:text-gray-200">
     {post.title}
   </h2>
   <p class="text-md text-gray-500 mt-1">{post.summary}</p>
