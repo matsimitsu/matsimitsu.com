@@ -6,7 +6,7 @@
 	$: active = $page.path.startsWith(href);
 </script>
 
-<a class="hoverable" class:active sveltekit:prefetch {href}>{title}</a>
+<a on:click class="hoverable" class:active sveltekit:prefetch {href}>{title}</a>
 
 <style>
 	.hoverable {
