@@ -6,7 +6,7 @@
 		trip: 'germany-2020',
 		startDate: new Date('2020-10-18'),
 		endDate: new Date('2020-10-26'),
-		url: 'https://matsimitsu.com/trips/germany-2020',
+		url: 'https://old.matsimitsu.com/trips/germany-2020',
 		image: {
 			src: 'https://cdn.matsimitsu.com/germany-2020/20200918-IMG_20200918_113025.jpg',
 			width: 4000,

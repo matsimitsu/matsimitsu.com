@@ -6,7 +6,7 @@
 		startDate: new Date('2019-04-01'),
 		endDate: new Date('2019-04-13'),
 		trip: 'central-asia-2019',
-		url: 'https://matsimitsu.com/trips/central-asia-2019',
+		url: 'https://old.matsimitsu.com/trips/central-asia-2019',
 		image: {
 			src: 'https://cdn.matsimitsu.com/central-asia-2019/DSC09693-2200.jpg',
 			width: 2200,

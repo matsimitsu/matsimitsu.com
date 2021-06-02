@@ -6,7 +6,7 @@
 		startDate: new Date('2019-07-18'),
 		endDate: new Date('2019-08-05'),
 		trip: 'usa-2019',
-		url: 'https://matsimitsu.com/trips/usa-2019',
+		url: 'https://old.matsimitsu.com/trips/usa-2019',
 		image: {
 			src: 'https://cdn.matsimitsu.com/usa-2019/DSC00672-2200.jpg',
 			width: 2200,

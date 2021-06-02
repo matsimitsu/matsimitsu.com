@@ -5,7 +5,7 @@
 		startDate: new Date('2019-10-18'),
 		endDate: new Date('2019-10-26'),
     trip: 'japan-2019',
-		url: 'https://matsimitsu.com/trips/japan-2019',
+		url: 'https://old.matsimitsu.com/trips/japan-2019',
 		image: {
 			src: 'https://cdn.matsimitsu.com/japan-2019/DSC00029.jpg',
 			width: 2200,

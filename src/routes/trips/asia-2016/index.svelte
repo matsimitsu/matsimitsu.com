@@ -5,7 +5,7 @@
 		startDate: new Date('2016-05-13'),
 		endDate: new Date('2016-06-10'),
 		trip: 'asia-2016',
-		url: 'https://matsimitsu.com/trips/asia-2016',
+		url: 'https://old.matsimitsu.com/trips/asia-2016',
 		image: {
 			src: 'https://cdn.matsimitsu.com/asia-2016/59f5d7142a86923bc672d4c2-2200.jpg',
 			width: 2200,

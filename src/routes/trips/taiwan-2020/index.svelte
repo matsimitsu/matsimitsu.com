@@ -5,7 +5,7 @@
 		startDate: new Date('2020-02-20'),
 		endDate: new Date('2020-03-04'),
     trip: 'taiwan-2020',
-		url: 'https://matsimitsu.com/trips/taiwan-2020',
+		url: 'https://old.matsimitsu.com/trips/taiwan-2020',
 		image: {
 			src: 'https://cdn.matsimitsu.com/taiwan-2020/DSC01170.jpg',
 			width: 2200,
