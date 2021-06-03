@@ -1,0 +1,66 @@
+---
+title: Switching to Svelte
+date: 2021/06/03
+summary: I have rewritten my middleman site to Svelte/SvelteKit, here's what I encountered.
+---
+
+It's been a good ten years since I switched from [nanoc](https://nanoc.app) to [middleman](https://middlemanapp.com) and it has served me well.
+
+But in the past few years I moved to [Tailwind](https://tailwindcss.com) for styling and added some Javascript interactivity and the amount of node modules used increased over time.
+
+Having to update both Ruby gems and Node modules became more cumbersome and chances of something breaking increased over time.
+
+Deploying the site also wasn't really fast anymore. You'd had to wait several minutes for all the gems/modules to be installed and for Middleman to render the hundreds of pages. I believe the average time the last few deploys was around 03:50.
+
+
+## Alternatives
+
+I've been looking for an alternative for a while now and tried  the most popular candidates such as [Next.js](https://nextjs.org) and [Eleventy/11ty](https://www.11ty.dev), but Next.js didn't spark joy and 11ty was a bit too flexible.
+
+Flexibility is awesome, but it also makes it difficult to start with a "good" structure. Sure there were starter kits, but even picking one of those was difficult with dozens of starter kits that were all slightly different.
+
+## SvelteKit
+A couple of months ago [SvelteKit](https://kit.svelte.dev) was released as an early beta version and it immediately got my attention. I've been watching svelte videos from <name> on Youtube for a while now and it seemed like a fun language/framework to play with.
+
+Svelte-Kit gave me the structure needed to setup a blog the "official" way, without needing starter kits. Adding my biggest dependency, tailwind, was super easy with the svelte-add library and before I knew it, I was creating components to try and replicate [my current site](https://old.matsimitsu.com).
+
+As with any new framework, the first few pages progressed fast, but there are a few things to keep in mind when switching.
+
+## Pitfalls
+Another thing to note is that SvelteKit is under active development so things might change or have already changed since writing this.
+
+
+### Hydration
+It took me a while to grasp the concept of server-side rendered pages that were hydrated when loaded. This sounds amazing, but it requires a few hoops to jump through to make sure the right Javascript runs in the right place (e.g. you cant do filesystem stuff in the browser).
+
+### Endpoints
+Anything read from disk needs to be exposed through and endpoint, that can be consumed on the frontend.
+
+It's important to properly expose these endpoints. For example I had a `posts` endpoint that returned posts in a "trip". This endpoint worked with url params (`/posts.json?trip=usa-2020`). Which broke other pages, since the output of `posts.json` is cached for other trips as well. I had to rewrite the filename to `[trip].json`  (`usa-2020.json`) ,which could then be called and cached during the server-side rendering.
+
+Another thing that bit me a couple of times is the times a layout is rendered. I thought the layout was rendered every time you load a page, (and maybe it is?), but the `onMount` callback is only called on the first layout render. Which lead to some weird states in my app, where recommended posts were not tied to the current post, making for weird recommendations.
+
+### Deploys
+
+The biggest issue for me was that the `npm run dev` and `npm run build` command differ a lot with what they do and things that work fine in development are sudddenly broken when building.
+
+Sometimes a JS lib was not imported properly, or a page link pointed to a non-existing page, crashing the build process. It's also not always clear what each [build adapter](https://kit.svelte.dev/docs#adapters) actually does.
+
+[Build adapters](https://kit.svelte.dev/docs#adapters) are plugins that are specific to certain build environments.
+There are build adatapers for [Netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify) and [Vercel](https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel), for example.
+But also more generic adapters for NodeJS and a static adapter.
+
+I *think* the Netlify adapter uses Netlify Functions to render the page on demand, which for me resulted in 1 second + response times and a lot of function invocations, exactly the opposite of the static site I wanted.
+
+The static adapter, on the other hand, works fine on [Vercel](https://vercel.com), but crashed constantly on [Netlify](https://www.netlify.com), for example. I still haven't figured out why, it was just easier to switch to Vercel 🤷.
+
+## Development process
+Apart from these (small-ish) pitfalls, the development process was really nice and while it took a bit to grasp the concepts of Svelte, it felt really thought-out and easy to use.
+
+The development environment spins up quickly and auto-reloading is a bliss.
+
+
+## Deploying SvelteKit
+The build times for production have also gone down to 42 seconds, which is amazing. Though I haven't converted all the pages yet.
+
+I'll probably add more posts on how I solved specific problems with SvelteKit in the future, for now feel free to [check the source code](https://github.com/matsimitsu/matsimitsu.com) of this SvelteKit site for inspiration!
