@@ -103,7 +103,7 @@ height="4000"
   src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00239.jpg"
   width="6000"
   height="4000"
-  hero
+  full
 />
 
 <TextContent
@@ -204,7 +204,7 @@ height="4000"
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-one/DSC00268.jpg"
 	width="5740"
 	height="4000"
-	hero
+	full
 />
 
 <Panels>

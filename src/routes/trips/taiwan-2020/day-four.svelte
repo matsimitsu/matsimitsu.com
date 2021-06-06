@@ -50,7 +50,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-four/DSC00409.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>
@@ -112,7 +112,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-four/DSC00424.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>
@@ -148,7 +148,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-four/DSC00445.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>
@@ -241,7 +241,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-four/DSC00476.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>
@@ -308,7 +308,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-four/DSC00508.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>

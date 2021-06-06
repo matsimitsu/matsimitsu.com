@@ -91,7 +91,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00773.jpg"
 	width="1467"
 	height="2200"
-	hero
+	full
 />
 <TextContent
 	><h2>National Chiang Kai-shek Memorial Hall</h2>
@@ -107,7 +107,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00796.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>
@@ -136,7 +136,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00817.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <Panels>
 	<ResponsiveImage
@@ -166,7 +166,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00832.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <Panels>
 	<ResponsiveImage
@@ -189,5 +189,5 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00846.jpg"
 	width="2200"
 	height="1316"
-	hero
+	full
 />

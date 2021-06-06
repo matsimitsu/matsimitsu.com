@@ -108,7 +108,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-two/DSC00305.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent><p>The tower provides nice views of the surrounding city.</p></TextContent>
 
@@ -129,7 +129,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-two/DSC00315.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent><h2>Chihkan Tower, Tainan</h2>
   <p>
@@ -162,7 +162,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-two/DSC00321.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>

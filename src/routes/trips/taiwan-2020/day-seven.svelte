@@ -116,7 +116,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-seven-eight/DSC00761.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 
 <Panels>

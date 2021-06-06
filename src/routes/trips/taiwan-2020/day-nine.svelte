@@ -99,7 +99,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00862.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00878.jpg"
@@ -190,7 +190,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00939.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>
@@ -203,7 +203,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00942.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00955.jpg"
@@ -219,7 +219,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-nine/DSC00957.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>

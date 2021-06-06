@@ -102,7 +102,7 @@
   src="https://cdn.matsimitsu.com/taiwan-2020/day-ten/DSC00996.jpg"
   width="2200"
   height="1467"
-  hero
+  full
 />
 <Panels>
   <ResponsiveImage
@@ -148,7 +148,7 @@
   src="https://cdn.matsimitsu.com/taiwan-2020/day-ten/DSC01010.jpg"
   width="2200"
   height="1467"
-  hero
+  full
 />
 <TextContent><p>There are a couple of must-try things at Juifen and one of them is a bowl of <strong>Sweet Taro Balls</strong>. (Which I didn&#39;t like much, it has hardly any taste). And the <strong>Peanut Ice Cream Roll</strong>, which was really nice, basically a pancake with ice cream and peanut shavings. It was pretty neat how they managed to not touch any money at this shop by having the customers place the money in baskets and ask them to take the change themselves.</p></TextContent>
 
@@ -178,7 +178,7 @@
   src="https://cdn.matsimitsu.com/taiwan-2020/day-ten/DSC01028.jpg"
   width="2200"
   height="1467"
-  hero
+  full
 />
 <TextContent><p>After a shower I walked a &quot;small&quot; (5km) walk towards the south in the Wanhua district and eventually took the bus back, after eating some delicious fried chicken.</p></TextContent>
 

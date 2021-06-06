@@ -149,7 +149,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-eleven/DSC01081.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-eleven/DSC01090.jpg"
@@ -193,7 +193,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-eleven/DSC01116.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-eleven/DSC01118.jpg"
@@ -312,7 +312,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-eleven/DSC01164.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <Panels>
 	<ResponsiveImage

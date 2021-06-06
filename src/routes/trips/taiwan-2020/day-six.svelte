@@ -200,7 +200,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-six/DSC00617.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <Panels>
 	<ResponsiveImage
@@ -284,7 +284,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-six/DSC00659.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>
@@ -345,7 +345,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-six/DSC00685.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent><p>One side is river and the other &quot;jungle&quot;</p></TextContent>
 
@@ -376,7 +376,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-six/DSC00701.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>

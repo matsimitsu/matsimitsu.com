@@ -70,7 +70,7 @@
 	src="https://cdn.matsimitsu.com/taiwan-2020/day-three/DSC00357.jpg"
 	width="2200"
 	height="1467"
-	hero
+	full
 />
 <TextContent
 	><p>
