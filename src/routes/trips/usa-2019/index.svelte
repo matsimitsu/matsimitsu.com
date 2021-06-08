@@ -6,7 +6,6 @@
 		startDate: new Date('2019-07-18'),
 		endDate: new Date('2019-08-05'),
 		trip: 'usa-2019',
-		url: 'https://old.matsimitsu.com/trips/usa-2019',
 		image: {
 			src: 'https://cdn.matsimitsu.com/usa-2019/DSC00672-2200.jpg',
 			width: 2200,
@@ -16,3 +15,14 @@
 		countries: ['United States of America']
 	};
 </script>
+
+<script>
+	import Map from '$lib/Map.svelte';
+	import TripHeader from '$lib/TripHeader.svelte';
+</script>
+
+<TripHeader {...tripData} />
+
+<div class="max-w-screen-xl mx-auto">
+	<Map highlight={tripData.countries} height={800} zoom={250} center={[0, 10]} />
+</div>
