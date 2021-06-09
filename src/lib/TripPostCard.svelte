@@ -31,6 +31,6 @@
 		>
 			{post.title}
 		</h3>
-		<p class="text-sm md:text-xl text-gray-500 line-clamp-3 md:line-clamp-none">{post.subtitle}</p>
+		<p class="text-sm md:text-xl text-gray-500 line-clamp-3 md:line-clamp-none">{@html post.subtitle}</p>
 	</div>
 </a>

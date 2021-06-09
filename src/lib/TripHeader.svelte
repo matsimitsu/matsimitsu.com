@@ -25,6 +25,6 @@
 	>
 		{title}
 	</h1>
-	<p class="text-lg text-gray-600 dark:text-gray-400">{subtitle}</p>
+	<p class="text-lg text-gray-600 dark:text-gray-400">{@html subtitle}</p>
 	<hr class="mx-auto w-64 mt-4 dark:border-gray-600" />
 </div>

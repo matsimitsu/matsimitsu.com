@@ -21,7 +21,7 @@
       {/if}
     </p>
 		<h2 class="text-white text-2xl sm:text-4xl lg:text-6xl font-bold mb-4">{trip.title}</h2>
-		<p class="text-gray-300 text-md md:text-lg line-clamp-2 md:line-clamp-none">{trip.subtitle}</p>
+		<p class="text-gray-300 text-md md:text-lg line-clamp-2 md:line-clamp-none">{@html trip.subtitle}</p>
 	</div>
 	<ResponsiveImage noPadding rounded src={trip.image.src} width={trip.image.width} height={trip.image.height} alt={trip.image.alt} />
 </a>
