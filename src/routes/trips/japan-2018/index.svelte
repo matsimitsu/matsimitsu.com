@@ -6,13 +6,23 @@
 		startDate: new Date('2018-11-01'),
 		endDate: new Date('2018-11-15'),
 		trip: 'japan-2018',
-		url: 'https://old.matsimitsu.com/trips/japan-2018',
 		image: {
 			src: 'https://cdn.matsimitsu.com/japan-2018/5bde7cd72a86927dd442307e-2200.jpg',
 			width: 2200,
 			height: 1637,
 			alt: 'View of bridge near Ueno station in Tokyo, Japan'
 		},
-		countries: ['Japan']
+		countries: ['Japan'],
 	};
 </script>
+
+<script>
+	import Map from '$lib/Map.svelte';
+	import TripHeader from '$lib/TripHeader.svelte';
+</script>
+
+<TripHeader {...tripData} />
+
+<div class="max-w-screen-xl mx-auto">
+	<Map highlight={tripData.countries} height={800} zoom={250} center={[0, 10]} />
+</div>
