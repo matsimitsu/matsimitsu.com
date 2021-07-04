@@ -549,7 +549,7 @@
 	<h2>Plaka alleys</h2>
 	<p>
 		Plaka is a neighbourhood near the Acropolis and it consists of many small alleys filled with
-		bars, restaurants, gelato and offee places.
+		bars, restaurants, gelato and coffee places.
 	</p>
 </TextContent>
 
