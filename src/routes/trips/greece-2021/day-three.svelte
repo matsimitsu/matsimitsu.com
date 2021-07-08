@@ -229,6 +229,7 @@
 <TextContent>
 	<p>On top of the hill (that takes about 10-20 minutes to climb) is a church and a restaurant.</p>
 </TextContent>
+
 <Panels>
 	<ResponsiveImage
 		src="https://cdn.matsimitsu.com/greece-2021/day-three/20210706-DSC01995.jpg"
@@ -243,6 +244,17 @@
 		alt="Church cross"
 	/>
 </Panels>
+
+<TextContent>
+	<p>
+		The next day my flight was in the evening and I spent the day taking the tram (T5) to the coast
+		to spend the day at the beach.
+	</p>
+	<p>
+		From there I took a bus to the airport and a flight back to Amsterdam where I was woefully
+		unprepared for the cold Dutch evening weather with just T-shirts in my bag.
+	</p>
+</TextContent>
 
 <ResponsiveImage
 	full
