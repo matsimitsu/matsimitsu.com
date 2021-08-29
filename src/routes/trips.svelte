@@ -28,8 +28,8 @@
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@matsimitsu" />
-	<meta property="og:url" content="https://matsimitsu.com/blog" />
-	<link rel="canonical" href="https://matsimitsu.com/blog" />
+	<meta property="og:url" content="https://matsimitsu.com/trips" />
+	<link rel="canonical" href="https://matsimitsu.com/trips" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
