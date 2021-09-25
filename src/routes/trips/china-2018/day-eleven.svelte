@@ -39,6 +39,7 @@
 	</p>
 </TextContent>
 <ResponsiveImage
+	full
 	src="https://cdn.matsimitsu.com/china-2018/day-eleven/20180511-01391.jpg"
 	width="4000"
 	height="2667"
@@ -79,6 +80,7 @@
 />
 
 <ResponsiveImage
+	full
 	src="https://cdn.matsimitsu.com/china-2018/day-eleven/20180511-01396.jpg"
 	width="4000"
 	height="2667"
@@ -138,6 +140,7 @@
 	/>
 </Panels>
 <ResponsiveImage
+	full
 	src="https://cdn.matsimitsu.com/china-2018/day-eleven/20180511-01438-2.jpg"
 	width="4000"
 	height="2667"
@@ -181,6 +184,7 @@
 	/>
 </Panels>
 <ResponsiveImage
+	full
 	src="https://cdn.matsimitsu.com/china-2018/day-eleven/20180511-01476.jpg"
 	width="4000"
 	height="906"
