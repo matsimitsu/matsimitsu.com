@@ -1,5 +1,6 @@
 <script>
 	import { getContext } from 'svelte';
+	export let subtitle = "Shot on an old phone, hence the lack of quality.";
 	let inTextContent = getContext('inTextContent') || false;
 </script>
 
@@ -27,7 +28,7 @@
 			<slot />
 		</div>
 		<div class="flex justify-end mt-4 prose prose-lg dark:prose-dark">
-			<small>Shot on an old phone, hence the lack of quality.</small>
+			<small>{subtitle}</small>
 		</div>
 	</div>
 </div>
