@@ -1,0 +1,121 @@
+---
+title: Tailwind CLI with Yew and Trunk
+date: 2022/01/04
+summary: Let's see if we can go node-less with Yew.
+---
+
+[Yew](https://yew.rs) is a front-end web framework written in Rust. It compiles to Web assembly, which is pretty darn quick. But you probably already knew this if you came here from Google.
+
+I'm no front-end expert, and I don't like to deal with CSS, so [Tailwindcss](https://tailwindcss.com) is a godsend for me. Instead of wrangling tons of CSS tags together to make something that looks different in every browser, I get to add a couple of CSS classes to elements to make things look halfway decent.
+
+Before the [Tailwind Standalone CLI](https://tailwindcss.com/blog/standalone-cli), you had to install Node to compile the Tailwind CSS to something Yew can output after compiling.
+
+With this CLI, however, you don't need any node at all (well, technically, the Tailwind Standalone CLI is just Node wrapped with Tailwind, but it's a single binary, and you don't have to install and manage a gazillion NPM packages).
+
+To set this up with [Trunk](), one of the ways to use Yew, ideally I'd have it build Tailwind for me, and I don't have to run multiple processes.
+
+Luckily you can do this with a `Trunk.toml` file and a `[build]` directive.
+
+ First I installed the Tailwind CLI as described in their docs:
+
+```
+curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-x64
+chmod +x tailwindcss-macos-x64
+mv tailwindcss-macos-x64 tailwindcss
+```
+
+After initializing tailwind with `./tailwindcss init`, I modified the config file to look for classes in the Rust code:
+
+```
+module.exports = {
+  content: [
+    './src/**/*.rs',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ]
+}
+```
+
+Then I added a `Trunk.toml` file with a build step:
+
+```
+[build]
+target = "index.html"
+dist = "dist"
+
+[[hooks]]
+stage = "build"
+command = "sh"
+command_arguments = ["-c", "./tailwindcss -i src/tailwind.css -o $TRUNK_STAGING_DIR/tailwind.css"]
+```
+
+And placed a Tailwind.css file in the src folder that uses the base, utilities, and components.
+
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Finally, I modified the `index.html` file that Trunk uses to render the app to include the CSS file:
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/tailwind.css"/>
+    <base data-trunk-public-url/>
+
+    <title>Yew App</title>
+  </head>
+</html>
+```
+
+Running `trunk serve` will compile the CSS during the build step and include it in the output:
+
+```
+➜  yew-app git:(main) trunk serve
+Jan 04 12:42:30.060  INFO 📦 starting build
+Jan 04 12:42:30.063  INFO spawning asset pipelines
+Jan 04 12:42:30.470  INFO spawned hook sh command_arguments=["-c", "./tailwindcss -i src/tailwind.css -o $TRUNK_STAGING_DIR/tailwind.css"]
+Jan 04 12:42:30.470  INFO spawning hook stage=Build command=sh
+Jan 04 12:42:30.470  INFO building yew-app
+    Finished dev [unoptimized + debuginfo] target(s) in 0.14s
+Jan 04 12:42:30.816  INFO fetching cargo artifacts
+Jan 04 12:42:31.106  INFO processing WASM
+Jan 04 12:42:31.148  INFO using system installed binary app="wasm-bindgen" version="0.2.78"
+Jan 04 12:42:31.150  INFO calling wasm-bindgen
+Jan 04 12:42:31.428  INFO copying generated wasm-bindgen artifacts
+
+Done in 329ms.
+Jan 04 12:42:32.114  INFO finished hook sh
+Jan 04 12:42:32.115  INFO applying new distribution
+Jan 04 12:42:32.117  INFO ✅ success
+Jan 04 12:42:32.119  INFO 📡 serving static assets at -> /
+Jan 04 12:42:32.119  INFO 📡 server listening at 0.0.0.0:8080
+```
+
+
+The entire app looks like this:
+
+```
+➜  yew-app git:(main) tree .
+.
+├── Cargo.lock
+├── Cargo.toml
+├── Trunk.toml
+├── index.html
+├── src
+│   ├── main.rs
+│   └── tailwind.css
+├── tailwind.config.js
+├── tailwindcss
+```
+
+I also managed to [deploy it to vercel](https://github.com/matsimitsu/yew-app), but that's a story for another time.
