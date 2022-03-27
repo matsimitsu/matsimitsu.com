@@ -4,7 +4,7 @@ export async function getTrips() {
   await Promise.all(Object.entries(modules).map(async ([file, module]) => {
     const { tripData } = await module();
 
-    if (tripData) {
+    if (tripData && !tripData.private) {
       const url = file
         .replace('/src/routes', '')
         .replace("index.svelte", "")

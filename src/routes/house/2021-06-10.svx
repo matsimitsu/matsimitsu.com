@@ -1,9 +1,0 @@
----
-date: 2021-06-10T15:20:28.483Z
-title: Applied to the project
-category: photos
-layout: note
----
-
-Just two days after my subscription the website opened up for applications, which I submitted later on the day. Amongst the things they asked are your personal details, if you live alone or not, an indication of the value of your current home and your income.
-Based on these details the project will divvy up the available housing stock.
