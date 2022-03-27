@@ -131,20 +131,12 @@
 	/>
 </Panels>
 
-<Panels>
-	<ResponsiveImage
-		src="https://cdn.matsimitsu.com/france-2022/processed-lg/20220327--46.jpg"
-		width="1536"
-		height="2048"
-		alt=""
-	/>
-	<ResponsiveImage
-		src="https://cdn.matsimitsu.com/france-2022/processed-lg/20220327--45.jpg"
-		width="2048"
-		height="1536"
-		alt=""
-	/>
-</Panels>
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/france-2022/processed-lg/20220327--45.jpg"
+	width="2048"
+	height="1536"
+	alt=""
+/>
 
 <TextContent>
 	<p>Luckily the Saharan sand did not influence the taste of beer.</p>
