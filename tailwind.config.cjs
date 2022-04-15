@@ -1,5 +1,6 @@
 const headerLink = {
-  color: "inherit",
+  'color': 'var(--tw-prose-headings)',
+  'text-decoration': 'none',
   '&:hover, &:active': {
     'text-decoration': 'none'
   }
@@ -13,143 +14,84 @@ module.exports = {
   ],
   theme: {
     extend: {
-      typography: (theme) => ({
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.600'),
-            a: {
-              color: theme('colors.blue.400'),
-              'text-decoration': 'none',
-              '&:hover, &.active': {
-                'text-decoration': 'underline',
-              },
-            },
-            strong: {
-              color: theme('colors.gray.800')
-            },
+            '--tw-prose-body': theme('colors.gray[600]'),
+            '--tw-prose-headings': theme('colors.gray[800]'),
+            '--tw-prose-lead': theme('colors.gray[700]'),
+            '--tw-prose-links': theme('colors.blue[400]'),
+            '--tw-prose-bold': theme('colors.gray[800]'),
+            '--tw-prose-counters': theme('colors.gray[600]'),
+            '--tw-prose-bullets': theme('colors.gray[400]'),
+            '--tw-prose-hr': theme('colors.gray[300]'),
+            '--tw-prose-quotes': theme('colors.gray[800]'),
+            '--tw-prose-quote-borders': theme('colors.gray[300]'),
+            '--tw-prose-captions': theme('colors.gray[700]'),
+            '--tw-prose-code': theme('colors.gray[800]'),
+            '--tw-prose-pre-code': theme('colors.gray[200]'),
+            '--tw-prose-pre-bg': theme('colors.gray[800]'),
+            '--tw-prose-th-borders': theme('colors.gray[300]'),
+            '--tw-prose-td-borders': theme('colors.gray[200]'),
             h1: {
               'text-align': 'center',
-              color: theme('colors.gray.800'),
-              'margin-top': '0',
               a: headerLink
             },
             h2: {
               'text-align': 'center',
-              color: theme('colors.gray.800'),
-              'margin-top': '0',
               a: headerLink
             },
             h3: {
               'text-align': 'center',
-              color: theme('colors.gray.800'),
-              'margin-top': '0',
               a: headerLink
             },
             h4: {
               'text-align': 'center',
-              color: theme('colors.gray.800'),
-              'margin-top': '0',
               a: headerLink
             },
-            code: {
-              color: theme('colors.gray.800'),
-              'background-color': theme('colors.gray.200'),
-              '&:before, &:after': {
-                display: 'none'
-              }
+          },
+        },
+        dark: {
+          css: {
+            '--tw-prose-body': theme('colors.gray[400]'),
+            '--tw-prose-headings': theme('colors.gray[200]'),
+            '--tw-prose-lead': theme('colors.gray[300]'),
+            '--tw-prose-links': theme('colors.blue[400]'),
+            '--tw-prose-bold': theme('colors.white'),
+            '--tw-prose-counters': theme('colors.gray[400]'),
+            '--tw-prose-bullets': theme('colors.gray[600]'),
+            '--tw-prose-hr': theme('colors.gray[700]'),
+            '--tw-prose-quotes': theme('colors.gray[100]'),
+            '--tw-prose-quote-borders': theme('colors.gray[700]'),
+            '--tw-prose-captions': theme('colors.gray[400]'),
+            '--tw-prose-code': theme('colors.white'),
+            '--tw-prose-pre-code': theme('colors.gray[300]'),
+            '--tw-prose-pre-bg': theme('colors.gray[800]'),
+            '--tw-prose-th-borders': theme('colors.gray[600]'),
+            '--tw-prose-td-borders': theme('colors.gray[700]'),
+            h1: {
+              'text-align': 'center',
+              a: headerLink
             },
-            p: {
-              color: theme('colors.gray.600'),
+            h2: {
+              'text-align': 'center',
+              a: headerLink
             },
-            'ul > li': {
-              '&::before': {
-                'background-color': theme('colors.gray.800'),
-                'font-weight': 'bold'
-              }
+            h3: {
+              'text-align': 'center',
+              a: headerLink
             },
-            'ol > li': {
-              '&::before': {
-                color: theme('colors.gray.800'),
-                'font-weight': 'bold'
-              }
+            h4: {
+              'text-align': 'center',
+              a: headerLink
             }
           },
         },
-
-        dark: {
-          css: {
-            color: theme('colors.gray.400'),
-            a: {
-              color: theme('colors.blue.400'),
-              'text-decoration': 'none',
-              '&:hover, &.active': {
-                'text-decoration': 'underline',
-              },
-            },
-            strong: {
-              color: theme('colors.gray.100')
-            },
-            h1: {
-              'text-align': 'center',
-              color: 'white',
-              'margin-top': '0',
-              a: headerLink
-            },
-            h2: {
-              'text-align': 'center',
-              color: 'white',
-              'margin-top': '0',
-              a: headerLink
-            },
-            h3: {
-              'text-align': 'center',
-              color: 'white',
-              'margin-top': '0',
-              a: headerLink
-            },
-            h4: {
-              'text-align': 'center',
-              color: 'white',
-              'margin-top': '0',
-              a: headerLink
-            },
-            code: {
-              color: theme('colors.gray.400'),
-              'background-color': theme('colors.gray.800'),
-              '&:before, &:after': {
-                display: 'none'
-              }
-            },
-            p: {
-              color: theme('colors.gray.400'),
-            },
-            blockquote: {
-              color: theme('colors.gray.100'),
-            },
-            'ul > li': {
-              '&::before': {
-                'background-color': 'white',
-                'font-weight': 'bold'
-              }
-            },
-            'ol > li': {
-              '&::before': {
-                color: 'white',
-                'font-weight': 'bold'
-              }
-            }
-          }
-        },
-      })
+      }),
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
   ],
-  variants: {
-    extend: {
-      typography: ['dark']
-    }
-  }
 };
