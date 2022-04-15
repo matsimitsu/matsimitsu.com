@@ -8,7 +8,7 @@ const headerLink = {
 module.exports = {
   mode: "jit",
   darkMode: "class",
-  purge: [
+  content: [
     "./src/**/*.{html,js,svelte,ts,svx}",
   ],
   theme: {
