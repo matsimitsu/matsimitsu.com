@@ -8,6 +8,7 @@
 	export let rounded = false;
 	export let width, height;
 	export let full = false;
+	export let noZoom = false;
 	let style;
 	let inPanel = getContext('inPanel') || false;
 
@@ -35,6 +36,8 @@
 	// Lightbox
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
+		if (noZoom) { return }
+
 		isOpen = newIsOpen;
 	};
 </script>

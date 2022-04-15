@@ -13,7 +13,7 @@
 	class="flex max-w-4xl mx-auto mb-8 transform hover:scale-105 duration-300 transition transition-transform"
 >
 	<div class="flex-1">
-		<ResponsiveImage rounded {...post.image} />
+		<ResponsiveImage noZoom rounded {...post.image} />
 	</div>
 	<div class="flex-1 p-2 md:p-4 lg:p-8">
 		<p class="hidden md:block mx-auto text-sm text-gray-400 mb md:mb-4">
