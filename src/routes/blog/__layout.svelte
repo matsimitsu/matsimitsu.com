@@ -27,11 +27,13 @@
 <slot />
 
 <PrevNextPost {prevPost} {nextPost} />
-<div class="max-w-4xl mx-auto mb-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-8">
-	<MoreHeader>More posts</MoreHeader>
+<div class="mb-24 border-t dark:border-gray-600 border-gray-200 pt-24 px-8">
+	<div class="max-w-4xl mx-auto">
+		<MoreHeader>More posts</MoreHeader>
 
-	{#each posts.slice(0, 5) as post (post.url)}
-		<Post {post} />
-	{/each}
+		{#each posts.slice(0, 5) as post (post.url)}
+			<Post {post} />
+		{/each}
+	</div>
 </div>
 <ReturnToCategory path="/blog" text="Return to blog" />

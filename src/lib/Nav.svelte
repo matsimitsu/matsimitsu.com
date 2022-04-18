@@ -35,7 +35,7 @@
 		<li class="ml-4"><NavLink on:click={closeMenu} href="/uses" title="Tech" /></li>
 	</ul>
 	<DarkModeToggle />
-	<button on:click={toggleMenu} class="ml-4 md:hidden w-8 h-8 p-1 dark:text-gray-100">
+	<button on:click={toggleMenu} class="ml-2 md:hidden w-8 h-8 p-1 dark:text-gray-100">
 		{#if isMenuOpen}
 			<svg
 				aria-hidden="true"
