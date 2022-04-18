@@ -72,7 +72,7 @@
 				>
 			{/if}
 	</p>
-	<h2 class="text-md sm:text-lg lg:text-2xl ml-2 font-bold text-gray-700 dark:text-gray-200">
+	<h2 class="text-md sm:text-lg ml-2 font-bold text-gray-700 dark:text-gray-200">
 		{note.title}
 	</h2>
 </a>
