@@ -1,6 +1,6 @@
 <script context="module">
 	// Use load function to get the current trip posts
-	export async function load({ _page, fetch }) {
+	export async function load({ fetch }) {
 		const posts = await fetch(`/blog.json`);
 		const notes = await fetch(`/notes.json`);
 		const trips = await fetch(`/trips.json`);
@@ -16,15 +16,16 @@
 </script>
 
 <script>
-	import TripPostCard from "$lib/TripPostCard.svelte";
+	import TripPostCard from '$lib/TripPostCard.svelte';
 	import Post from '$lib/Post.svelte';
-import Note from "$lib/Note.svelte";
-import PageHeader from '$lib/PageHeader.svelte';
+	import Note from '$lib/Note.svelte';
+	import PageHeader from '$lib/PageHeader.svelte';
 	export let posts = [];
 	export let notes = [];
 	export let trips = [];
 
-	const description = "Hi there! My name is Robert Beekman, developer, photographer and longboarder."
+	const description =
+		'Hi there! My name is Robert Beekman, developer, photographer and longboarder.';
 </script>
 
 <svelte:head>
@@ -54,40 +55,38 @@ import PageHeader from '$lib/PageHeader.svelte';
 	</span>
 	<span slot="subtitle">
 		<p>
-			I love creating scalable webapplications, created pragmatically, with both "boring" and new technologies, whatever is best suited for the job. I made the first commit to <a href="https://appsignal.com">AppSignal</a>, where I'm still happily employed.
-			In my free time I like to travel, mainly to Asia and when I'm not abroad I regularly take my longboard out for a spin.
+			I love creating scalable webapplications, created pragmatically, with both "boring" and new
+			technologies, whatever is best suited for the job. I made the first commit to <a
+				href="https://appsignal.com">AppSignal</a
+			>, where I'm still happily employed. In my free time I like to travel, mainly to Asia and when
+			I'm not abroad I regularly take my longboard out for a spin.
 		</p>
 	</span>
 </PageHeader>
 
-<PageHeader title="From the blog" align="left">
-</PageHeader>
+<PageHeader title="From the blog" align="left" />
 <div class="mx-auto max-w-4xl mb-24 px-4 -mt-12">
 	<div class="max-w-xl ml-0">
 		{#each posts.slice(0, 3) as post (post.url)}
-		<Post post={post} />
-	{/each}
+			<Post {post} />
+		{/each}
 	</div>
 </div>
 
-
-<PageHeader title="From my trips" align="left">
-</PageHeader>
+<PageHeader title="From my trips" align="left" />
 
 <div class="mx-auto max-w-4xl px-4 mb-24 -mt-12">
 	{#each trips.slice(0, 3) as trip (trip.trip)}
-		<TripPostCard post={trip}/>
+		<TripPostCard post={trip} />
 	{/each}
 </div>
 
-
-<PageHeader title="Notes" align="left">
-</PageHeader>
+<PageHeader title="Notes" align="left" />
 
 <div class="mx-auto max-w-4xl mb-24 px-4 -mt-12">
 	<div class="max-w-xl ml-0">
 		{#each notes.slice(0, 3) as note (note.url)}
-		<Note note={note} />
-	{/each}
+			<Note {note} />
+		{/each}
 	</div>
 </div>

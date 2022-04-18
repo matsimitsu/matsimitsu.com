@@ -3,7 +3,7 @@
 	export let href;
 	export let title;
 
-	$: active = $page.path.startsWith(href);
+	$: active = $page.url.pathname.startsWith(href);
 </script>
 
 <a on:click class="hoverable" class:active sveltekit:prefetch {href}>{title}</a>

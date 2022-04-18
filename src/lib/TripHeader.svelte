@@ -8,7 +8,7 @@
 	export let endDate = null;
 
 	onMount(() => {
-		setSeenPost($page.path)
+		setSeenPost($page.url.pathname)
 	})
 </script>
 

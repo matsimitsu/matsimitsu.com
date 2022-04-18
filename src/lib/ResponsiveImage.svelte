@@ -36,7 +36,9 @@
 	// Lightbox
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
-		if (noZoom) { return }
+		if (noZoom) {
+			return;
+		}
 
 		isOpen = newIsOpen;
 	};

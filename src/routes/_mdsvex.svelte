@@ -15,8 +15,8 @@
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="@matsimitsu" />
-	<meta property="og:url" content="https://matsimitsu.com{$page.path}" />
-	<link rel="canonical" href="https://matsimitsu.com{$page.path}" />
+	<meta property="og:url" content="https://matsimitsu.com{$page.url.pathname}" />
+	<link rel="canonical" href="https://matsimitsu.com{$page.url.pathname}" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"

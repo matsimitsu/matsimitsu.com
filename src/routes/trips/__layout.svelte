@@ -1,11 +1,11 @@
 <script context="module">
 	import { getNeighbours } from '$lib/utils/neighbours';
-  import { getSeenPosts } from '$lib/utils/seenPosts.js';
-  import { browser } from '$app/env';
+	import { getSeenPosts } from '$lib/utils/seenPosts.js';
+	import { browser } from '$app/env';
 
 	// Use load function to get the current trip posts
-	export async function load({ page, fetch }) {
-		const [_root, _trips, trip, _post] = page.path.split('/');
+	export async function load({ url, fetch }) {
+		const [_root, _trips, trip, _post] = url.pathname.split('/');
 		const postsReq = await fetch(`/trips/${trip}.json`);
 		const tripReq = await fetch('/trips.json');
 
@@ -13,15 +13,15 @@
 		const trips = await tripReq.json();
 
 		const currentTrip = trips.find((t) => t.trip == trip);
-		const currentPost = tripPosts.find((p) => p.url == page.path);
+		const currentPost = tripPosts.find((p) => p.url == url);
 
-		let seenPosts = []
+		let seenPosts = [];
 		if (browser && currentPost) {
-			seenPosts = [...getSeenPosts(), currentPost.url]
+			seenPosts = [...getSeenPosts(), currentPost.url];
 		}
 
 		const [prevPost, nextPost] =
-			tripPosts.length > 1 ? getNeighbours(page, tripPosts) : [null, null];
+			tripPosts.length > 1 ? getNeighbours(url, tripPosts) : [null, null];
 
 		return {
 			props: { tripPosts, prevPost, nextPost, currentTrip, currentPost, seenPosts }
@@ -94,7 +94,7 @@
 		<div class="border-t dark:border-gray-600 border-gray-200 pt-24 px-4" class:mt-24={!nextPost}>
 			<MoreHeader>More posts in this trip</MoreHeader>
 			{#each tripPosts as post (post.url)}
-				<TripPostCard post={post} seenPosts={seenPosts} />
+				<TripPostCard {post} {seenPosts} />
 			{/each}
 		</div>
 	{/if}

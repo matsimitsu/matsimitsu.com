@@ -2,11 +2,11 @@
 	import { getNeighbours } from '$lib/utils/neighbours';
 
 	// Use load function to get the current trip posts
-	export async function load({ page, fetch }) {
+	export async function load({ url, fetch }) {
 		const req = await fetch(`/blog.json`);
 		const posts = await req.json();
 
-		const [nextPost, prevPost] = getNeighbours(page, posts);
+		const [nextPost, prevPost] = getNeighbours(url, posts);
 		return {
 			props: { posts, nextPost, prevPost }
 		};
