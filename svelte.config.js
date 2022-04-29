@@ -22,8 +22,13 @@ const config = {
 			assets: 'build',
 		}),
 		prerender: {
-			default: true
+			default: true,
+			entries: [
+        "*",
+        "/trips/france-2022"
+      ],
 		},
+		trailingSlash: 'always',
 		vite: {}
 	}
 };
