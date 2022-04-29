@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'France 2022',
-		subtitle: 'A relaxing week in southern Spain with friends.',
+		subtitle: 'Skiing with friends.',
 		trip: 'france-2022',
 		startDate: new Date('2022-03-14'),
 		endDate: new Date('2022-03-20'),
@@ -23,7 +23,7 @@
 	export const tripData = {
     private: true,
 		title: 'France 2022',
-		subtitle: 'A relaxing week in southern Spain with friends.',
+		subtitle: 'Skiing with friends.',
 		trip: 'france-2022',
 		startDate: new Date('2022-03-14'),
 		endDate: new Date('2022-03-20'),
