@@ -13,15 +13,27 @@
 		const trips = await tripReq.json();
 
 		const currentTrip = trips.find((t) => t.trip == trip);
-		const currentPost = tripPosts.find((p) => p.url == url);
+		const currentPost = tripPosts.find((p) => p.url == url.pathname);
+		const isSinglePost = tripPosts.length == 1 && tripPosts[0].isSinglePost;
 
 		let seenPosts = [];
 		if (browser && currentPost) {
 			seenPosts = [...getSeenPosts(), currentPost.url];
 		}
 
-		const [prevPost, nextPost] =
-			tripPosts.length > 1 ? getNeighbours(url, tripPosts) : [null, null];
+		// No neighbours by default
+		let [prevPost, nextPost] = [null, null];
+
+		// If we are on an index page, show neighbours
+		// (e.g. the trip is not a single post, but has one post)
+		if (!isSinglePost && !currentPost) {
+			[prevPost, nextPost] = getNeighbours(url, tripPosts);
+		}
+
+		// If we have more than one post, we can always show neighbours
+		if (tripPosts.length > 1) {
+			[prevPost, nextPost] = getNeighbours(url, tripPosts);
+		}
 
 		return {
 			props: { tripPosts, prevPost, nextPost, currentTrip, currentPost, seenPosts }
@@ -83,7 +95,10 @@
 		<slot />
 	</div>
 	{#if nextPost}
-		<div class="mt-24 border-t dark:border-gray-600 border-gray-200 py-24 px-4 bg-gray-100">
+		<div
+			class="mt-24 border-t dark:border-gray-600 border-gray-200 py-24 px-4 bg-gray-100"
+			class:-mb-24={tripPosts.length == 1}
+		>
 			<MoreHeader>Next in this trip</MoreHeader>
 			{#each [nextPost] as post (post.url)}
 				<Trip trip={post} />

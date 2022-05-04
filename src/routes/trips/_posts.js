@@ -5,11 +5,12 @@ export async function getPosts() {
     const { postData } = await module();
 
     if (postData) {
+      const isSinglePost = file.endsWith("index.svelte")
       const url = file
         .replace('/src/routes', '')
         .replace("index.svelte", "")
-        .replace(".svelte", "");
-      posts.push({ ...postData, url });
+        .replace(".svelte", "") + '/';
+      posts.push({ ...postData, url, isSinglePost, file });
     }
   }));
 
