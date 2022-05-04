@@ -1,16 +1,17 @@
 <script context="module">
-	export const postData = {
+	export const tripData = {
 		title: 'Asia 2022',
-		subtitle: 'Singapore and Thailand - Starting soon',
+		subtitle: 'Singapore and Thailand',
 		trip: 'asia-2022',
 		startDate: new Date('2022-05-02'),
 		endDate: new Date('2022-07-04'),
 		image: {
-			src: 'https://cdn.matsimitsu.com/asia-2022/59f77cba2a86923bc672d6f9-2200.jpg',
-			width: 2200,
-			height: 1467,
-			alt: 'Gardens by the bay in Singapore'
+			src: 'https://cdn.matsimitsu.com/asia-2022/day-one/20220504-03371.jpg',
+			width: 4000,
+			height: 2667,
+			alt: 'Tree forest, Gardens by the bay'
 		},
+		countries: ['Singapore', 'Thailand'],
 		locations: [
 			{
 				name: 'Singapore',
@@ -32,46 +33,27 @@
 			}
 		]
 	};
-	export const tripData = {
-		title: 'Asia 2022',
-		subtitle: 'Singapore and Thailand',
-		trip: 'asia-2022',
-		startDate: new Date('2022-05-02'),
-		endDate: new Date('2022-07-04'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/asia-2022/59f77cba2a86923bc672d6f9-2200.jpg',
-			width: 2200,
-			height: 1467,
-			alt: 'Gardens by the bay in Singapore'
-		},
-		countries: ['Singapore', 'Thailand']
-	};
 </script>
 
 <script>
-	import TextContent from '$lib/TextContent.svelte';
-	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
-	import Panels from '$lib/Panels.svelte';
 	import Map from '$lib/Map.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
-	import Video from '$lib/Video.svelte';
-	import PhonePic from '$lib/PhonePic.svelte';
 </script>
 
-<TripHeader {...postData} />
+<TripHeader {...tripData} />
 
 <div class="max-w-screen-xl mx-auto">
 	<Map highlight={tripData.countries} height={800} zoom={250} center={[0, 10]} />
 </div>
 
 <Location
-	name="Asia 2022 - Starting soon"
+	name="Asia 2022"
 	height={460}
 	zoom={400}
 	focus={true}
 	center={[100.523186, 13.736717]}
-	markers={postData.locations}
+	markers={tripData.locations}
 >
 	<p>
 		After two years of Covid, countries are opening up for tourism. At the time of booking (March,

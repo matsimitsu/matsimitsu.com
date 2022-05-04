@@ -57,7 +57,7 @@
 	<source type="image/jpg" srcset={srcsetForExtension('jpg')} />
 	<source type="image/webp" srcset={srcsetForExtension('webp')} />
 	<source type="image/avif" srcset={srcsetForExtension('avif')} />
-	<img loading="lazy" {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
+	<img {width} {height} class="block mx-auto h-auto" src="{src}-720.jpg" {alt} />
 </picture>
 
 <Transition show={isOpen}>
@@ -95,7 +95,6 @@
 						<source type="image/webp" srcset={srcsetForExtension('webp')} />
 						<source type="image/avif" srcset={srcsetForExtension('avif')} />
 						<img
-							loading="lazy"
 							{width}
 							{height}
 							src="{src}-720.jpg"
