@@ -1,7 +1,7 @@
 <script context="module">
 	export const postData = {
 		title: 'Day One',
-		subtitle: 'Singapore, Gardens by the Bay',
+		subtitle: 'Gardens by the Bay, Singapore',
 		trip: 'asia-2022',
 		startDate: new Date('2022-05-04'),
 		image: {
