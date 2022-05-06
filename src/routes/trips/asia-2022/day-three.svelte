@@ -232,3 +232,23 @@
 	height="2667"
 	alt="Stairs at Fort Canning Park"
 />
+
+<TextContent>
+	<p>
+		After some rest at the apartment, it's time for dinner. The street my apartment is on; Belastier, is known for it's chicken rice, so time to try it out.
+	</p>
+
+	<PhonePic subtitle="Foodpic, taken with phone">
+		<ResponsiveImage src="https://cdn.matsimitsu.com/asia-2022/day-three/PXL_20220506_113954151.jpg" width="4032" height="3024" alt="Belastier Chicken Rice" />
+	</PhonePic>
+	<p>
+		For dessert I had <i>Popiah</i>, a crepe-like contraption from Fujian in China, filled with vegetables.
+	</p>
+	<PhonePic subtitle="Foodpic, taken with phone">
+		<ResponsiveImage src="https://cdn.matsimitsu.com/asia-2022/day-three/PXL_20220506_115442093.jpg" width="3024" height="4032" alt="Popiah" />
+	</PhonePic>
+</TextContent>
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/asia-2022/day-three/20220506-03641.jpg" width="4000" height="2282" alt="" />
+
+<ResponsiveImage src="https://cdn.matsimitsu.com/asia-2022/day-three/20220506-03647-2.jpg" width="4000" height="2843" alt="" />
