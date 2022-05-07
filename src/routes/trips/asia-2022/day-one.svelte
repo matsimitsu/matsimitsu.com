@@ -28,6 +28,7 @@
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
 	import PhonePic from '$lib/PhonePic.svelte';
+	import BunnyVideo from '$lib/BunnyVideo.svelte';
 </script>
 
 <TripHeader {...postData} />
@@ -191,6 +192,10 @@
 		alt="Hamburger icon"
 	/>
 </Panels>
+
+<PhonePic subtitle="Phone video of noise at the Gardens by the Bay">
+	<BunnyVideo id="c8d53f0c-2376-4679-90e4-5f53d55772b0" />
+</PhonePic>
 
 <Panels>
 	<ResponsiveImage
