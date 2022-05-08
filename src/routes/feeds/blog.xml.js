@@ -18,7 +18,7 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
     <title><![CDATA[Matsimitsu.com - Trips]]></title>
     <description><![CDATA[Personal weblog of Robert Beekman. Feed of latest posts from the blog section of my site.]]></description>
     <link>${siteUrl}</link>
-    <atom:link href="${siteUrl}/feeds/blog.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="www.${siteUrl}/feeds/blog.xml" rel="self" type="application/rss+xml" />
     <generator>SvelteKit</generator>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     ${posts
