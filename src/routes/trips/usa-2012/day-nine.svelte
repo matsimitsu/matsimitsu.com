@@ -101,7 +101,7 @@
 	</p>
 	<p>
 		We also went off-road again this time, it's a rental car after all. And we nearly got stuck at
-		some point, but somehow managed to complete the trial.
+		some point, but somehow managed to complete the trail.
 	</p>
 </Location>
 

@@ -33,7 +33,7 @@
 
 <TextContent>
 	<p>
-		A while ago, a rail corridor running from north to south was converted to a trial, and it's a
+		A while ago, a rail corridor running from north to south was converted to a trail, and it's a
 		nice way to visit a few sites near the trail.
 	</p>
 	<ResponsiveImage
