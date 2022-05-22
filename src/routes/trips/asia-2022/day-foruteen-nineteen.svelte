@@ -237,28 +237,6 @@
 	</PhonePic>
 </TextContent>
 
-<ResponsiveImage
-	src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/PXL_20220521_044551366.jpg"
-	width="4032"
-	height="3024"
-	alt=""
-/>
-
-<Panels>
-	<ResponsiveImage
-		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04376.jpg"
-		width="2667"
-		height="4000"
-		alt=""
-	/>
-	<ResponsiveImage
-		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04381.jpg"
-		width="1954"
-		height="4000"
-		alt=""
-	/>
-</Panels>
-
 <Panels>
 	<ResponsiveImage
 		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04378.jpg"
@@ -272,19 +250,25 @@
 		height="3663"
 		alt=""
 	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04381.jpg"
+		width="1954"
+		height="4000"
+		alt=""
+	/>
 </Panels>
 
 <Panels>
 	<ResponsiveImage
-		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04388.jpg"
-		width="4000"
-		height="2667"
-		alt=""
-	/>
-	<ResponsiveImage
 		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04390.jpg"
 		width="1717"
 		height="3616"
+		alt=""
+	/>
+	<ResponsiveImage
+		src="https://cdn.matsimitsu.com/asia-2022/day-thirteen-sixteen/20220521-04388.jpg"
+		width="4000"
+		height="2667"
 		alt=""
 	/>
 </Panels>
