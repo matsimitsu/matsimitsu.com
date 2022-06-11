@@ -27,8 +27,6 @@
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
-	import PhonePic from '$lib/PhonePic.svelte';
-	import Location from '$lib/Location.svelte';
 </script>
 
 <TripHeader {...postData} />
