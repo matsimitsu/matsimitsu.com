@@ -1,6 +1,6 @@
 <script context="module">
 	export const postData = {
-		title: 'Day Thirty Eight - Fourt Six',
+		title: 'Day Thirty Eight - Fourty Six',
 		subtitle: 'Chiang Mai, Thailand',
 		trip: 'asia-2022',
 		startDate: new Date('2022-06-11'),
@@ -27,7 +27,6 @@
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
-	import PhonePic from '$lib/PhonePic.svelte';
 </script>
 
 <TripHeader {...postData} />
