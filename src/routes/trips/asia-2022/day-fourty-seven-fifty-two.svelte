@@ -27,6 +27,7 @@
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	import PhonePic from '$lib/PhonePic.svelte';
 </script>
 
 <TripHeader {...postData} />
@@ -60,6 +61,30 @@
 		alt=""
 	/>
 </Panels>
+
+<TextContent>
+	<h2>Art galleries</h2>
+	<p>
+		With the blistering heat every day, I was looking for more and more indoor activities to do. Art
+		galleries are an excellent way to get out of the heat, while still getting inspiration and
+		things to see.
+	</p>
+	<PhonePic subtitle="Art!">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/week-7/PXL_20220624_072723758.jpg"
+			width="4032"
+			height="3024"
+			alt=""
+		/>
+	</PhonePic>
+</TextContent>
+
+<ResponsiveImage
+	src="https://cdn.matsimitsu.com/asia-2022/week-7/20220624-05148.jpg"
+	width="4000"
+	height="2667"
+	alt=""
+/>
 
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/asia-2022/week-7/20220623-05142.jpg"
@@ -176,6 +201,14 @@
 		do that a location that did no longer exist, so I had to lug my heavy bag half-way across the
 		city to a coin locker in the 36-degree heat. Fun times!
 	</p>
+	<PhonePic subtitle="An abandoned locker facility">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/week-7/PXL_20220625_050729777.jpg"
+			width="4032"
+			height="3024"
+			alt=""
+		/>
+	</PhonePic>
 </TextContent>
 
 <Panels>
@@ -283,7 +316,7 @@
 </Panels>
 
 <TextContent>
-	<h2>Art Galleries</h2>
+	<h2>Art Galleries (part two)</h2>
 	<p>
 		Most of these photos were taken in Talat Noi, an area on the Menam river and I was planning to
 		head to the dock for a water taxi a bit up the river to Chinatown.
@@ -301,13 +334,34 @@
 	height="3124"
 	alt=""
 />
-<ResponsiveImage
-	src="https://cdn.matsimitsu.com/asia-2022/week-7/20220625-05229.jpg"
-	width="4000"
-	height="2667"
-	alt=""
-/>
 
+<TextContent>
+	<PhonePic subtitle="Phone-pic compositions">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/week-7/20220625-05229.jpg"
+			width="4000"
+			height="2667"
+			alt=""
+		/>
+
+		<Panels>
+			<ResponsiveImage
+				src="https://cdn.matsimitsu.com/asia-2022/week-7/PXL_20220625_091333833.jpg"
+				width="4032"
+				height="3024"
+				alt=""
+			/>
+			<ResponsiveImage
+				src="https://cdn.matsimitsu.com/asia-2022/week-7/PXL_20220625_091344479.jpg"
+				width="3024"
+				height="4032"
+				alt=""
+			/>
+		</Panels>
+    <ResponsiveImage src="https://cdn.matsimitsu.com/asia-2022/week-7/PXL_20220625_091431587.jpg" width="4032" height="3024" alt="" />
+
+	</PhonePic>
+</TextContent>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/asia-2022/week-7/20220625-05230.jpg"
 	width="4000"
