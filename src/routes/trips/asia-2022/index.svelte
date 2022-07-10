@@ -1,7 +1,7 @@
 <script context="module">
 	export const tripData = {
 		title: 'Asia 2022',
-		subtitle: 'Singapore and Thailand',
+		subtitle: 'Singapore, Thailand and Malaysia',
 		trip: 'asia-2022',
 		startDate: new Date('2022-05-02'),
 		endDate: new Date('2022-07-04'),
