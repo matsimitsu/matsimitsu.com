@@ -26,8 +26,8 @@
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
-	import PhonePic from '$lib/PhonePic.svelte';
 	import Location from '$lib/Location.svelte';
+	import PhonePic from '$lib/PhonePic.svelte';
 </script>
 
 <TripHeader {...postData} />
@@ -67,19 +67,32 @@
 	alt=""
 />
 
-<TextContent
-	><p>
-		George Town's architecture is an interesting mix of Chinese clan houses, mansions, skyscrapers,
-		and colonial-style buildings.
-	</p></TextContent
->
-
+<TextContent>
+	<p>
+		Malaysia has had a lot more Chinese immigrants than Thailand, which means delicious breakfast at
+		this Hong Kong-style breakfast place.
+	</p>
+	<PhonePic subtitle="There may have been more egg-tarts before this picture was taken">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/day-55/PXL_20220626_041025516.jpg"
+			width="3024"
+			height="4032"
+			alt=""
+		/>
+	</PhonePic>
+</TextContent>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/asia-2022/day-54/20220626-05273.jpg"
 	width="4000"
 	height="2747"
 	alt=""
 />
+<TextContent
+	><p>
+		George Town's architecture is an interesting mix of Chinese clan houses, mansions, skyscrapers,
+		and colonial-style buildings.
+	</p></TextContent
+>
 
 <Panels>
 	<ResponsiveImage
@@ -170,6 +183,30 @@
 	/>
 </Panels>
 
+<TextContent>
+	<h2>Char Koay Teow</h2>
+	<p>
+		Where Thailand has Pad Thai, Penang has Char Koay Teow, and this might just be my new favorite
+		dish.
+	</p>
+	<PhonePic subtitle="Char Koay Teow">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/day-55/PXL_20220626_092016208.jpg"
+			width="4032"
+			height="3024"
+			alt=""
+		/>
+	</PhonePic>
+	<p>
+		Char means stir-fried and Koay Teow refers to the flat rice noodles. It's served at a hawker
+		centre and cooked on the spot.
+	</p>
+	<p>
+		The meal consists of a delicious mix of flat rice noodles, Chinese sausage, vegetables and
+		various soy sauces. Cooked at high heat it contains <i>juust</i> a little charring for additional
+		taste.
+	</p>
+</TextContent>
 <Panels>
 	<ResponsiveImage
 		src="https://cdn.matsimitsu.com/asia-2022/day-54/20220626-05297.jpg"
@@ -214,6 +251,25 @@
 	alt=""
 />
 
+<TextContent>
+	<p>
+		When walking back from the waterfront I noticed a little food cart where people were drinking
+		peculiar coloured drinks.
+	</p>
+	<p>
+		After some pointing to the drinks and to money in my hand, I was the proud owner of whatever
+		this concoction was.
+	</p>
+	<PhonePic subtitle="Pretty colours">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/day-55/PXL_20220626_102016898.jpg"
+			width="3024"
+			height="4032"
+			alt=""
+		/>
+	</PhonePic>
+	<p>I suspect it was a variant of Cendol (which we'll come bak to later).</p>
+</TextContent>
 <ResponsiveImage
 	src="https://cdn.matsimitsu.com/asia-2022/day-54/20220626-05307.jpg"
 	width="4000"
@@ -291,3 +347,25 @@
 	height="2667"
 	alt=""
 />
+
+<TextContent>
+	<p>
+		Back to that weird drink. On the way back to the hotel I came across a café that served <a
+			href="https://en.wikipedia.org/wiki/Cendol"
+			target="_blank"
+			rel="noopener noreferrer">Cendol</a
+		>, a combination of ingredients that should taste awful when combined, but is in fact delicious.
+	</p>
+	<PhonePic subtitle="Cendol">
+		<ResponsiveImage
+			src="https://cdn.matsimitsu.com/asia-2022/day-55/PXL_20220626_110806821.jpg"
+			width="3024"
+			height="4032"
+			alt=""
+		/>
+	</PhonePic>
+	<p>
+		Cendol is a combination of shaved ice, green rice flour jelly, coconut milk and palm sugar
+		syrop. In this case additional toppings included corn and sweetened red azuki beans.
+	</p>
+</TextContent>
