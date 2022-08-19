@@ -1,17 +1,4 @@
-<script context="module">
-	export const postData = {
-		title: 'Day Seven',
-		subtitle: 'Japan - Shinjuku',
-		trip: 'asia-2014',
-		startDate: new Date('2014-05-21'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/asia-2014/day-seven/20140521-_DSC0374.jpg',
-			width: 2200,
-			height: 1461,
-			alt: 'Restaurant in Shinjuku'
-		}
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
@@ -19,6 +6,8 @@
 	import Panels from '$lib/Panels.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

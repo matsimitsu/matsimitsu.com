@@ -1,17 +1,4 @@
-<script context="module">
-	export const postData = {
-		title: 'Day Nine',
-		subtitle: 'Shinjuku - Ginza - Tsukiji Fish market - Meiji Jingu - Shibuya - Omotesando',
-		trip: 'asia-2014',
-		startDate: new Date('2014-05-23'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/asia-2014/day-nine/20140523-_DSC0692.jpg',
-			width: 2200,
-			height: 1461,
-			alt: 'Shinjuku station'
-		}
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
@@ -19,6 +6,8 @@
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
 	import Video from '$lib/Video.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

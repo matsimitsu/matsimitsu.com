@@ -1,25 +1,12 @@
-<script context="module">
-	export const postData = {
-		title: 'Day Three',
-		subtitle: 'Walking around Plaka, Psyri and Lycabettus Hill.',
-		trip: 'greece-2021',
-		startDate: new Date('2021-07-06'),
-		endDate: new Date('2021-07-06'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/greece-2021/day-three/20210706-DSC01972-2.jpg',
-			width: 2200,
-			height: 1467,
-			alt: 'Acropolis by night'
-		},
-		locations: []
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

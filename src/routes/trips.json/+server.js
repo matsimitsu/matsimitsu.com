@@ -1,9 +1,8 @@
-import { getTrips } from './_trips'
+import { json } from '@sveltejs/kit';
+import { getTrips } from '../trips/_trips'
 
 export async function GET({ params }) {
   let trips = await getTrips()
 
-  return {
-    body: trips
-  };
+  return json(trips);
 }

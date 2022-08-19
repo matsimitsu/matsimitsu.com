@@ -1,27 +1,11 @@
-<script context="module">
-	import { getNeighbours } from '$lib/utils/neighbours';
-
-	// Use load function to get the current trip posts
-	export async function load({ url, fetch }) {
-		const req = await fetch(`/blog.json`);
-		const posts = await req.json();
-
-		const [nextPost, prevPost] = getNeighbours(url, posts);
-		return {
-			props: { posts, nextPost, prevPost }
-		};
-	}
-</script>
-
 <script>
 	import MoreHeader from '$lib/MoreHeader.svelte';
 	import Post from '$lib/Post.svelte';
 	import PrevNextPost from '$lib/PrevNextPost.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
 
-	export let posts = [];
-	export let prevPost = null;
-	export let nextPost = null;
+	export let data = {};
+	const { posts, prevPost, nextPost} = data
 </script>
 
 <slot />
@@ -31,7 +15,7 @@
 	<div class="max-w-4xl mx-auto">
 		<MoreHeader>More posts</MoreHeader>
 
-		{#each posts.slice(0, 5) as post (post.url)}
+		{#each posts.slice(0, 5) as post (post.id)}
 			<Post {post} />
 		{/each}
 	</div>

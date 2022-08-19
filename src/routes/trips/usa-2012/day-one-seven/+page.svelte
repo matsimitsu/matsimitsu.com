@@ -1,18 +1,4 @@
-<script context="module">
-	export const postData = {
-		title: 'Day one - seven',
-		subtitle: 'From New-York to Denver.',
-		trip: 'usa-2012',
-		startDate: new Date('2012-06-04'),
-		endDate: new Date('2012-06-10'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/usa-2012/day-one-seven/20120605-IMG_0807.jpg',
-			width: 2200,
-			height: 1650,
-			alt: 'View of central park from Top of the Rock'
-		}
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
@@ -21,6 +7,8 @@
 	import PhonePic from '$lib/PhonePic.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

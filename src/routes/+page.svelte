@@ -1,28 +1,12 @@
-<script context="module">
-	// Use load function to get the current trip posts
-	export async function load({ fetch }) {
-		const posts = await fetch(`/blog.json`);
-		const notes = await fetch(`/notes.json`);
-		const trips = await fetch(`/trips.json`);
-
-		return {
-			props: {
-				posts: await posts.json(),
-				notes: await notes.json(),
-				trips: await trips.json()
-			}
-		};
-	}
-</script>
-
 <script>
 	import TripPostCard from '$lib/TripPostCard.svelte';
 	import Post from '$lib/Post.svelte';
 	import Note from '$lib/Note.svelte';
 	import PageHeader from '$lib/PageHeader.svelte';
-	export let posts = [];
-	export let notes = [];
-	export let trips = [];
+
+	export let data = {};
+
+	const { posts, notes, trips} = data;
 
 	const description =
 		'Hi there! My name is Robert Beekman, developer, photographer and longboarder.';

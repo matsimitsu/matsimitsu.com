@@ -1,20 +1,10 @@
-<script context="module">
-	// Use load function to get the current trip posts
-	export async function load({ fetch }) {
-		const req = await fetch(`/trips.json`);
-
-		return {
-			props: { trips: await req.json() }
-		};
-	}
-</script>
-
 <script>
 	import Trip from '$lib/Trip.svelte';
 	import Map from '$lib/Map.svelte';
 	import PageHeader from '$lib/PageHeader.svelte';
 
-	export let trips = [];
+	export let data = {};
+	const { trips = [] } = data
 	let countries = trips.map((t) => t.countries || []).flat();
 	const description = "Over the years I've visited quite a few countries on many trips, below I'll share these with you."
 </script>

@@ -1,4 +1,4 @@
-import { getPosts } from '../trips/_posts';
+import { getPosts } from '../../trips/_posts';
 
 const siteUrl = 'https://matsimitsu.com';
 

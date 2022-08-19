@@ -1,27 +1,15 @@
-<script context="module">
-	import { getNeighbours } from '$lib/utils/neighbours';
-
-	// Use load function to get the current trip posts
-	export async function load({ url, fetch }) {
-		const req = await fetch(`/notes.json`);
-		const notes = await req.json();
-
-		const [nextNote, prevNote] = getNeighbours(url, notes);
-		return {
-			props: { notes, prevNote, nextNote }
-		};
-	}
-</script>
-
 <script>
 	import MoreHeader from '$lib/MoreHeader.svelte';
 	import Note from '$lib/Note.svelte';
 	import PrevNextPost from '$lib/PrevNextPost.svelte';
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
 
-	export let notes = [];
-	export let prevNote = null;
-	export let nextNote = null;
+	export let data = {};
+	const {
+		notes = [],
+		prevNote,
+		nextNote
+	} = data;
 </script>
 
 <slot />

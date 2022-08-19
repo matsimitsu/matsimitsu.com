@@ -1,4 +1,4 @@
-import { getPosts } from '../blog/_posts';
+import { getPosts } from '../../blog/_posts';
 
 const siteUrl = 'https://matsimitsu.com';
 

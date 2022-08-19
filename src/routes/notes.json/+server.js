@@ -1,9 +1,7 @@
-import { getPosts } from './_posts'
+import { json } from '@sveltejs/kit';
+import { getPosts } from '../notes/_posts'
 
 export async function GET() {
   let posts = await getPosts()
-
-  return {
-    body: posts
-  };
+  return json(posts);
 }

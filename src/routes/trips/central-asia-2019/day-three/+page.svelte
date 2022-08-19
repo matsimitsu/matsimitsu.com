@@ -1,24 +1,4 @@
-<script context="module">
-	export const postData = {
-		title: 'Day Three',
-		subtitle: 'Ala Archa National Park, Kyrgyzstan',
-		trip: 'central-asia-2019',
-		startDate: new Date('2019-04-03'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/central-asia-2019/day-three/DSC09339.jpg',
-			width: '2200',
-			height: '1467',
-			alt: ''
-		},
-		locations: [
-			{
-				lat: 42.6558635,
-				long: 74.4953346,
-				name: 'Ala Archa National Park'
-			}
-		]
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
@@ -26,6 +6,8 @@
 	import Panels from '$lib/Panels.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

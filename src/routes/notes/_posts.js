@@ -8,7 +8,7 @@ export async function getPosts() {
     if (post && post.metadata) {
       const url = post.metadata.appsignal || file
         .replace('/src/routes', '')
-        .replace(".svx", "");
+        .replace("+page.svx", "");
 
       posts.push({ ...post.metadata, url });
     }

@@ -1,25 +1,12 @@
-<script context="module">
-	export const postData = {
-		title: 'Day Two',
-		subtitle: 'The Acropolis.',
-		trip: 'greece-2021',
-		startDate: new Date('2021-07-05'),
-		endDate: new Date('2021-07-05'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/greece-2021/day-two/20210705-DSC01852.jpg',
-			width: 2200,
-			height: 1467,
-			alt: 'Parthenon at the Acropolis'
-		},
-		locations: []
-	};
-</script>
+
 
 <script>
 	import TextContent from '$lib/TextContent.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
 	import Panels from '$lib/Panels.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+	export let data = {}
+	const { postData } = data;
 </script>
 
 <TripHeader {...postData} />

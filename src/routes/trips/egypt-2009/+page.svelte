@@ -1,35 +1,3 @@
-<script context="module">
-	export const postData = {
-		title: 'Egypt 2009',
-		subtitle: 'Land of Pharaohs and Sphinxes. My first trip outside of continental Europe.',
-		trip: 'egypt-2009',
-		startDate: new Date('2009-08-22'),
-		endDate: new Date('2009-08-29'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg',
-			width: 2200,
-			height: 1461,
-			alt: 'Photo of Egyptian ruins with hieroglyphs in Luxor'
-		}
-	};
-	export const tripData = {
-		title: 'Egypt 2009',
-		subtitle: 'Land of Pharaohs and Sphinxes. My first trip outside of continental Europe.',
-		trip: 'egypt-2009',
-		startDate: new Date('2009-08-22'),
-		endDate: new Date('2009-08-29'),
-		image: {
-			src: 'https://cdn.matsimitsu.com/egypt-2009/20090823-_DSC0021.jpg',
-			width: 2200,
-			height: 1461,
-			alt: 'Photo of Egyptian ruins with hieroglyphs in Luxor'
-		},
-		countries: [
-			'Egypt'
-		]
-	}
-</script>
-
 <script>
 	import TextContent from '$lib/TextContent.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
@@ -38,6 +6,9 @@
 	import Explanation from '$lib/Explanation.svelte';
 	import Location from '$lib/Location.svelte';
 	import TripHeader from '$lib/TripHeader.svelte';
+
+	export let data = {};
+	const { tripData, postData } = data;
 </script>
 
 <TripHeader {...postData} />

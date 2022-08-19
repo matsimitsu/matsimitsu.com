@@ -1,19 +1,9 @@
-<script context="module">
-	// Use load function to get the current trip posts
-	export async function load({ fetch }) {
-		const req = await fetch(`/notes.json`);
-
-		return {
-			props: { posts: await req.json() }
-		};
-	}
-</script>
-
 <script>
 	import Note from '$lib/Note.svelte';
 	import PageHeader from '$lib/PageHeader.svelte';
 
-	export let posts = [];
+	export let data = {};
+	const { posts } = data
 
 	const description = "Another place to not post anything ;)"
 </script>

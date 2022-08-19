@@ -1,5 +1,5 @@
 export async function getPosts() {
-  const modules = import.meta.glob("/src/routes/trips/**/*.svelte");
+  const modules = import.meta.glob("/src/routes/trips/**/+page.js");
   const posts = []
   await Promise.all(Object.entries(modules).map(async ([file, module]) => {
     const { postData } = await module();
@@ -8,8 +8,7 @@ export async function getPosts() {
       const isSinglePost = file.endsWith("index.svelte")
       const url = file
         .replace('/src/routes', '')
-        .replace("index.svelte", "")
-        .replace(".svelte", "") + '/';
+        .replace("+page.js", "");
       posts.push({ ...postData, url, isSinglePost, file });
     }
   }));

@@ -1,18 +1,9 @@
-<script context="module">
-	// Use load function to get the current trip posts
-	export async function load({ fetch }) {
-		const req = await fetch(`/blog.json`);
-
-		return {
-			props: { posts: await req.json() }
-		};
-	}
-</script>
-
 <script>
   import Post from '$lib/Post.svelte'
 	import PageHeader from '$lib/PageHeader.svelte';
-	export let posts = [];
+
+	export let data = {};
+	const { posts } = data
 
 	const description ="Stories on problems I encountered while writing code/using products and how I solved them."
 </script>
@@ -45,7 +36,7 @@
 </PageHeader>
 
 <div class="mx-auto mb-24 px-4 max-w-4xl">
-	{#each posts as post (post.url)}
+	{#each posts as post (post.id)}
 		<Post post={post} />
 	{/each}
 </div>
