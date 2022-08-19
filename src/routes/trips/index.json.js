@@ -1,6 +1,6 @@
 import { getTrips } from './_trips'
 
-export async function get({ params }) {
+export async function GET({ params }) {
   let trips = await getTrips()
 
   return {

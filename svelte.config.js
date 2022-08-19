@@ -29,7 +29,6 @@ const config = {
       ],
 		},
 		trailingSlash: 'always',
-		vite: {}
 	}
 };
 
