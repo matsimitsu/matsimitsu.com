@@ -6,7 +6,7 @@
 
 	export let data = {};
 
-	const { tripPosts = [], nextPost, currentPost, currentTrip, seenPosts = []} = data;
+	$: ({ tripPosts = [], nextPost, currentPost, currentTrip, seenPosts = [] } = data);
 </script>
 
 <svelte:head>
