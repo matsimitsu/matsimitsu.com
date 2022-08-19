@@ -1,10 +1,10 @@
 <script>
-	import dayjs from "dayjs"
-	import customParseFormat from "dayjs/plugin/customParseFormat"
-	dayjs.extend(customParseFormat)
+	import dayjs from 'dayjs';
+	import customParseFormat from 'dayjs/plugin/customParseFormat';
+	dayjs.extend(customParseFormat);
 
 	export let date;
-	let dayjsDate = dayjs(date, 'YYYY-MM-DD H:mm:ss')
+	let dayjsDate = dayjs(date);
 </script>
 
 <time datetime={dayjsDate.toISOString()}>{dayjsDate.toDate().toLocaleDateString()}</time>

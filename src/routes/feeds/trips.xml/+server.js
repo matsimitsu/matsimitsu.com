@@ -28,15 +28,12 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
   </channel>
 </rss>`;
 
-export async function get() {
+export async function GET() {
   let posts = await getPosts();
   const feed = renderXmlRssFeed(posts.reverse());
 
-  return {
-    body: feed,
-    headers: {
-      'Cache-Control': `max-age=0, s-max-age=${600}`, // 10 minutes
-      'Content-Type': 'application/rss+xml'
-    }
-  };
+  return new Response(feed, {
+    'Cache-Control': `max-age=0, s-max-age=${600}`, // 10 minutes
+    'Content-Type': 'application/rss+xml'
+  })
 }

@@ -32,19 +32,19 @@ const config = {
 						'--tw-prose-th-borders': theme('colors.gray[300]'),
 						'--tw-prose-td-borders': theme('colors.gray[200]'),
 						h1: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h2: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h3: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h4: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						}
 					}
@@ -68,19 +68,19 @@ const config = {
 						'--tw-prose-th-borders': theme('colors.gray[600]'),
 						'--tw-prose-td-borders': theme('colors.gray[700]'),
 						h1: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h2: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h3: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						},
 						h4: {
-							'text-align': 'center',
+							'text-align': 'left',
 							a: headerLink
 						}
 					}

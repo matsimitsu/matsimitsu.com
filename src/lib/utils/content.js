@@ -13,3 +13,22 @@ export function enrichContentWithFiles(content, files) {
     return block
   })
 }
+
+export function extractTypeFromContent(type, blocks) {
+  let result = [];
+
+  for (const { content = [], ...block} of blocks) {
+    if (block.type === type) {
+      result.push(block)
+    }
+    result = result.concat(extractTypeFromContent(type, content))
+  }
+
+  return result
+}
+
+export function readingTimeInMinutes(content) {
+  const textBlocks = extractTypeFromContent("text", content);
+  const words = textBlocks.map(t => t.text).join(" ").split(" ").length;
+  return Math.ceil(words/ 200)
+}
