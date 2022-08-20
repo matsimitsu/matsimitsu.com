@@ -5,7 +5,7 @@
 	import ReturnToCategory from '$lib/ReturnToCategory.svelte';
 
 	export let data = {};
-	const { posts, prevPost, nextPost} = data
+	$: ({ posts, prevPost, nextPost} = data)
 </script>
 
 <slot />
