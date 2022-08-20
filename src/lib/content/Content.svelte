@@ -5,6 +5,8 @@
 	import Img from './Img.svelte';
 	import Youtube from './Youtube.svelte';
 	import Panel from './Panel.svelte';
+	import OrderedList from './OrderedList.svelte';
+	import UnorderedList from './UnorderedList.svelte';
 
 	export let content = [];
 	export let id;
@@ -24,6 +26,12 @@
 			<Youtube {block} />
 		{:else if block.type === 'panel'}
 			<Panel {block} />
+		{:else if block.type === 'orderedList'}
+			<OrderedList {block} />
+		{:else if block.type === 'unOrderedList'}
+			<UnorderedList {block} />
+		{:else}
+			<pre>{JSON.stringify(block)}</pre>
 		{/if}
 	{/each}
 {/key}

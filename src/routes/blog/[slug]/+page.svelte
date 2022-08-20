@@ -4,7 +4,7 @@
 	import FormattedDate from '$lib/FormattedDate.svelte';
 	export let data = {};
 	$: ({
-		post: { id, updated, summary, url, title, date, content = [] }
+		post: { id, summary, url, title, date, content = [] }
 	} = data);
 </script>
 
@@ -31,5 +31,5 @@
 	<p class="meta p-0 m-0 font-mono text-base text-gray-400">
 		<FormattedDate {date} /> - {readingTimeInMinutes(content)} minutes
 	</p>
-		<Content {content} key={id} />
+	<Content {content} key={id} />
 </div>

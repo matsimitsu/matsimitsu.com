@@ -32,3 +32,7 @@ export function readingTimeInMinutes(content) {
   const words = textBlocks.map(t => t.text).join(" ").split(" ").length;
   return Math.ceil(words/ 200)
 }
+
+export function generateKey(length = 8) {
+  return (Math.random() + 1).toString(36).substring(length)
+}
