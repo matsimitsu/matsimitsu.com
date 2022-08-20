@@ -2,7 +2,7 @@
 	import Text from './Text.svelte';
 	export let block = {};
 
-	const { content = [] } = block;
+	$:({ content = [] } = block)
 </script>
 
 <p>

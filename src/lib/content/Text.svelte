@@ -1,27 +1,19 @@
 <script>
-	export let text = {};
+	import Mark from './Mark.svelte';
 
-	const markObject = {};
-	for (const { type, ...rest } of text.marks || []) {
-		markObject[type] = rest;
-	}
-	const textItem = { ...text, markTypes: markObject };
+	export let text = {};
+	const optionalMarks = text.marks || [];
+	const link = optionalMarks.find((m) => m.type === 'link');
+	const code = optionalMarks.find((m) => m.type === 'code');
+	const marks = optionalMarks.filter((m) => m.type !== 'link' && m.type !== 'code');
 </script>
 
-<span
-	class:font-bold={textItem.markTypes.bold}
-	class:italic={textItem.markTypes.italic}
-	class:line-through={textItem.markTypes.strike}
-	class:underline={textItem.markTypes.underline}
-	class:bg-yellow-300={textItem.markTypes.highlight}
->
-	{#if textItem.markTypes.link}
-		<a href={textItem.markTypes.link.attrs.href}>
-			{textItem.text}
-		</a>
-	{:else if textItem.markTypes.code}
-		<code>{textItem.text}</code>
-	{:else}
-		{textItem.text}
-	{/if}
-</span>
+{#if link}
+	<a href={link.attrs.href}>
+		<Mark {marks}>{text.text}</Mark>
+	</a>
+{:else if code}
+	<code>{text.text}</code>
+{:else}
+	<Mark {marks}>{text.text}</Mark>
+{/if}
