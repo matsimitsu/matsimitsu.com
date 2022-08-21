@@ -6,5 +6,5 @@
 </script>
 
 <li>
-	<Content content={block.content} key={generateKey()} />
+	<Content content={block.content} id={generateKey()} />
 </li>
