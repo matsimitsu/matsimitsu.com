@@ -4,11 +4,20 @@
 	export let block = {};
 	const { versions = {}, width, height } = block;
 
-	export let className = '';
 	export let nested = false;
+	export let noPadding;
+	export let rounded;
+	export let full;
 
-	let thumb = 'https://cdn.matsimitsu.dev' + (versions?.jpg || {})[480];
-	let large = 'https://cdn.matsimitsu.dev' + (versions?.jpg || {})[1200];
+	const style = `flex: ${width / height}`;
+
+	const srcsetForExtension = (ext) => {
+		return Object.entries(versions[ext])
+			.map(([size, src]) => {
+				return `https://cdn.matsimitsu.dev${src} ${size}w`;
+			})
+			.join(', ');
+	};
 	let alt = block?.attrs?.alt || block.name || block.file;
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
@@ -16,25 +25,31 @@
 	};
 </script>
 
-<figure
+<picture
+	{style}
+	class:single={!nested}
+	class:full
+	class="mx-auto block overflow-hidden cursor-pointer"
 	class:nested
-	class="m-0 p-0 mx-auto block overflow-hidden"
-	style={`flex: ${width / height}`}
+	class:noPadding
+	class:rounded
+	on:click={() => setIsOpen(true)}
 >
+	<source type="image/jpeg" srcset={srcsetForExtension('jpg')} />
 	<img
-		src={thumb}
+		{width}
+		{height}
+		class="block mx-auto h-auto"
+		src="https://cdn.matsimitsu.dev{versions?.jpg[720]}"
 		{alt}
-		class:nested
-		class={className + ' cursor-zoom-in'}
-		on:click={() => setIsOpen(true)}
-		loading="lazy"
 	/>
-</figure>
+</picture>
+
 <Transition show={isOpen}>
 	<Dialog
 		open={isOpen}
 		on:close={() => setIsOpen(false)}
-		class="fixed z-50 inset-0 bg-gray-500 cursor-zoom-out"
+		class="fixed z-50 inset-0 bg-gray-800 cursor-zoom-out"
 	>
 		<TransitionChild
 			enter="ease-out duration-300"
@@ -56,14 +71,21 @@
 			leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 		>
 			<div class="flex h-screen w-screen">
-				<div class="relative m-auto p-2 bg-white rounded">
-					<img
-						src={large}
-						{alt}
+				<div class="relative m-auto overflow-hidden">
+					<picture
 						on:click={() => setIsOpen(false)}
-						class="object-contain mx-auto block rounded"
-						style=" max-height: 90vh; max-width: 90vw"
-					/>
+						class="mx-auto block rounded-md border-2 bg-white"
+					>
+						<source type="image/jpeg" srcset={srcsetForExtension('jpg')} />
+						<img
+							{width}
+							{height}
+							src="https://cdn.matsimitsu.dev{versions?.jpg[720]}"
+							{alt}
+							class="block object-contain w-auto mx-auto rounded-md"
+							style="max-height: 90vh; max-width: 90vw"
+						/>
+					</picture>
 				</div>
 			</div>
 		</TransitionChild>
@@ -71,17 +93,25 @@
 </Transition>
 
 <style>
-	figure:not(.nested) {
-		@apply my-4;
+	.single {
+		@apply px-4 max-w-screen-2xl mt-2 lg:mt-2 px-2 2xl:px-0;
 	}
-	figure.nested {
-		@apply m-0 p-0;
+	.nested {
+		@apply ml-2 lg:ml-2 first:ml-0;
+	}
+	.noPadding {
+		@apply px-0;
 	}
 
-	img.nested {
-		@apply m-0 p-0;
+	.rounded > img {
+		@apply rounded-md;
 	}
-	img:not(.nested) {
-		@apply w-full;
+	.full {
+		@apply max-w-full;
+	}
+
+	img {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 </style>

@@ -43,7 +43,7 @@
 		{/each}
 		{#each markers as marker}
 			<Marker
-				coords={projection([marker.long, marker.lat])}
+				coords={projection([marker.long || marker.lng, marker.lat])}
 				text={marker.name}
 				textPosition={marker.textPosition}
 			/>

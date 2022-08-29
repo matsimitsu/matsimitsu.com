@@ -1,10 +1,10 @@
 <script>
 	import FormattedDate from '$lib/FormattedDate.svelte';
 	import ResponsiveImage from '$lib/ResponsiveImage.svelte';
+	import Img from '$lib/content/Img.svelte';
 
 	export let post;
-  export let seenPosts = []
-
+	export let seenPosts = [];
 </script>
 
 <a
@@ -13,7 +13,11 @@
 	class="flex max-w-4xl mx-auto mb-8 transform hover:scale-105 duration-300 transition transition-transform"
 >
 	<div class="flex-1">
-		<ResponsiveImage noZoom rounded {...post.image} />
+		{#if post.cover}
+			<Img block={post.cover} noZoom noPadding rounded />
+		{:else}
+			<ResponsiveImage noZoom rounded {...post.image} />
+		{/if}
 	</div>
 	<div class="flex-1 p-2 md:p-4 lg:p-8">
 		<p class="hidden md:block mx-auto text-sm text-gray-400 mb md:mb-4">
@@ -31,6 +35,8 @@
 		>
 			{post.title}
 		</h3>
-		<p class="text-sm md:text-xl text-gray-500 line-clamp-3 md:line-clamp-none">{@html post.subtitle}</p>
+		<p class="text-sm md:text-xl text-gray-500 line-clamp-3 md:line-clamp-none">
+			{@html post.subtitle}
+		</p>
 	</div>
 </a>

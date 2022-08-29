@@ -7,6 +7,7 @@
 	import Panel from './Panel.svelte';
 	import OrderedList from './OrderedList.svelte';
 	import UnorderedList from './UnorderedList.svelte';
+	import Map from './Map.svelte';
 
 	export let content = [];
 	export let id;
@@ -30,6 +31,8 @@
 			<OrderedList {block} />
 		{:else if block.type === 'unOrderedList'}
 			<UnorderedList {block} />
+		{:else if block.type === 'map'}
+			<Map {block} />
 		{:else}
 			<pre>{JSON.stringify(block)}</pre>
 		{/if}
