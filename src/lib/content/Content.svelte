@@ -17,7 +17,6 @@
 	export let id;
 	export let renderStyle = 'default';
 	setContext('renderStyle', renderStyle);
-
 	// Clear out any empty paragraphs
 	const filteredContent = content.filter(
 		(c) =>

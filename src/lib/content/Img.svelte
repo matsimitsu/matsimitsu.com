@@ -12,6 +12,7 @@
 	export let full = display == 'full';
 	export let nextType = null;
 	export let prevType = null;
+	export let noZoom = false;
 
 	const renderStyle = getContext('renderStyle');
 
@@ -27,6 +28,10 @@
 	let alt = block?.attrs?.alt || block.name || block.file;
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
+		if (noZoom) {
+			return;
+		}
+
 		isOpen = newIsOpen;
 	};
 </script>
@@ -35,6 +40,8 @@
 	{style}
 	class:mb-20={!nested && renderStyle == 'wide' && !['panel', 'img'].includes(nextType)}
 	class:mt-20={!nested && renderStyle == 'wide' && !['panel', 'img'].includes(prevType)}
+	class:my-4={renderStyle !== 'wide' ||
+		(renderStyle == 'wide' && ['panel', 'img'].includes(prevType))}
 	class:single={!nested}
 	class:full
 	class:wide={!nested && renderStyle == 'wide'}

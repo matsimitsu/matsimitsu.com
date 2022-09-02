@@ -34,7 +34,7 @@
 	<div>
     <TripHeader {...trip} />
     <div class="max-w-screen-xl mx-auto">
-      <Map highlight={trip.locations.map(l => l.country)} height={800} zoom={250} center={[0, 10]} />
+      <Map highlight={trip.locations.map(l => l.country.toLowerCase())} height={800} zoom={250} center={[0, 10]} />
     </div>
 
     <div class="prose prose-lg dark:prose-dark my-24 mx-auto max-w-2xl px-2 2xl:px-0 ">

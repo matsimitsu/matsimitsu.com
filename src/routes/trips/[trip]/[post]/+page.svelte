@@ -38,9 +38,11 @@
 
 <TripHeader {...data.post} />
 
-<div class="prose prose-lg dark:prose-dark my-24 mx-auto px-2 2xl:px-0">
-	<Content {content} {id} renderStyle="wide" />
-</div>
+{#key id}
+	<div class="prose prose-lg dark:prose-dark my-24 mx-auto px-2 2xl:px-0">
+		<Content {content} {id} renderStyle="wide" />
+	</div>
+{/key}
 
 {#if nextPost}
 	<div
