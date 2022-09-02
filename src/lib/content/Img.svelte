@@ -1,13 +1,19 @@
 <script>
+	import { getContext } from 'svelte';
 	import { Dialog, DialogOverlay, Transition, TransitionChild } from '@rgossiaux/svelte-headlessui';
 
 	export let block = {};
-	const { versions = {}, width, height } = block;
+	const { versions = {}, width, height, attrs } = block;
+	const { display = 'default', title } = attrs || {};
 
 	export let nested = false;
-	export let noPadding;
-	export let rounded;
-	export let full;
+	export let noPadding = false;
+	export let rounded = false;
+	export let full = display == 'full';
+	export let nextType = null;
+	export let prevType = null;
+
+	const renderStyle = getContext('renderStyle');
 
 	const style = `flex: ${width / height}`;
 
@@ -27,8 +33,11 @@
 
 <picture
 	{style}
+	class:mb-20={!nested && renderStyle == 'wide' && !['panel', 'img'].includes(nextType)}
+	class:mt-20={!nested && renderStyle == 'wide' && !['panel', 'img'].includes(prevType)}
 	class:single={!nested}
 	class:full
+	class:wide={!nested && renderStyle == 'wide'}
 	class="mx-auto block overflow-hidden cursor-pointer"
 	class:nested
 	class:noPadding
@@ -93,7 +102,7 @@
 </Transition>
 
 <style>
-	.single {
+	.single:not(.wide) {
 		@apply px-4 max-w-screen-2xl mt-2 lg:mt-2 px-2 2xl:px-0;
 	}
 	.nested {
@@ -107,11 +116,29 @@
 		@apply rounded-md;
 	}
 	.full {
-		@apply max-w-full;
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
 	}
 
+	.wide {
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
+	}
 	img {
 		margin-top: 0;
 		margin-bottom: 0;
+	}
+	.wide img {
+		@apply max-w-screen-2xl;
 	}
 </style>

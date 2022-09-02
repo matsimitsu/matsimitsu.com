@@ -2,11 +2,11 @@
 	import Text from './Text.svelte';
 	export let block = {};
 
-	$: ({ content = [] } = block);
+	const { content = [] } = block;
 </script>
 
 <p>
-	{#each content as text}
-		<Text {text} />
+	{#each content as block}
+		<Text text={block} />
 	{/each}
 </p>

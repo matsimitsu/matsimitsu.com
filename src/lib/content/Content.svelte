@@ -1,4 +1,6 @@
 <script>
+	import { setContext } from 'svelte';
+
 	import Paragraph from './Paragraph.svelte';
 	import Heading from './Heading.svelte';
 	import CodeBlock from './CodeBlock.svelte';
@@ -8,13 +10,25 @@
 	import OrderedList from './OrderedList.svelte';
 	import UnorderedList from './UnorderedList.svelte';
 	import Map from './Map.svelte';
+	import File from './File.svelte';
+	import Location from './Location.svelte';
 
 	export let content = [];
 	export let id;
+	export let renderStyle = 'default';
+	setContext('renderStyle', renderStyle);
+
+	// Clear out any empty paragraphs
+	const filteredContent = content.filter(
+		(c) =>
+			c.type !== 'paragraph' ||
+			(c.type === 'paragraph' && (c.content || []).filter((cc) => cc.type === 'text').length > 0)
+	);
+
 </script>
 
 {#key id}
-	{#each content as block}
+	{#each filteredContent as block, idx}
 		{#if block.type === 'paragraph'}
 			<Paragraph {block} />
 		{:else if block.type === 'heading'}
@@ -22,17 +36,33 @@
 		{:else if block.type === 'codeBlock'}
 			<CodeBlock {block} />
 		{:else if block.type === 'img'}
-			<Img {block} />
+			<Img
+				{block}
+				nextType={filteredContent[idx + 1]?.type}
+				prevType={filteredContent[idx - 1]?.type}
+			/>
 		{:else if block.type === 'youtube'}
-			<Youtube {block} />
+			<Youtube
+				{block}
+				nextType={filteredContent[idx + 1]?.type}
+				prevType={filteredContent[idx - 1]?.type}
+			/>
 		{:else if block.type === 'panel'}
-			<Panel {block} />
+			<Panel
+				{block}
+				nextType={filteredContent[idx + 1]?.type}
+				prevType={filteredContent[idx - 1]?.type}
+			/>
 		{:else if block.type === 'orderedList'}
 			<OrderedList {block} />
 		{:else if block.type === 'unOrderedList'}
 			<UnorderedList {block} />
 		{:else if block.type === 'map'}
 			<Map {block} />
+		{:else if block.type === 'location'}
+			<Location {block} />
+		{:else if block.type === 'file'}
+			<File {block} />
 		{:else}
 			<pre>{JSON.stringify(block)}</pre>
 		{/if}
