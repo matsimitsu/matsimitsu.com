@@ -45,5 +45,5 @@ export const tripData = {
 };
 
 export function load({ params }) {
-    return { tripData};
+	return { tripData };
 }

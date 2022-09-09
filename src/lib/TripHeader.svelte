@@ -15,7 +15,7 @@
 <div class="mx-auto container my-24 text-center px-4">
 	<p class="mx-auto text-sm text-gray-400 mb-4">
 		<FormattedDate date={startDate} />
-		{#if endDate.split(' ')[0] != startDate.split(' ')[0]}
+		{#if typeof(endDate) === "string" && endDate.split(' ')[0] != startDate.split(' ')[0]}
 			<span>-</span>
 			<FormattedDate date={endDate} />
 		{/if}
