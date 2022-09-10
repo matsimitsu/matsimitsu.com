@@ -145,7 +145,5 @@
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	.wide img {
-		@apply max-w-screen-2xl;
-	}
+
 </style>
