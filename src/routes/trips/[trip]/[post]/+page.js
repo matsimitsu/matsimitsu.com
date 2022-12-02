@@ -8,7 +8,7 @@ export async function load({ params, fetch }) {
   const trips = await req.json()
   const trip = trips.find(t => t.url === `/trips/${params.trip}/`)
 
-  const url = `https://pocketbase.matsimitsu.com/api/collections/trip_posts/records?sort=+end&perPage=1000&expand=cover,files,locations&filter=(${encodeURIComponent("trip=\"" + trip.id + "\"&&public=true")})`
+  const url = `https://pocketbase.home.matsimitsu.dev/api/collections/trip_posts/records?sort=+end&perPage=1000&expand=cover,files,locations&filter=(${encodeURIComponent("trip=\"" + trip.id + "\"&&public=true")})`
   const data = await fetch(url)
   const posts = await data.json()
 
