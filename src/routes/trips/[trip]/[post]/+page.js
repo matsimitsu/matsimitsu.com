@@ -11,7 +11,6 @@ export async function load({ params, fetch }) {
   const url = `https://pocketbase.home.matsimitsu.dev/api/collections/trip_posts/records?sort=+end&perPage=1000&expand=cover,files,locations&filter=(${encodeURIComponent("trip=\"" + trip.id + "\"&&public=true")})`
   const data = await fetch(url)
   const posts = await data.json()
-
   const enrichedPosts = posts.items.map(({ content = {}, ...post }) => {
     return {
       ...post,

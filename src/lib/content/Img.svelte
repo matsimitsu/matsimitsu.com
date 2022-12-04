@@ -19,13 +19,14 @@
 	const style = `flex: ${width / height}`;
 
 	const srcsetForExtension = (ext) => {
-		return Object.entries(versions[ext])
+		return Object.entries(versions[ext] || [])
 			.map(([size, src]) => {
 				return `https://cdn.matsimitsu.dev${src} ${size}w`;
 			})
 			.join(', ');
 	};
 	let alt = block?.attrs?.alt || block.name || block.file;
+	let defaultImage = versions?.jpg ? `https://cdn.matsimitsu.dev${versions?.jpg[720]}` : block.attrs.src
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
 		if (noZoom) {
@@ -56,7 +57,7 @@
 		{width}
 		{height}
 		class="block mx-auto h-auto"
-		src="https://cdn.matsimitsu.dev{versions?.jpg[720]}"
+		src={defaultImage}
 		{alt}
 	/>
 </picture>
@@ -96,7 +97,7 @@
 						<img
 							{width}
 							{height}
-							src="https://cdn.matsimitsu.dev{versions?.jpg[720]}"
+							src={defaultImage}
 							{alt}
 							class="block object-contain w-auto mx-auto rounded-md"
 							style="max-height: 90vh; max-width: 90vw"
@@ -145,5 +146,4 @@
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-
 </style>

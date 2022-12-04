@@ -4,7 +4,7 @@ export async function load({ params, fetch }) {
   const req = await fetch('/trips.json')
   const trips = await req.json()
   const trip = trips.find(t => t.url === `/trips/${params.trip}/`)
-
+  trip.content = enrichContentWithFiles(trip.content.content || [], trip["@expand"].files)
   const url = `https://pocketbase.home.matsimitsu.dev/api/collections/trip_posts/records?sort=+start&perPage=1000&expand=cover,files,locations&filter=(${encodeURIComponent("trip=\"" + trip.id + "\"&&public=true")})`
   const data = await fetch(url)
   const posts = await data.json()
