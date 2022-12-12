@@ -1,4 +1,4 @@
-export function enrichContentWithFiles(content, files) {
+export function enrichContentWithFiles(content, files = []) {
   return content.map(block => {
     if (block?.attrs?.id) {
       const file = files.find(f => f.id == block.attrs.id)

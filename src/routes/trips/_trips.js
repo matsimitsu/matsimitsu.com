@@ -14,7 +14,7 @@ export async function getTrips() {
     }
   }));
 
-  const url = `https://pocketbase.home.matsimitsu.dev/api/collections/trips/records?sort=-end&perPage=1000&expand=cover,files,locations`
+  const url = `https://pocketbase.home.matsimitsu.dev/api/collections/trips/records?sort=-end&perPage=1000&expand=cover,files,locations&filter=(public=true)`
   let res = await fetch(url)
   let parsed = await res.json();
   for (const { start, end, slug, ...rest } of parsed.items) {
