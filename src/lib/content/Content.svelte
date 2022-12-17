@@ -12,6 +12,7 @@
 	import Map from './Map.svelte';
 	import File from './File.svelte';
 	import Location from './Location.svelte';
+	import Video from './Video.svelte';
 
 	export let content = [];
 	export let id;
@@ -23,7 +24,6 @@
 			c.type !== 'paragraph' ||
 			(c.type === 'paragraph' && (c.content || []).filter((cc) => cc.type === 'text').length > 0)
 	);
-
 </script>
 
 {#key id}
@@ -62,6 +62,8 @@
 			<Location {block} />
 		{:else if block.type === 'file'}
 			<File {block} />
+		{:else if block.type === 'video'}
+			<Video {block} />
 		{:else}
 			<pre>{JSON.stringify(block)}</pre>
 		{/if}
