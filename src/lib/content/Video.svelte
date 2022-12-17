@@ -1,4 +1,5 @@
 <script>
+	import Hls from 'hls.js';
 	export let block = {};
 	const { name, title: blockTitle, bunny_id } = block;
 
@@ -7,8 +8,18 @@
 	let showOverlay = true;
 
 	function onPlayButtonPointerUp(_e) {
-		videoElement.play();
-		playing = true;
+		if (Hls.isSupported()) {
+			var hls = new Hls();
+			hls.loadSource(videoElement.src);
+			hls.attachMedia(videoElement);
+			hls.on(Hls.Events.MANIFEST_PARSED, function () {
+				videoElement.play();
+				playing = true;
+			});
+		} else {
+			videoElement.play();
+			playing = true;
+		}
 	}
 
 	function onPauseButtonPointerUp(_e) {
@@ -47,7 +58,7 @@
 					focusable="false"
 					data-prefix="fas"
 					data-icon="pause-circle"
-					class="font-bold text-gray-300 block ml-4 cursor-pointer hover:text-white w-10 h-10 stroke-1"
+					class="z-50 font-bold text-gray-300 block ml-4 cursor-pointer hover:text-white w-10 h-10 stroke-1"
 					role="img"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 512 512"
@@ -59,7 +70,7 @@
 			{:else}
 				<svg
 					on:pointerup={onPlayButtonPointerUp}
-					class="font-bold text-gray-300 block ml-4 cursor-pointer hover:text-white w-10 h-10 stroke-1"
+					class="z-50 font-bold text-gray-300 block ml-4 cursor-pointer hover:text-white w-10 h-10 stroke-1"
 					fill="none"
 					stroke="currentColor"
 					role="img"

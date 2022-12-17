@@ -21,7 +21,7 @@
 >
 	<div class="flex mx-auto max-w-screen-2xl overflow-hidden gap-2">
 		{#each content as img}
-			<Img block={img} nested className="block mx-auto h-auto" />
+			<Img block={img} nested/>
 		{/each}
 	</div>
 </div>
