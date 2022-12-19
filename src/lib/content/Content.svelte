@@ -13,6 +13,7 @@
 	import File from './File.svelte';
 	import Location from './Location.svelte';
 	import Video from './Video.svelte';
+	import Sidenote from './Sidenote.svelte';
 
 	export let content = [];
 	export let id;
@@ -64,6 +65,8 @@
 			<File {block} />
 		{:else if block.type === 'video'}
 			<Video {block} />
+		{:else if block.type === 'sidenote'}
+			<Sidenote {block} />
 		{:else}
 			<pre>{JSON.stringify(block)}</pre>
 		{/if}
