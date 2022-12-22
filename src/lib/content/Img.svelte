@@ -10,6 +10,7 @@
 	export let noPadding = false;
 	export let rounded = false;
 	export let full = display == 'full';
+	export let small = display == 'small';
 	export let nextType = null;
 	export let prevType = null;
 	export let noZoom = false;
@@ -26,7 +27,9 @@
 			.join(', ');
 	};
 	let alt = block?.attrs?.alt || block.name || block.file;
-	let defaultImage = versions?.jpg ? `https://cdn.matsimitsu.dev${versions?.jpg[720]}` : block.attrs.src
+	let defaultImage = versions?.jpg
+		? `https://cdn.matsimitsu.dev${versions?.jpg[720]}`
+		: block.attrs.src;
 	let isOpen = false;
 	const setIsOpen = (newIsOpen) => {
 		if (noZoom) {
@@ -45,6 +48,7 @@
 		(renderStyle == 'wide' && ['panel', 'img'].includes(prevType))}
 	class:single={!nested}
 	class:full
+	class:small
 	class:wide={!nested && renderStyle == 'wide'}
 	class="mx-auto block overflow-hidden cursor-pointer"
 	class:nested
@@ -53,13 +57,7 @@
 	on:click={() => setIsOpen(true)}
 >
 	<source type="image/jpeg" srcset={srcsetForExtension('jpg')} />
-	<img
-		{width}
-		{height}
-		class="block mx-auto h-auto"
-		src={defaultImage}
-		{alt}
-	/>
+	<img {width} {height} class="block mx-auto h-auto" src={defaultImage} {alt} />
 </picture>
 
 <Transition show={isOpen}>
@@ -131,6 +129,18 @@
 		position: relative;
 		right: 50%;
 		width: 100vw;
+	}
+
+	.small {
+		max-width: 500px;
+	}
+
+	.wide.small {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		left: auto;
+		right: auto;
 	}
 
 	.wide {
