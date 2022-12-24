@@ -3,8 +3,6 @@
 	import PageHeader from '$lib/PageHeader.svelte';
 
 	export let data = {};
-	const { posts } = data
-
 	const description = "Another place to not post anything ;)"
 </script>
 
@@ -36,7 +34,7 @@
 </PageHeader>
 
 <div class="px-4 lg:px-0 max-w-xl mb-24 mx-auto">
-	{#each posts as note (note.url)}
+	{#each data.posts as note (note.url)}
 		<Note {note} />
 	{/each}
 </div>

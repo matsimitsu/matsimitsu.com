@@ -17,8 +17,6 @@ module.exports = {
 		}],
 	],
 	layout: {
-		_: "./src/routes/_mdsvex.svelte",
-		blog: "./src/routes/blog/_mdsvex.svelte",
-		note: "./src/routes/notes/_mdsvex.svelte",
+		_: "./src/routes/_mdsvex.svelte"
 	}
 };

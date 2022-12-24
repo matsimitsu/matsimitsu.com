@@ -1,5 +1,3 @@
-import { getPosts } from '../../notes/_posts';
-
 const siteUrl = 'https://matsimitsu.com';
 
 const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
@@ -28,8 +26,9 @@ const renderXmlRssFeed = (posts) => `<?xml version="1.0" encoding="UTF-8" ?>
 </rss>`;
 
 export async function GET() {
-  let posts = await getPosts();
-  const feed = renderXmlRssFeed(posts.reverse());
+  let res = await fetch("https://pocketbase.home.matsimitsu.dev/api/collections/notes/records?sort=-date&perPage=20&filter=(public=true)")
+  let parsed = await res.json();
+  const feed = renderXmlRssFeed(parsed.items);
 
   return new Response(feed, {
     'Cache-Control': `max-age=0, s-max-age=${600}`, // 10 minutes

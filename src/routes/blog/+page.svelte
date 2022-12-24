@@ -3,8 +3,6 @@
 	import PageHeader from '$lib/PageHeader.svelte';
 
 	export let data = {};
-	const { posts } = data
-
 	const description ="Stories on problems I encountered while writing code/using products and how I solved them."
 </script>
 
@@ -36,7 +34,7 @@
 </PageHeader>
 
 <div class="mx-auto mb-24 px-4 max-w-4xl">
-	{#each posts as post (post.id)}
+	{#each data.posts as post (post.id)}
 		<Post post={post} />
 	{/each}
 </div>
